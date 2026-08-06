@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="No Road Through — משחק תפקידים חי. פנטזיה היסטורית מאופקת, יערות חשוכים, אבירי שלום."
+    />
+    <meta name="theme-color" content="#0a0e0b" />
+    <meta property="og:title" content="No Road Through — LARP" />
+    <meta
+      property="og:description"
+      content="משחק תפקידים חי. פנטזיה היסטורית מאופקת."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.pexels.com/photos/259280/pexels-photo-259280.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    />
+    <title>No Road Through — משחק תפקידים חי</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/sigil.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Amatic+SC:wght@400;700&family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#premise">דלגו לתוכן</a>
+
+    <!-- ============================================================
+         NAVIGATION
+    ============================================================ -->
+    <header class="site-nav" id="top">
+      <nav class="nav-inner" aria-label="ניווט ראשי">
+        <a class="nav-brand" href="#top" aria-label="חזרה לראש העמוד">
+          <svg class="nav-sigil" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" />
+            <path d="M60 34 V86" stroke="currentColor" stroke-width="1.5" />
+            <path d="M60 48 L48 42 M60 48 L72 42 M60 60 L44 54 M60 60 L76 54 M60 72 L46 67 M60 72 L74 67" stroke="currentColor" stroke-width="1.1" />
+          </svg>
+          <span class="nav-brand-text">No Road Through</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#premise">הקדמה</a></li>
+          <li><a href="#factions">פלגים</a></li>
+          <li><a href="#practical">מידע שימושי</a></li>
+          <li><a href="#rules">חוקים ומסמכים</a></li>
+          <li><a href="#register">הרשמה</a></li>
+        </ul>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="navLinks"
+          aria-label="פתיחת תפריט"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================================================
+           HERO / TEASER
+      ============================================================ -->
+      <section class="hero" id="hero" aria-labelledby="heroTitle">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-vignette" aria-hidden="true"></div>
+        <div class="hero-mist" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <svg class="hero-sigil" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7" />
+            <path d="M60 22 L92 44 V76 L60 98 L28 76 V44 Z" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.35" />
+            <path d="M60 34 V86" stroke="currentColor" stroke-width="1.5" opacity="0.85" />
+            <path d="M60 48 L48 42 M60 48 L72 42 M60 60 L44 54 M60 60 L76 54 M60 72 L46 67 M60 72 L74 67" stroke="currentColor" stroke-width="1.1" opacity="0.75" />
+            <circle cx="60" cy="34" r="2.5" fill="currentColor" opacity="0.9" />
+          </svg>
+
+          <p class="eyebrow reveal" data-reveal>משחק תפקידים חי</p>
+          <h1 class="hero-title reveal" data-reveal id="heroTitle">
+            No Road<br />Through
+          </h1>
+
+          <p class="hero-subtitle reveal" data-reveal>
+            A Sword Coast LARP about two castles, one trade road, and a fortress no one can reach
+          </p>
+
+          <div class="hero-rule reveal" data-reveal aria-hidden="true">
+            <svg viewBox="0 0 240 24" fill="none"><path d="M0 12 H80 M160 12 H240" stroke="currentColor" stroke-width="1" opacity="0.5" /><path d="M88 12 C96 4, 104 4, 120 12 C136 20, 144 20, 152 12" stroke="currentColor" stroke-width="1" opacity="0.7" /><circle cx="120" cy="12" r="2.5" fill="currentColor" /></svg>
+          </div>
+
+          <p class="hero-date reveal" data-reveal>
+            <span class="hero-date-main">21 בנובמבר 2026</span>
+            <span class="hero-date-sub">חורשת שוסטר</span>
+          </p>
+
+          <div class="hero-countdown reveal" data-reveal id="countdown" aria-live="polite">
+            <div class="count-cell"><span class="count-num" id="cdDays">—</span><span class="count-label">ימים</span></div>
+            <div class="count-cell"><span class="count-num" id="cdHours">—</span><span class="count-label">שעות</span></div>
+            <div class="count-cell"><span class="count-num" id="cdMinutes">—</span><span class="count-label">דקות</span></div>
+            <div class="count-cell"><span class="count-num" id="cdSeconds">—</span><span class="count-label">שניות</span></div>
+          </div>
+
+          <div class="hero-cta reveal" data-reveal>
+            <a href="#register" class="btn btn-weathered">הירשמו לאספה</a>
+            <a href="#premise" class="btn btn-ghost">קראו את ההקדמה</a>
+          </div>
+        </div>
+
+        <a href="#premise" class="scroll-cue" aria-label="גלילה למטה">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4 V18 M5 11 L12 18 L19 11" stroke="currentColor" stroke-width="1.5" /></svg>
+        </a>
+      </section>
+
+      <!-- ============================================================
+           PREMISE
+      ============================================================ -->
+      <section class="section section-dark" id="premise" aria-labelledby="premiseHeading">
+        <div class="section-inner">
+          <header class="section-head reveal" data-reveal>
+            <p class="eyebrow">הַקְּדָמָה</p>
+            <h2 class="section-heading" id="premiseHeading">השלום האחרון של אֶלְדַהָר</h2>
+            <div class="gold-rule" aria-hidden="true"></div>
+          </header>
+
+          <div class="prose prose-dark reveal" data-reveal>
+            <p>
+              במשך שלושים שנה נחה ממלכת אֶלְדַהָר תחת הֶסכֵּם שברירי: ברית ישנה בין אצילי
+              הכתר, מסדר אבירי הכנסייה ושבטי היער שמעבר לנהר. הברית עמדה בפני רעב, בצורת
+              ופשיטות — אך מעולם לא נבחנה כמו הלילה הזה.
+            </p>
+            <p>
+              השליח האחרון של המלך הזקן נמצא מת בצומת הדרכים, ובידו מגילה חתומה. עם שקיעת
+              החמה ייאספו נציגי הפלגים באספה האחרונה. מה יוחלט בה — תלוי בכם.
+            </p>
+            <p>
+              זהו לילה אחד, רציף, ללא הפסקות. העלילה נכתבת סביב הבחירות שלכם, ולכל דמות יש
+              סוד, חובה ונאמנות כפולה. לא ניתן להכריע את הלילה בלי לוותר על משהו.
+            </p>
+          </div>
+
+          <aside class="premise-note reveal" data-reveal>
+            <p>
+              העלילה נבנית סביב בחירות השחקנים ואינה כוללת תוכן מטריד או אלימות גרפית. המשחק
+              מתאים לבוגרים מגיל 18 ומעלה.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           FACTIONS
+      ============================================================ -->
+      <section class="section section-stone" id="factions" aria-labelledby="factionsHeading">
+        <div class="section-inner section-inner-wide">
+          <header class="section-head reveal" data-reveal>
+            <p class="eyebrow">פְּלָגִים</p>
+            <h2 class="section-heading" id="factionsHeading">שישה נושאי דגל</h2>
+            <div class="gold-rule" aria-hidden="true"></div>
+            <p class="section-lede prose-dark">
+              שישה פלגים ייאספו לאספה האחרונה. לכל אחד דגל, שבועה ומחיר משלו. ברשמכם תבחרו
+              את הפלג שאליו תשתייכו — ובו תקבלו את תיק הדמות שלכם.
+            </p>
+          </header>
+
+          <div class="factions-grid">
+            <article class="faction-card reveal" data-reveal>
+              <div class="faction-shield" aria-hidden="true">
+                <svg viewBox="0 0 100 120" fill="none"><path d="M50 4 L92 18 V58 C92 88 72 108 50 116 C28 108 8 88 8 58 V18 Z" stroke="currentColor" stroke-width="1.5" opacity="0.4" /><path d="M50 14 L84 25 V58 C84 83 68 99 50 106 C32 99 16 83 16 58 V25 Z" stroke="currentColor" stroke-width="0.8" opacity="0.22" /></svg>
+                <span class="faction-glyph">שלט אריה</span>
+              </div>
+              <h3 class="faction-name">בית הכתר</h3>
+              <p class="faction-motto">"בְּדָמָם — הַסֶּדֶר"</p>
+              <p class="faction-desc">
+                אצילי החצר ונושאי הדגל. הם מחזיקים בחוק, במס ובמילה האחרונה של המלך הגוסס.
+                ללא בריתם אין כתר — אך הכתר עצמו כבר נחלש.
+              </p>
+              <ul class="faction-creed">
+                <li>שמירת ההסכם הישן</li>
+                <li>ירושת הכתר</li>
+                <li>כבוד המעמדות</li>
+              </ul>
+            </article>
+
+            <article class="faction-card reveal" data-reveal>
+              <div class="faction-shield" aria-hidden="true">
+                <svg viewBox="0 0 100 120" fill="none"><path d="M50 4 L92 18 V58 C92 88 72 108 50 116 C28 108 8 88 8 58 V18 Z" stroke="currentColor" stroke-width="1.5" opacity="0.4" /><path d="M50 14 L84 25 V58 C84 83 68 99 50 106 C32 99 16 83 16 58 V25 Z" stroke="currentColor" stroke-width="0.8" opacity="0.22" /></svg>
+                <span class="faction-glyph">שלט שלהבת</span>
+              </div>
+              <h3 class="faction-name">מסדר השלהבת</h3>
+              <p class="faction-motto">"בְּאוֹר — הַצְּדָק"</p>
+              <p class="faction-desc">
+                אבירי־הכנסייה נשבעו להגן על החפים מפשע ולשמור על אש המקדש. הם מאמינים כי הברית
+                נשברה בגלל חטא — וכי רק כפרה תשיב את האור.
+              </p>
+              <ul class="faction-creed">
+                <li>שמירת המקדש</li>
+                <li>הגנת החפים מפשע</li>
+                <li>צדק מעל כל נאמנות</li>
+              </ul>
+            </article>
+
+            <article class="faction-card reveal" data-reveal>
+              <div class="faction-shield" aria-hidden="true">
+                <svg viewBox="0 0 100 120" fill="none"><path d="M50 4 L92 18 V58 C92 88 72 108 50 116 C28 108 8 88 8 58 V18 Z" stroke="currentColor" stroke-width="1.5" opacity="0.4" /><path d="M50 14 L84 25 V58 C84 83 68 99 50 106 C32 99 16 83 16 58 V25 Z" stroke="currentColor" stroke-width="0.8" opacity="0.22" /></svg>
+                <span class="faction-glyph">שלט אלון</span>
+              </div>
+              <h3 class="faction-name">שבטי היער</h3>
+              <p class="faction-motto">"בְּשֹׁרֶשׁ — הָאֱמֶת"</p>
+              <p class="faction-desc">
+                ציידים, מרפאים וזקני השבטים שמעבר לנהר. הם לא נשבעו לאף כתר, וזכרו את היער
+                כשהממלכה עוד לא הייתה. האדמה, לדבריהם, זוכרת כל חוב.
+              </p>
+              <ul class="faction-creed">
+                <li>שמירת האדמה</li>
+                <li>זיכרון השבט</li>
+                <li>אמת מעל חוק</li>
+              </ul>
+            </article>
+
+            <article class="faction-card reveal" data-reveal>
+              <div class="faction-shield" aria-hidden="true">
+                <svg viewBox="0 0 100 120" fill="none"><path d="M50 4 L92 18 V58 C92 88 72 108 50 116 C28 108 8 88 8 58 V18 Z" stroke="currentColor" stroke-width="1.5" opacity="0.4" /><path d="M50 14 L84 25 V58 C84 83 68 99 50 106 C32 99 16 83 16 58 V25 Z" stroke="currentColor" stroke-width="0.8" opacity="0.22" /></svg>
+                <span class="faction-glyph">שלט ירח</span>
+              </div>
+              <h3 class="faction-name">משמר הצללים</h3>
+              <p class="faction-motto">"בְּמַחְשָׁךְ — הַדֶּרֶךְ"</p>
+              <p class="faction-desc">
+                מרגלים, שליחים וסוחרי סודות. הם יודעים מה נכתב במגילה שלא נקראה, ומכירים את
+                המחיר של כל שתיקה. אינם נאמנים לדגל — אלא למי שמשלם.
+              </p>
+              <ul class="faction-creed">
+                <li>שמירת הסוד</li>
+                <li>מחיר המילה</li>
+                <li>הדרך מעל הדגל</li>
+              </ul>
+            </article>
+
+            <article class="faction-card reveal" data-reveal>
+              <div class="faction-shield" aria-hidden="true">
+                <svg viewBox="0 0 100 120" fill="none"><path d="M50 4 L92 18 V58 C92 88 72 108 50 116 C28 108 8 88 8 58 V18 Z" stroke="currentColor" stroke-width="1.5" opacity="0.4" /><path d="M50 14 L84 25 V58 C84 83 68 99 50 106 C32 99 16 83 16 58 V25 Z" stroke="currentColor" stroke-width="0.8" opacity="0.22" /></svg>
+                <span class="faction-glyph">שלט פטיש</span>
+              </div>
+              <h3 class="faction-name">גילדת הפטיש</h3>
+              <p class="faction-motto">"בְּמַעֲשֵׂה — הַקִּיּוּם"</p>
+              <p class="faction-desc">
+                בעלי המלאכה, הנפחים וסוחרי הדרכים. בלעדיהם אין לחם, אין נשק ואין דרך. הם דורשים
+                שקט כדי לבנות — ומוכנים למכור אותו למרבה במחיר.
+              </p>
+              <ul class="faction-creed">
+                <li>שמירת הדרכים</li>
+                <li>מחיר העבודה</li>
+                <li>קיום מעל דגל</li>
+              </ul>
+            </article>
+
+            <article class="faction-card reveal" data-reveal>
+              <div class="faction-shield" aria-hidden="true">
+                <svg viewBox="0 0 100 120" fill="none"><path d="M50 4 L92 18 V58 C92 88 72 108 50 116 C28 108 8 88 8 58 V18 Z" stroke="currentColor" stroke-width="1.5" opacity="0.4" /><path d="M50 14 L84 25 V58 C84 83 68 99 50 106 C32 99 16 83 16 58 V25 Z" stroke="currentColor" stroke-width="0.8" opacity="0.22" /></svg>
+                <span class="faction-glyph">שלט נוצה</span>
+              </div>
+              <h3 class="faction-name">מסדר הדיו</h3>
+              <p class="faction-motto">"בְּמִלָּה — הַזִּכְרוֹן"</p>
+              <p class="faction-desc">
+                מלומדים, סופרי החצר ושומרי הרשומות. הם יודעים כי מי שכותב את ההיסטוריה — קובע
+                אותה. לידיהם עדויות שלא הוזכרו מעולם באספה.
+              </p>
+              <ul class="faction-creed">
+                <li>שמירת הרשומות</li>
+                <li>אמת הכתוב</li>
+                <li>זיכרון מעל שכחה</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PRACTICAL INFO & SCHEDULE
+      ============================================================ -->
+      <section class="section section-parchment" id="practical" aria-labelledby="practicalHeading">
+        <div class="section-inner section-inner-wide">
+          <header class="section-head reveal" data-reveal>
+            <p class="eyebrow eyebrow-dark">מִידָע שִׁימוּשִׁי</p>
+            <h2 class="section-heading section-heading-dark" id="practicalHeading">לקראת האספה</h2>
+            <div class="gold-rule gold-rule-dark" aria-hidden="true"></div>
+          </header>
+
+          <div class="info-grid">
+            <article class="info-card reveal" data-reveal>
+              <h3 class="info-card-title">מיקום והגעה</h3>
+              <dl class="info-list">
+                <div><dt>אתר</dt><dd>חורשת שוסטר — צפון (פרטים בסעיף המיקום)</dd></div>
+                <div><dt>חניון</dt><dd>חניון סמוך, הסעות מתחנה מרכזית בתיאום מראש</dd></div>
+                <div><dt>נגישות</dt><dd>שטח מיוער בחלקו — נא לתאם מראש לצרכים מיוחדים</dd></div>
+              </dl>
+            </article>
+
+            <article class="info-card reveal" data-reveal>
+              <h3 class="info-card-title">משך ותזמון</h3>
+              <dl class="info-list">
+                <div><dt>משך</dt><dd>כ־8 שעות רציפות, ללא הפסקות מחוץ לדמות</dd></div>
+                <div><dt>רמת עצימות</dt><dd>בינונית — הליכה, דיאלוג ומעט פעולה מבוקרת</dd></div>
+                <div><dt>שפה</dt><dd>עברית (אנגלית בתיאום מראש)</dd></div>
+              </dl>
+            </article>
+
+            <article class="info-card reveal" data-reveal>
+              <h3 class="info-card-title">תלבושות וציוד</h3>
+              <dl class="info-list">
+                <div><dt>תלבושת</dt><dd>סגנון ימי־ביניימי מאופק; ניתן לשאול פריטים ממאגר המשחק</dd></div>
+                <div><dt>נעליים</dt><dd>נעליים נוחות סגורות — השטח מיוער ולח בחלקו</dd></div>
+                <div><dt>מזג אוויר</dt><dd>היער קר בנובמבר — יש להביא שכבה חמה מתחת לתלבושת</dd></div>
+              </dl>
+            </article>
+
+            <article class="info-card reveal" data-reveal>
+              <h3 class="info-card-title">אוכל ושתייה</h3>
+              <dl class="info-list">
+                <div><dt>ארוחת צהריים</dt><dd>מזון חם צמחוני/טבעוני במטבח השדה (בתוך העלילה)</dd></div>
+                <div><dt>ארוחת ערב</dt><dd>ארוחת סיום חמה לאחר יציאה מדמות</dd></div>
+                <div><dt>מים</dt><dd>תחנות מים פזורות באתר — נא לשתות לעיתים תכופות</dd></div>
+              </dl>
+            </article>
+          </div>
+
+          <div class="schedule reveal" data-reveal>
+            <h3 class="schedule-title">לוח הזמנים של היום</h3>
+            <ol class="schedule-list">
+              <li><span class="sch-time">09:30</span><div class="sch-body"><strong>התאספות וקבלת תיקים</strong><span>הגעה לחניון, חלוקת תיקי דמות ותגי פלג.</span></div></li>
+              <li><span class="sch-time">10:30</span><div class="sch-body"><strong>סדנת פתיחה</strong><span>תדריך כללי, חוקי בטיחות והיכרות עם המערכת.</span></div></li>
+              <li><span class="sch-time">11:30</span><div class="sch-body"><strong>כניסה לדמות</strong><span>איפור, תלבושות וכניסה לאתר המשחק. נעילת שער.</span></div></li>
+              <li><span class="sch-time">12:00</span><div class="sch-body"><strong>תחילת המשחק</strong><span>האספה הראשונה בצומת הדרכים. המשחק רציף מרגע זה.</span></div></li>
+              <li><span class="sch-time">15:00</span><div class="sch-body"><strong>הפסקת ארוחה (בדמות)</strong><span>מזון חם במטבח השדה. הדמויות נשארות בעלילה.</span></div></li>
+              <li><span class="sch-time">18:30</span><div class="sch-body"><strong>שקיעה — האספה האחרונה</strong><span>הכרעת הברית תחת האור האחרון.</span></div></li>
+              <li><span class="sch-time">20:00</span><div class="sch-body"><strong>סיום ויציאה</strong><span>הורדת תלבושות, ארוחת ערב ושיחת סיום (Debrief).</span></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           RULES & DOCUMENTS
+      ============================================================ -->
+      <section class="section section-dark" id="rules" aria-labelledby="rulesHeading">
+        <div class="section-inner section-inner-wide">
+          <header class="section-head reveal" data-reveal>
+            <p class="eyebrow">חֻקִּים וּמְסָמָכִים</p>
+            <h2 class="section-heading" id="rulesHeading">ברית המשחק</h2>
+            <div class="gold-rule" aria-hidden="true"></div>
+          </header>
+
+          <div class="rules-grid">
+            <article class="rule-block reveal" data-reveal>
+              <h3 class="rule-block-title">עקרונות יסוד</h3>
+              <ul class="rule-list">
+                <li>המשחק מבוסס הסכמה. כל מגע פיזי דורש הסכמה מראש; ניתן לסגת מכל סיטואציה במילה הבטיחותית <em>"עצור"</em>.</li>
+                <li>הדמות שלכם אינה אתם. מה שקורה במשחק נשאר במשחק — סכסוכים בין דמויות אינם סכסוכים בין שחקנים.</li>
+                <li>המשחק נכתב סביב בחירותיכם. אין "תשובה נכונה" — יש השלכות לכל החלטה.</li>
+                <li>כבדו את האתר, הטבע והמשתתפים. אנו משחקים ביער חי — לא מותירים עקבות.</li>
+              </ul>
+            </article>
+
+            <article class="rule-block reveal" data-reveal>
+              <h3 class="rule-block-title">בטיחות ומגע</h3>
+              <ul class="rule-list">
+                <li>אסורים: מגע מיני, אלימות אמיתית, נשק אמיתי, אלכוהול וסמים באתר.</li>
+                <li>נשקי משחק עוברים בדיקת בטיחות בכניסה. נשק שלא עבר — לא נכנס.</li>
+                <li>קרב פיזי (בופר) אופציונלי ומחייב תדריך קודם. רוב הסכסוכים נפתרים במילים ובמחוות.</li>
+                <li>מילת בטיחות: <em>"עצור"</em> — עוצרת את הסצנה מיד. <em>"השהה"</em> — יציאה לרגע מהקשר.</li>
+              </ul>
+            </article>
+
+            <article class="rule-block reveal" data-reveal>
+              <h3 class="rule-block-title">הגיליון והדמות</h3>
+              <ul class="rule-list">
+                <li>כל שחקן מקבל תיק דמות סגור בכניסה. אין לפתוח תיק של שחקן אחר.</li>
+                <li>יש להישאר בדמות לאורך כל המשחק (In-Character), למעט אזורים מסומנים כ"מחוץ למשחק".</li>
+                <li>הסודות בתיק הדמות שלכם הם שלכם — שתפו אותם בשעה ובדרך שתבחרו.</li>
+                <li>אין להמציא מידע שאינו בתיק הדמות. אם יש ספק — פנו לצוות המשחק.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="documents reveal" data-reveal>
+            <h3 class="documents-title">מסמכים להורדה</h3>
+            <ul class="doc-list">
+              <li>
+                <a href="docs/eldhar-rulebook.pdf" download class="doc-link">
+                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 V15 M7 10 L12 15 L17 10 M5 19 H19" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                  <span class="doc-text"><strong>חוקת המשחק המלאה</strong><span>כל החוקים, מערכת המאפיינים ומנגנון ההכרעה · PDF 1.4MB</span></span>
+                  <span class="doc-cta" aria-hidden="true">הורדה</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/eldhar-character-guide.pdf" download class="doc-link">
+                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 V15 M7 10 L12 15 L17 10 M5 19 H19" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                  <span class="doc-text"><strong>מדריך הדמות</strong><span>כיצד לבנות דמות, לכתוב רקע ולהגיע מוכנים · PDF 820KB</span></span>
+                  <span class="doc-cta" aria-hidden="true">הורדה</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/eldhar-map.pdf" download class="doc-link">
+                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 V15 M7 10 L12 15 L17 10 M5 19 H19" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                  <span class="doc-text"><strong>מפת היער והאספה</strong><span>מפת האתר, נקודות העצירה ואזורי "מחוץ למשחק" · PDF 640KB</span></span>
+                  <span class="doc-cta" aria-hidden="true">הורדה</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/eldhar-registration.pdf" download class="doc-link">
+                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 V15 M7 10 L12 15 L17 10 M5 19 H19" stroke="currentColor" stroke-width="1.6" /></svg></span>
+                  <span class="doc-text"><strong>טופס הרשמה ובריאות</strong><span>פרטים אישיים, נתוני בריאות ואישור השתתפות · PDF 310KB</span></span>
+                  <span class="doc-cta" aria-hidden="true">הורדה</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           REGISTRATION
+      ============================================================ -->
+      <section class="section section-register" id="register" aria-labelledby="registerHeading">
+        <div class="register-bg" aria-hidden="true"></div>
+        <div class="section-inner register-inner">
+          <header class="section-head reveal" data-reveal>
+            <p class="eyebrow">הַרְשָׁמָה</p>
+            <h2 class="section-heading register-heading" id="registerHeading">המקומות מוגבלים</h2>
+            <div class="gold-rule" aria-hidden="true"></div>
+          </header>
+
+          <div class="register-body reveal" data-reveal>
+            <p class="prose-dark">
+              המשחק מיועד ל־60 משתתפים בלבד, לשמירת עומק העלילה והאינטימיות. ההרשמה נפתחת
+              שישה חודשים לפני האירוע ונסגרת עם מילוי המקומות. מועד מוקדם — הנחה במחיר.
+            </p>
+
+            <div class="register-price">
+              <div class="price-box">
+                <span class="price-label">מחיר מוקדם</span>
+                <span class="price-amount">150 ₪</span>
+                <span class="price-note">עד 1 באוגוסט</span>
+              </div>
+              <div class="price-box price-box-full">
+                <span class="price-label">מחיר מלא</span>
+                <span class="price-amount">180 ₪</span>
+                <span class="price-note">מ־2 באוגוסט ואילך</span>
+              </div>
+            </div>
+
+            <p class="register-deadline">
+              ההרשמה נסגרת ב־7 בנובמבר 2026 או עם מילוי המקומות — המוקדם מביניהם.
+            </p>
+
+            <div class="register-cta">
+              <a href="docs/eldhar-registration.pdf" download class="btn btn-weathered">הורדת טופס הרשמה</a>
+              <a href="mailto:eldhar.larp@gmail.com" class="btn btn-ghost">כתבו לנו</a>
+            </div>
+            <p class="register-contact-note">שאלות? כתבו לנו — משיבים תוך יומיים.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           LOCATION (initially hidden)
+      ============================================================ -->
+      <section class="section section-stone" id="location" aria-labelledby="locationHeading">
+        <div class="section-inner">
+          <header class="section-head reveal" data-reveal>
+            <p class="eyebrow">הַמָּקוֹם</p>
+            <h2 class="section-heading" id="locationHeading">חורשת שוסטר</h2>
+            <div class="gold-rule" aria-hidden="true"></div>
+          </header>
+
+          <div class="location-locked reveal" data-reveal>
+            <p class="location-lock-text">
+              המיקום המדויק מוסתר עד להרשמה, לשמירת הפתעת העלילה. לחצו לחשיפת תצוגה כללית
+              בלבד.
+            </p>
+            <button class="btn btn-ghost" id="locationReveal" aria-expanded="false" aria-controls="locationDetails">
+              חשיפת פרטי המיקום
+            </button>
+          </div>
+
+          <div class="location-details" id="locationDetails" aria-hidden="true">
+            <p class="prose-dark location-intro">
+              האתר נבחר בקפידה: חורש עבות, דרכי עפר ושטח פתוח המאפשרים אספה, מסתור ותחנות משחק.
+              המיקום המדויק מתגלה רק לנרשמים — למניעת הצצה מראש ושמירת הפתעת העלילה.
+            </p>
+
+            <dl class="info-list location-info">
+              <div><dt>מרחק</dt><dd>כ־45 דקות נסיעה ממרכז הארץ</dd></div>
+              <div><dt>שטח</dt><dd>כ־40 דונם חורש יער, דרכי עפר ושטח פתוח</dd></div>
+              <div><dt>ניווט</dt><dd>Waze / Google Maps — קישור מדויק נשלח במייל לנרשמים</dd></div>
+              <div><dt>חניון</dt><dd>חניון סמוך לשער הכניסה, נגיש לרכב פרטי</dd></div>
+            </dl>
+
+            <figure class="location-map">
+              <img
+                src="https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="תצלום אווירי של חורשת שוסטר — חורש עבות ודרכי עפר"
+                loading="lazy"
+                width="1200"
+                height="675"
+              />
+              <figcaption>תצוגה כללית של האתר. המיקום המדויק נשלח לנרשמים בלבד.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <svg class="footer-sigil" viewBox="0 0 120 120" aria-hidden="true">
+          <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6" />
+          <path d="M60 34 V86" stroke="currentColor" stroke-width="1.5" opacity="0.7" />
+          <path d="M60 48 L48 42 M60 48 L72 42 M60 60 L44 54 M60 60 L76 54 M60 72 L46 67 M60 72 L74 67" stroke="currentColor" stroke-width="1.1" opacity="0.6" />
+        </svg>
+        <p class="footer-name">No Road Through</p>
+        <p class="footer-tag">משחק תפקידים חי</p>
+        <div class="footer-rule" aria-hidden="true"></div>
+        <p class="footer-meta">
+          <a href="mailto:eldhar.larp@gmail.com">eldhar.larp@gmail.com</a>
+          <span aria-hidden="true">·</span>
+          <span>כל הזכויות שמורות ליוצרי המשחק</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

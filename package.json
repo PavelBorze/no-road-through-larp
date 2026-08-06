@@ -1,0 +1,11 @@
+{
+  "name": "no-road-through-larp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "No Road Through — אתר תדמית סטטי למשחק תפקידים חי (LARP). פריסת RTL, ללא תלויות.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "clean": "node -e \"import('node:fs').then(f=>f.rmSync('dist',{recursive:true,force:true}))\""
+  }
+}
