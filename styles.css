@@ -1283,6 +1283,91 @@ button {
   transition-delay: 0.16s;
 }
 
+/* ---------- Draft / TBD markers (placeholder logistics) ---------- */
+.draft-note {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  max-width: 660px;
+  margin: 0 auto 2.6rem;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid var(--blood-500);
+  border-radius: 6px;
+  background: rgba(125, 32, 32, 0.12);
+  color: var(--parch-700);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  text-align: start;
+}
+.draft-note::before {
+  content: "טרם סופי";
+  flex: none;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--blood-400);
+  border: 1px solid var(--blood-500);
+  border-radius: 4px;
+  padding: 0.14em 0.5em;
+  white-space: nowrap;
+}
+.section-parchment .draft-note {
+  color: var(--ink-soft);
+  background: rgba(125, 32, 32, 0.07);
+}
+
+.tbd {
+  display: inline-block;
+  font-size: 0.6em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--blood-400);
+  border: 1px solid var(--blood-500);
+  border-radius: 4px;
+  padding: 0.12em 0.45em;
+  margin-inline-start: 0.45em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.section-parchment .tbd {
+  color: var(--blood-500);
+}
+
+/* ---------- Valley powers (secondary factions beyond the two houses) ---------- */
+.valley-powers {
+  max-width: var(--max-w);
+  margin: 3.5rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem 2.2rem;
+}
+.valley-powers-title {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: var(--gold-200);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.4rem;
+}
+.valley-power {
+  border-top: 1px solid rgba(122, 106, 58, 0.32);
+  padding-top: 1rem;
+}
+.valley-power h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: var(--gold-300);
+  margin-bottom: 0.45rem;
+}
+.valley-power p {
+  font-size: 0.95rem;
+  color: var(--parch-900);
+  line-height: 1.6;
+}
+
 /* ============================================================
    RESPONSIVE
 ============================================================ */
