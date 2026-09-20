@@ -64,7 +64,7 @@
   }
 
   /* ---------- Active section tracking ---------- */
-  var sectionIds = ["premise", "factions", "practical", "rules", "combat", "register", "location"];
+  var sectionIds = ["premise", "factions", "practical", "rules", "register", "location"];
   var navAnchors = {};
   sectionIds.forEach(function (id) {
     var a = document.querySelector('.nav-links a[href="#' + id + '"]');

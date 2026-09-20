@@ -20,6 +20,7 @@ const dist = join(root, "dist");
 
 const REQUIRED = [
   "index.html",
+  "rules/combat.html",
   "styles.css",
   "main.js",
   "assets/sigil.svg",
@@ -48,34 +49,36 @@ for (const rel of REQUIRED) {
   }
 }
 
-/* 2. HTML sanity checks */
+/* 2. HTML sanity checks — every page, not just index */
 console.log("\n2) בודק תקינות HTML");
-const html = readFileSync(join(root, "index.html"), "utf8");
+const PAGES = REQUIRED.filter((rel) => rel.endsWith(".html"));
 
-const openTags = (html.match(/<section\b/g) || []).length;
-const closeTags = (html.match(/<\/section>/g) || []).length;
-if (openTags === closeTags) ok(`תגי section מאוזנים (${openTags}/${closeTags})`);
-else fail(`תגי section לא מאוזנים: ${openTags} פתיחה מול ${closeTags} סגירה`);
+for (const page of PAGES) {
+  console.log(`  — ${page}`);
+  const html = readFileSync(join(root, page), "utf8");
 
-const navIds = [...html.matchAll(/href="#([a-z]+)"/g)].map((m) => m[1]);
-for (const id of navIds) {
-  if (new RegExp(`id="${id}"`).test(html)) {
-    ok(`עוגן ניווט #${id} קיים`);
+  const openTags = (html.match(/<section\b/g) || []).length;
+  const closeTags = (html.match(/<\/section>/g) || []).length;
+  if (openTags === closeTags) ok(`תגי section מאוזנים (${openTags}/${closeTags})`);
+  else fail(`${page}: תגי section לא מאוזנים: ${openTags} פתיחה מול ${closeTags} סגירה`);
+
+  // in-page anchors only; href="../index.html#x" is a cross-page link and is skipped
+  const navIds = [...html.matchAll(/href="#([a-z][a-z0-9-]*)"/g)].map((m) => m[1]);
+  const missing = navIds.filter((id) => !new RegExp(`id="${id}"`).test(html));
+  if (missing.length === 0) ok(`כל ${navIds.length} עוגני הניווט קיימים`);
+  else for (const id of missing) fail(`${page}: עוגן ניווט #${id} חסר id תואם`);
+
+  if (html.includes('dir="rtl"') && html.includes('lang="he"')) {
+    ok("פריסת RTL ושפה עברית מוגדרות");
   } else {
-    fail(`עוגן ניווט #${id} חסר id תואם`);
+    fail(`${page}: חסרה הגדרת dir=rtl / lang=he`);
   }
-}
 
-if (html.includes('dir="rtl"') && html.includes('lang="he"')) {
-  ok("פריסת RTL ושפה עברית מוגדרות");
-} else {
-  fail("חסרה הגדרת dir=rtl / lang=he");
+  if (/href="(\.\.\/)?styles\.css"/.test(html)) ok("קישור ל-styles.css");
+  else fail(`${page}: חסר קישור ל-styles.css`);
+  if (/src="(\.\.\/)?main\.js"/.test(html)) ok("קישור ל-main.js");
+  else fail(`${page}: חסר קישור ל-main.js`);
 }
-
-if (html.includes('href="styles.css"')) ok("קישור ל-styles.css");
-else fail("חסר קישור ל-styles.css");
-if (html.includes('src="main.js"')) ok("קישור ל-main.js");
-else fail("חסר קישור ל-main.js");
 
 /* 3. Copy to dist/ */
 console.log("\n3) בונה תיקיית dist/");
@@ -87,6 +90,8 @@ try {
     cpSync(join(root, file), join(dist, file));
     ok(file);
   }
+  cpSync(join(root, "rules"), join(dist, "rules"), { recursive: true });
+  ok("rules/");
   cpSync(join(root, "assets"), join(dist, "assets"), { recursive: true });
   ok("assets/");
   cpSync(join(root, "docs"), join(dist, "docs"), { recursive: true });
