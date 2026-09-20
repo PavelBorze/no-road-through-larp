@@ -23,9 +23,9 @@ There is **no dev server, no test runner, and no linter**. To preview, open `ind
 
 `scripts/build.mjs` is the closest thing to a test suite. It does three things, and **fails the build (exit 1)** on any problem:
 
-1. **Existence check** — every path in its `REQUIRED` array must exist. This includes the four PDFs under `docs/` (`eldhar-rulebook.pdf`, `eldhar-character-guide.pdf`, `eldhar-map.pdf`, `eldhar-registration.pdf`). The committed PDFs are placeholders; the build only checks presence, not content.
+1. **Existence check** — every path in its `REQUIRED` array must exist.
 2. **HTML sanity check** — runs over **every `.html` entry in `REQUIRED`** (currently `index.html` and `rules/combat.html`): balanced `<section>` tags, every in-page `href="#id"` has a matching `id="…"` on that same page, `dir="rtl"`/`lang="he"` are present, and `styles.css`/`main.js` are linked (either at the root or via `../`). Cross-page links like `href="../index.html#rules"` are deliberately skipped. **Add a new rules page to `REQUIRED` and it is validated automatically.**
-3. **Copy to `dist/`** — copies `index.html`, `styles.css`, `main.js`, `README.md`, `rules/`, `assets/`, `docs/`.
+3. **Copy to `dist/`** — copies `index.html`, `styles.css`, `main.js`, `README.md`, `rules/`, `assets/`.
 
 Run `npm run build` after editing markup to catch broken nav anchors, unbalanced sections, or missing files. Build output and the script's own logs are in Hebrew.
 

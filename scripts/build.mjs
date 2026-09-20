@@ -24,10 +24,6 @@ const REQUIRED = [
   "styles.css",
   "main.js",
   "assets/sigil.svg",
-  "docs/eldhar-rulebook.pdf",
-  "docs/eldhar-character-guide.pdf",
-  "docs/eldhar-map.pdf",
-  "docs/eldhar-registration.pdf",
 ];
 
 let problems = 0;
@@ -94,8 +90,6 @@ try {
   ok("rules/");
   cpSync(join(root, "assets"), join(dist, "assets"), { recursive: true });
   ok("assets/");
-  cpSync(join(root, "docs"), join(dist, "docs"), { recursive: true });
-  ok("docs/");
 } catch (err) {
   fail(`העתקה ל-dist נכשלה: ${err.message}`);
 }
