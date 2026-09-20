@@ -37,7 +37,7 @@ Everything renders from `index.html`. `main.js` is a single IIFE (vanilla ES5-st
 - the nav `<a href="#…">` links, and
 - the `sectionIds` array in `main.js` (used for active-nav-link highlighting via IntersectionObserver).
 
-The build validates HTML ↔ nav, but **it does not check `main.js`** — if you add, remove, or rename a section, update `sectionIds` in `main.js` by hand or active-link tracking silently breaks. Current sections: `hero`, `premise`, `factions`, `practical`, `rules`, `register`, `location`.
+The build validates HTML ↔ nav, but **it does not check `main.js`** — if you add, remove, or rename a section, update `sectionIds` in `main.js` by hand or active-link tracking silently breaks. Current sections: `hero`, `premise`, `factions`, `practical`, `rules`, `combat`, `register`, `location`.
 
 `main.js` responsibilities (all guarded so missing elements no-op):
 - Reveal-on-scroll: elements marked `data-reveal` get `.is-visible` when they enter the viewport (falls back to always-visible without IntersectionObserver).

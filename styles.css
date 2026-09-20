@@ -1464,6 +1464,127 @@ button {
 /* ============================================================
    REDUCED MOTION
 ============================================================ */
+/* ============================================================
+   COMBAT RULES
+============================================================ */
+.safety-call {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  padding: 1.6rem 1.8rem;
+  border: 1px solid var(--blood-500);
+  border-radius: 6px;
+  background: rgba(125, 32, 32, 0.14);
+}
+.safety-call-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--blood-400);
+  margin-bottom: 0.45rem;
+}
+.safety-call-word {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
+  color: var(--parch-300);
+  margin-bottom: 1.1rem;
+}
+.safety-call .rule-list li::before {
+  color: var(--blood-400);
+}
+
+.combat-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.combat-group {
+  border: 1px solid rgba(184, 148, 90, 0.2);
+  background: rgba(22, 30, 23, 0.5);
+}
+
+.combat-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.05rem 1.6rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gold-300);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.combat-summary::-webkit-details-marker {
+  display: none;
+}
+.combat-summary::before {
+  content: "";
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-inline-start: 1.5px solid var(--gold-500);
+  border-block-end: 1.5px solid var(--gold-500);
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+}
+.combat-group[open] > .combat-summary::before {
+  transform: rotate(-45deg);
+}
+.combat-summary:hover {
+  background: rgba(184, 148, 90, 0.07);
+  color: var(--gold-200);
+}
+.combat-summary:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: -2px;
+}
+
+.combat-body {
+  padding: 0.3rem 1.6rem 1.6rem;
+  border-block-start: 1px solid rgba(184, 148, 90, 0.16);
+}
+.combat-body > .rule-list {
+  padding-block-start: 1.2rem;
+}
+
+.ability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.3rem;
+  margin-block-start: 1.6rem;
+}
+.ability-card {
+  padding: 1.4rem 1.3rem;
+  background: rgba(10, 14, 11, 0.5);
+  border: 1px solid rgba(184, 148, 90, 0.16);
+}
+.ability-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gold-400);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(184, 148, 90, 0.18);
+}
+
+@media (max-width: 560px) {
+  .safety-call {
+    padding: 1.3rem 1.2rem;
+  }
+  .combat-summary {
+    padding: 0.95rem 1.1rem;
+    font-size: 1rem;
+  }
+  .combat-body {
+    padding: 0.3rem 1.1rem 1.3rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1 !important;
@@ -1476,6 +1597,10 @@ button {
   .hero-title,
   .scroll-cue {
     animation: none !important;
+  }
+  .combat-summary,
+  .combat-summary::before {
+    transition: none !important;
   }
   html {
     scroll-behavior: auto;
