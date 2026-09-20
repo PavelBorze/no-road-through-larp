@@ -912,27 +912,7 @@ button {
 /* ============================================================
    RULES & DOCUMENTS
 ============================================================ */
-.rules-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.6rem;
-  margin-bottom: 3.5rem;
-}
 
-.rule-block {
-  padding: 1.8rem 1.6rem;
-  background: rgba(22, 30, 23, 0.5);
-  border: 1px solid rgba(184, 148, 90, 0.2);
-}
-.rule-block-title {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--gold-300);
-  margin-bottom: 1.1rem;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid rgba(184, 148, 90, 0.22);
-}
 .rule-list {
   display: flex;
   flex-direction: column;
