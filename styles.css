@@ -1447,10 +1447,6 @@ button {
 /* ============================================================
    RULES PAGES (standalone documents)
 ============================================================ */
-.documents-library {
-  margin-bottom: 3.2rem;
-}
-
 .doc-page {
   background: var(--forest-950);
 }
