@@ -1566,7 +1566,8 @@ button {
 
 /* ---------- Safety call ---------- */
 .safety-call {
-  margin: 0 0 3rem;
+  margin: 3rem 0 0;
+  scroll-margin-top: calc(var(--nav-h) + 1.5rem);
   padding: 1.6rem 1.8rem;
   border: 1px solid var(--blood-500);
   border-radius: 6px;
