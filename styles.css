@@ -1545,6 +1545,25 @@ button {
   border-bottom: 1px solid rgba(184, 148, 90, 0.22);
 }
 
+.premise-more {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.doc-prose .doc-section p {
+  color: var(--parch-900);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  opacity: 0.92;
+}
+.doc-prose .doc-section p + p {
+  margin-top: 1.15em;
+}
+.doc-prose .doc-section strong {
+  color: var(--gold-200);
+  font-weight: 500;
+}
+
 .doc-back {
   margin-top: 3.5rem;
   padding-top: 2rem;

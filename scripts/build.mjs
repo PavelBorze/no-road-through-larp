@@ -21,6 +21,7 @@ const dist = join(root, "dist");
 const REQUIRED = [
   "index.html",
   "rules/combat.html",
+  "story/background.html",
   "styles.css",
   "main.js",
   "assets/sigil.svg",
@@ -88,6 +89,8 @@ try {
   }
   cpSync(join(root, "rules"), join(dist, "rules"), { recursive: true });
   ok("rules/");
+  cpSync(join(root, "story"), join(dist, "story"), { recursive: true });
+  ok("story/");
   cpSync(join(root, "assets"), join(dist, "assets"), { recursive: true });
   ok("assets/");
 } catch (err) {
