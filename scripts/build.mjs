@@ -21,6 +21,7 @@ const dist = join(root, "dist");
 const REQUIRED = [
   "index.html",
   "rules/combat.html",
+  "rules/magic.html",
   "story/background.html",
   "styles.css",
   "main.js",

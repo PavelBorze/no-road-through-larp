@@ -1564,6 +1564,46 @@ button {
   font-weight: 500;
 }
 
+.doc-subhead {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: var(--gold-400);
+  margin: 1.8rem 0 0.9rem;
+}
+
+.doc-table-wrap {
+  overflow-x: auto;
+  margin: 1.4rem 0;
+  border: 1px solid rgba(184, 148, 90, 0.2);
+}
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.doc-table th,
+.doc-table td {
+  padding: 0.7rem 1rem;
+  text-align: start;
+  border-bottom: 1px solid rgba(184, 148, 90, 0.14);
+  white-space: nowrap;
+}
+.doc-table th {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--gold-300);
+  background: rgba(22, 30, 23, 0.6);
+}
+.doc-table td {
+  color: var(--parch-900);
+  opacity: 0.9;
+}
+.doc-table tbody tr:last-child th,
+.doc-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 .doc-back {
   margin-top: 3.5rem;
   padding-top: 2rem;
