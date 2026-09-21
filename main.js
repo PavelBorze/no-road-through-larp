@@ -141,7 +141,7 @@
       var open = locDetails.classList.toggle("is-open");
       locBtn.setAttribute("aria-expanded", open ? "true" : "false");
       locDetails.setAttribute("aria-hidden", open ? "false" : "true");
-      locBtn.textContent = open ? "הסתרת פרטי המיקום" : "חשיפת פרטי המיקום";
+      locBtn.textContent = open ? "הסתרת הפרטים" : "פרטי המיקום וההגעה";
     });
   }
 })();
