@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="מקצועות ויכולות מיוחדות ב-No Road Through — לוחם, ברברי, פלאדין, טבאקסי, גנב, קוסם וכוהן.‏"
+    />
+    <meta name="theme-color" content="#0a0e0b" />
+    <meta property="og:title" content="מקצועות ויכולות מיוחדות — No Road Through" />
+    <meta
+      property="og:description"
+      content="‏המקצועות והיכולות המיוחדות של המשחק.‏"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://pavelborze.github.io/no-road-through-larp/rules/classes.html" />
+    <meta property="og:site_name" content="No Road Through" />
+    <meta property="og:locale" content="he_IL" />
+    <meta
+      property="og:image"
+      content="https://pavelborze.github.io/no-road-through-larp/assets/og-image.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>מקצועות ויכולות מיוחדות — No Road Through</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/sigil.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Amatic+SC:wght@400;700&family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="doc-page">
+    <a class="skip-link" href="#doc-main">דלגו לתוכן</a>
+
+    <header class="site-nav is-scrolled" id="top">
+      <nav class="nav-inner" aria-label="ניווט ראשי">
+        <a class="nav-brand" href="../index.html" aria-label="חזרה לאתר">
+          <svg class="nav-sigil" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" />
+            <path d="M60 34 V86" stroke="currentColor" stroke-width="1.5" />
+            <path d="M60 48 L48 42 M60 48 L72 42 M60 60 L44 54 M60 60 L76 54 M60 72 L46 67 M60 72 L74 67" stroke="currentColor" stroke-width="1.1" />
+          </svg>
+          <span class="nav-brand-text">No Road Through</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../story/background.html">הרקע המלא</a></li>
+          <li><a href="../index.html#rules">חוקים ומסמכים</a></li>
+          <li><a href="../index.html#register">הרשמה</a></li>
+        </ul>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="navLinks"
+          aria-label="פתיחת תפריט"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="doc-main" id="doc-main">
+      <div class="doc-inner doc-prose">
+        <header class="doc-head reveal" data-reveal>
+          <p class="eyebrow">מִקְצוֹעוֹת</p>
+          <h1 class="doc-title">מקצועות ויכולות מיוחדות</h1>
+          <div class="gold-rule" aria-hidden="true"></div>
+          <p class="doc-lede">
+            מה כל מקצוע יכול לעשות. קראו זאת יחד עם חוקי הקרב וחוקי הקסם.
+          </p>
+        </header>
+
+        <nav class="doc-toc reveal" data-reveal aria-labelledby="tocHeading">
+          <h2 class="doc-toc-title" id="tocHeading">בעמוד זה</h2>
+          <ol class="doc-toc-list">
+            <li><a href="#general">כללים כלליים</a></li>
+            <li><a href="#fighter">לוחם (Fighter)</a></li>
+            <li><a href="#barbarian">ברברי (Barbarian)</a></li>
+            <li><a href="#paladin">פלאדין (Paladin)</a></li>
+            <li><a href="#tabaxi">סייף אקרובטי טבאקסי (Tabaxi Swashbuckler)</a></li>
+            <li><a href="#thief">גנב (Thief)</a></li>
+            <li><a href="#wizard">קוסם (Wizard)</a></li>
+            <li><a href="#cleric">כוהן (Cleric)</a></li>
+            <li><a href="#non-combat">מעמד ללא לחימה (Non-Combat)</a></li>
+          </ol>
+        </nav>
+
+      <section class="doc-section reveal" data-reveal id="general">
+        <h2 class="doc-section-title">כללים כלליים</h2>
+        <p>לכל דמות יש מקצוע ראשי. דמות רשאית להחזיק גם במיומנויות נוספות, אם קיבלה לכך אישור מפורש.</p>
+        <p>המקצועות מקנים רק את היכולות המתוארות בכללים אלה. הגזע של הדמות אינו מקנה לה יכולות מיוחדות באופן אוטומטי.</p>
+        <p>ללוחמים, ברברים, פלאדינים וסייפים אקרובטיים אין דרגות דמות. לגנבים, קוסמים וכוהנים יש דרגות ממוספרות. הדרגות קובעות את מכסת כלי הפריצה או את זמינות הלחשים ומספרם, בהתאם למקצוע. דרגות אינן משנות ישירות את הנזק של נשק או את נקודות הפגיעה הבסיסיות.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="fighter">
+        <h2 class="doc-section-title">לוחם (Fighter)</h2>
+        <p>ללוחם אין יכולת קרב מיוחדת.</p>
+        <p>לוחמים רשאים להשתמש בכל נשק, מגן ושריון שאושרו, בכפוף לכללי הקרב. נקודות הפגיעה שלהם נקבעות לפי ציודם.</p>
+        <p>מקצוע זה כולל חיילים רגילים, שומרים, שכירי חרב ולוחמים אחרים שאין להם יכולת מקצוע מיוחדת.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="barbarian">
+        <h2 class="doc-section-title">ברברי (Barbarian)</h2>
+        <p><strong>מקצוע מוגבל</strong></p>
+        <h3 class="doc-subhead">זעם (Rage)</h3>
+        <p>ברברי חייב להיות ללא שריון כדי להשתמש בזעם. להפעלת היכולת עליו להשמיע קריאות קרב רצופות וברורות במשך שבע שניות. השחקן רשאי לספור בקול או להשתמש בקריאת קרב שנקבעה לפני המשחק ואורכה שבע שניות.</p>
+        <p>במהלך שבע השניות האלה, נזק רגיל מנשק ומחצים אינו מפחית את נקודות הפגיעה של הברברי.</p>
+        <p>אם הברברי ספג לפחות פגיעה תקפה אחת שגורמת נזק בזמן הזעם, הוא נופל ל־0 נקודות פגיעה בתום שבע השניות. אחרת, מספר נקודות הפגיעה שלו נשאר כפי שהיה.</p>
+        <p>ניתן להשתמש בזעם פעם אחת בכל קרב. ברברי המשתמש ביכולת חייב להילחם בחרב או בגרזן, ואינו רשאי להשתמש בחנית.</p>
+        <p>כדי לשחק ברברי יש לעבור מבחן קרב מעשי מול אחד המאסטרים לפני המשחק.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="paladin">
+        <h2 class="doc-section-title">פלאדין (Paladin)</h2>
+        <h3 class="doc-subhead">הנחת ידיים (Lay on Hands)</h3>
+        <p>פעם אחת בכל קרב, פלאדין רשאי להשיב לדמות חיה אחרת את מלוא נקודות הפגיעה שלה.</p>
+        <p>הפלאדין מניח יד על כתפו או על פלג גופו של היעד, וקורא בבירור לאלוהות שלו לרפא את היעד. הנחת ידיים יכולה לרפא גם דמות שנמצאת ב־0 נקודות פגיעה, לרבות במהלך קרב.</p>
+        <p>פלאדין אינו רשאי להשתמש בהנחת ידיים על עצמו או על דמות מתה.</p>
+        <p>המגע הנדרש להפעלת היכולת הוא חריג לאיסור הרגיל על מגע גופני במהלך קרב.</p>
+        <p>לפלאדינים אין דרגות הטלת לחשים ואין להם יכולות נוספות להטלת לחשים, אלא אם צוין אחרת במפורש בדף הדמות שלהם.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="tabaxi">
+        <h2 class="doc-section-title">סייף אקרובטי טבאקסי (Tabaxi Swashbuckler)</h2>
+        <p><strong>מקצוע מוגבל</strong></p>
+        <h3 class="doc-subhead">זריזות חתולית (Feline Agility)</h3>
+        <p>סייף אקרובטי טבאקסי אינו רשאי להשתמש במגן או ללבוש שריון מתכת.</p>
+        <p>כל עוד הטבאקסי נלחם בפועל מול יריב אחד בדיוק, התקפות קפא״פ בנשק שאורכו מעל מטר אחד אינן גורמות לו נזק.</p>
+        <p>הזריזות החתולית מפסיקה לפעול מיד אם לוחם שלישי מצטרף בפועל לקרב, מאחד הצדדים. היכולת חוזרת לפעול כשהלוחם השלישי מתנתק ואינו מעורב עוד, והקרב חוזר להיות אחד על אחד.</p>
+        <p>היכולת אינה מגינה מפני נשק באורך מטר אחד או פחות, חצים, בריחי קשת, נשק הטלה, לחשים או השפעות אחרות.</p>
+        <p>כדי לשחק סייף אקרובטי טבאקסי יש לעבור מבחן קרב מעשי מול אחד המאסטרים לפני המשחק.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="thief">
+        <h2 class="doc-section-title">גנב (Thief)</h2>
+        <p>דמות שהמקצוע הראשי שלה הוא גנב רשאית להשתמש בכל נשק מאושר, אך אינה רשאית ללבוש שריון מתכת או להשתמש במגן.</p>
+        <p>אפשר להעניק מיומנויות גנב כמיומנויות משניות לדמויות שהמקצוע הראשי שלהן אחר. מיומנויות גנב משניות אינן מקנות באופן אוטומטי את היכולת "החיוך השני".</p>
+        <p>לגנבים יש דרגות ממוספרות הקובעות את מכסת כלי הפריצה שלהם. המכסות מוגדרות בכללי הגנבים הנפרדים.</p>
+        <h3 class="doc-subhead">פריצת מנעולים (Lockcraft)</h3>
+        <p>דמות בעלת מיומנות פריצת מנעולים רשאית לבדוק את צורות המנגנון של מנעולים רגילים ולפתוח אותם באמצעות כלי הפריצה הפיזיים הנדרשים. על הדמות להחזיק בכלים בעלי הצורות הנכונות ובכמויות הנדרשות.</p>
+        <h3 class="doc-subhead">טיפול במלכודות (Trapcraft)</h3>
+        <p>דמות בעלת מיומנות טיפול במלכודות רשאית לבדוק מלכודות ולנטרל אותן בהתאם לכללי הגנבים. מיומנות פריצת מנעולים אינה מקנה באופן אוטומטי מיומנות טיפול במלכודות.</p>
+        <h3 class="doc-subhead">החיוך השני (Second Smile)</h3>
+        <p>לכל דמות שהמקצוע הראשי שלה הוא גנב יש את היכולת "החיוך השני".</p>
+        <p>החיוך השני מאפשר לגנב לנטרל יעד מאחור.</p>
+        <p>הגנב מתקרב אל היעד מאחור, נוגע בעדינות בגב העליון שלו באמצעות פגיון ספוג מאושר למשחק שאורכו פחות מ־50 ס״מ, ואומר בבירור "Second Smile".</p>
+        <p>אסור לפגיון לגעת בצוואר או בראש. אסור לבצע תנועת דקירה או חיתוך בפועל.</p>
+        <p>ברגע המגע, גבו של היעד חייב להיות מופנה אל הגנב. אם היעד הסתובב אל הגנב לפני המגע, אי אפשר להשתמש בחיוך השני.</p>
+        <p>אסור להשתמש בחיוך השני נגד דמות שכבר משתתפת בקרב או נגד דמות שאינה משתתפת בלחימה (Non-Combat).</p>
+        <p>אם החיוך השני הופעל בהצלחה, היעד נופל מיד ל־0 נקודות פגיעה, ללא תלות בשריון שלו.</p>
+        <p><strong>דמות שירדה ל־0 נקודות פגיעה בעקבות החיוך השני אינה רשאית לדבר, לצעוק או להשמיע כל קול בתוך המשחק עד שתרופא.</strong> זהו חריג לכללים הרגילים החלים על דמויות ב־0 נקודות פגיעה. קריאות בטיחות מחוץ למשחק, כולל "חדל!", ובקשות לעזרה במציאות מותרות תמיד.</p>
+        <p>קסדה הכוללת הגנה על הצוואר מונעת את החיוך השני. אם הגנב מנסה להשתמש בחיוך השני נגד דמות החובשת קסדה כזאת, ההתקפה גורמת במקום זאת לנזק של נקודת פגיעה אחת, אינה מפילה את היעד אוטומטית ל־0 נקודות פגיעה, והיעד נעשה מודע לתקיפה.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="wizard">
+        <h2 class="doc-section-title">קוסם (Wizard)</h2>
+        <p>קוסמים משתמשים בקסם מאגי בהתאם לכללי הקסם הנפרדים.</p>
+        <p>המעגל הממוספר של הקוסם קובע אילו לחשים הוא רשאי ללמוד וכמה לחשים זמינים לו. הכנת לחשים, ספרי לחשים, הטלת לחשים, חידוש לחשים ומגילות כפופים לכללי הקסם.</p>
+        <p>לקוסמים אין יכולת קרב נוספת. הם רשאים להשתמש בנשק מאושר בהתאם לכללי הקרב הרגילים. קוסמים אינם רשאים ללבוש שריון.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="cleric">
+        <h2 class="doc-section-title">כוהן (Cleric)</h2>
+        <p>כוהנים משתמשים בקסם אלוהי בהתאם לכללי הקסם הנפרדים.</p>
+        <p>דרגת החסד הממוספרת של הכוהן קובעת באילו תפילות, ברכות וטקסים הוא רשאי להשתמש ומהי מכסת הלחשים המותרת לו.</p>
+        <p>לכוהנים אין יכולת קרב נוספת. ריפוי והשפעות אלוהיות אחרות כפופים לכללי הקסם ולתיאור של כל לחש בנפרד.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="non-combat">
+        <h2 class="doc-section-title">מעמד ללא לחימה (Non-Combat)</h2>
+        <p>דמויות מכל מקצוע מתאים יכולות לקבל מעמד של דמות שאינה משתתפת בלחימה. דמויות כאלה עונדות סרטים בצבע ירוק זרחני־חומצי על שני פרקי הידיים ופועלות לפי הוראות הדמויות ללא לחימה שבכללי הקרב. אסור להן להשתמש בנשק קפא״פ או לשאת אותו.</p>
+        <p>מעמד ללא לחימה אינו מקנה או מבטל יכולות מקצוע. דמות ללא לחימה שירדה ל־0 נקודות פגיעה אינה רשאית להמשיך להשתמש ביכולות או להטיל לחשים.</p>
+      </section>
+
+        <p class="doc-back">
+          <a href="../index.html#rules">חזרה לחוקים ומסמכים</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <svg class="footer-sigil" viewBox="0 0 120 120" aria-hidden="true">
+          <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6" />
+          <path d="M60 34 V86" stroke="currentColor" stroke-width="1.5" opacity="0.7" />
+          <path d="M60 48 L48 42 M60 48 L72 42 M60 60 L44 54 M60 60 L76 54 M60 72 L46 67 M60 72 L74 67" stroke="currentColor" stroke-width="1.1" opacity="0.6" />
+        </svg>
+        <p class="footer-name">No Road Through</p>
+        <p class="footer-tag">משחק תפקידים חי</p>
+        <div class="footer-rule" aria-hidden="true"></div>
+        <p class="footer-meta">
+          <a href="mailto:noldo.warrior@gmail.com">noldo.warrior@gmail.com</a>
+          <span aria-hidden="true">·</span>
+          <span>כל הזכויות שמורות ליוצרי המשחק</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../main.js" defer></script>
+  </body>
+</html>
