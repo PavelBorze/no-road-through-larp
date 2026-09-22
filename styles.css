@@ -492,6 +492,42 @@ button {
   }
 }
 
+.hero-epigraph {
+  position: absolute;
+  top: calc(var(--nav-h) + 2.4rem);
+  left: 2.4rem;
+  z-index: 3;
+  max-width: 252px;
+  text-align: left;
+  padding-left: 0.95rem;
+  border-left: 1px solid rgba(184, 148, 90, 0.3);
+}
+.hero-epigraph blockquote {
+  margin: 0;
+  font-style: italic;
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: var(--parch-900);
+  opacity: 0.55;
+}
+.hero-epigraph blockquote p {
+  margin: 0;
+}
+.hero-epigraph figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-500);
+  opacity: 0.75;
+}
+
+/* below this the epigraph crowds the sigil and title */
+@media (max-width: 1100px) {
+  .hero-epigraph {
+    display: none;
+  }
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
