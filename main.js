@@ -71,26 +71,43 @@
     if (a) navAnchors[id] = a;
   });
 
-  if ("IntersectionObserver" in window) {
-    var sectionObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            Object.keys(navAnchors).forEach(function (id) {
-              navAnchors[id].classList.remove("is-active");
-            });
-            if (navAnchors[entry.target.id]) {
-              navAnchors[entry.target.id].classList.add("is-active");
-            }
-          }
-        });
-      },
-      { threshold: 0.4, rootMargin: "-25% 0px -55% 0px" }
-    );
-    sectionIds.forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) sectionObserver.observe(el);
+  /* A reference line a third of the way down decides the current section.
+     The old IntersectionObserver used threshold 0.4, which a section can only
+     reach if it is short enough to fill 40% of the observer band — so tall
+     sections never fired, and whichever short one fired last kept .is-active
+     forever. Measuring against a line works at any section height. */
+  var sections = sectionIds
+    .map(function (id) {
+      return document.getElementById(id);
+    })
+    .filter(Boolean);
+
+  function updateActiveSection() {
+    var line = window.innerHeight * 0.35;
+    var current = null;
+    sections.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top <= line && r.bottom > line) current = el.id;
     });
+    Object.keys(navAnchors).forEach(function (id) {
+      if (id === current) navAnchors[id].classList.add("is-active");
+      else navAnchors[id].classList.remove("is-active");
+    });
+  }
+
+  if (sections.length) {
+    var navTicking = false;
+    var onNavScroll = function () {
+      if (navTicking) return;
+      navTicking = true;
+      window.requestAnimationFrame(function () {
+        updateActiveSection();
+        navTicking = false;
+      });
+    };
+    window.addEventListener("scroll", onNavScroll, { passive: true });
+    window.addEventListener("resize", onNavScroll);
+    updateActiveSection();
   }
 
   /* ---------- Countdown to event ---------- */

@@ -37,7 +37,7 @@ The promo page renders from `index.html`; each rulebook is its own file under `r
 
 - the `<section id="…">` in `index.html`,
 - the nav `<a href="#…">` links, and
-- the `sectionIds` array in `main.js` (used for active-nav-link highlighting via IntersectionObserver).
+- the `sectionIds` array in `main.js` (used for active-nav-link highlighting).
 
 The build validates HTML ↔ nav, but **it does not check `main.js`** — if you add, remove, or rename a section, update `sectionIds` in `main.js` by hand or active-link tracking silently breaks. Current sections: `hero`, `premise`, `factions`, `practical`, `rules`, `register`, `location`. This applies to `index.html` only; rules pages have no entry in `sectionIds`.
 
@@ -45,7 +45,8 @@ The build validates HTML ↔ nav, but **it does not check `main.js`** — if you
 
 `main.js` responsibilities (all guarded so missing elements no-op):
 - Reveal-on-scroll: elements marked `data-reveal` get `.is-visible` when they enter the viewport (falls back to always-visible without IntersectionObserver).
-- Nav scroll state (`.is-scrolled`), mobile nav toggle, active-section tracking.
+- Nav scroll state (`.is-scrolled`), mobile nav toggle, active-section tracking. Active tracking measures each section against a reference line 35% down the viewport on scroll (rAF-throttled) — **not** an IntersectionObserver threshold. A threshold is unreachable for any section taller than the observer band, so tall sections never fired and whichever short one fired last kept `.is-active` permanently.
+- **All pages share the same top nav.** The sub-page copies are generated from the one in `index.html` with `href="#x"` rewritten to `href="../index.html#x"`; keep them in sync when nav items change.
 - **Countdown timer** — the event datetime is hard-coded as `new Date("2026-11-21T10:00:00+02:00")`. Change it there.
 - Location reveal toggle (the exact venue is intentionally hidden behind a button).
 
