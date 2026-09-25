@@ -1003,13 +1003,27 @@ button {
   opacity: 0.85;
 }
 .team-meta {
-  margin-top: 0.9rem;
-  padding-top: 0.8rem;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
   border-top: 1px solid rgba(184, 148, 90, 0.16);
   width: 100%;
-  font-size: 0.78rem;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.team-meta dt {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-500);
+  opacity: 0.85;
+  margin-bottom: 0.15rem;
+}
+.team-meta dd {
+  font-size: 0.8rem;
+  line-height: 1.55;
   color: var(--parch-900);
-  opacity: 0.55;
+  opacity: 0.6;
 }
 
 .rule-list {
