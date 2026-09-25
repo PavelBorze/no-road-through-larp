@@ -730,106 +730,10 @@ button {
 /* ============================================================
    FACTIONS
 ============================================================ */
-.factions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.6rem;
-}
-
-.faction-card {
-  position: relative;
-  padding: 2.2rem 1.8rem 2rem;
-  background: linear-gradient(180deg, var(--forest-800) 0%, var(--forest-900) 100%);
-  border: 1px solid rgba(184, 148, 90, 0.25);
-  text-align: center;
-  transition: transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
-}
-.faction-card::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border: 1px solid rgba(184, 148, 90, 0.1);
-  pointer-events: none;
-  transition: border-color 0.5s ease;
-}
-.faction-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(184, 148, 90, 0.5);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
-}
-.faction-card:hover::before {
-  border-color: rgba(184, 148, 90, 0.22);
-}
-
-.faction-shield {
-  position: relative;
-  width: 84px;
-  height: 100px;
-  margin: 0 auto 1.2rem;
-  color: var(--gold-400);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.faction-shield svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-.faction-glyph {
-  position: relative;
-  z-index: 1;
-  font-family: var(--font-hand);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  color: var(--gold-200);
-  opacity: 0.8;
-}
-
-.faction-name {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--gold-300);
-  margin-bottom: 0.3rem;
-}
-.faction-motto {
-  font-family: var(--font-hand);
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--parch-900);
-  opacity: 0.85;
-  margin-bottom: 1rem;
-  letter-spacing: 0.04em;
-}
-.faction-desc {
-  font-size: 0.96rem;
-  color: var(--parch-900);
-  opacity: 0.88;
-  line-height: 1.7;
-  margin-bottom: 1.3rem;
-}
-.faction-creed {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid rgba(184, 148, 90, 0.2);
-}
-.faction-creed li {
-  font-size: 0.88rem;
-  color: var(--gold-300);
-  letter-spacing: 0.03em;
-  opacity: 0.85;
-}
 
 /* ============================================================
    PRACTICAL / PARCHMENT
 ============================================================ */
-
-
 
 .info-list {
   display: flex;
@@ -1519,9 +1423,6 @@ button {
   color: var(--blood-500);
 }
 
-/* ---------- Valley powers (secondary factions beyond the two houses) ---------- */
-
-
 /* ============================================================
    RESPONSIVE
 ============================================================ */
@@ -1564,10 +1465,7 @@ button {
     font-size: 0.88rem;
   }
 
-  .factions-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
+  
 
   .schedule-list li {
     gap: 0.8rem;
