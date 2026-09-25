@@ -1671,6 +1671,25 @@ button {
   border-bottom: 0;
 }
 
+.doc-lead {
+  margin-bottom: 2.4rem;
+  padding-bottom: 1.7rem;
+  border-bottom: 1px solid rgba(184, 148, 90, 0.16);
+}
+.doc-prose .doc-lead p {
+  color: var(--parch-900);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  opacity: 0.92;
+}
+.doc-prose .doc-lead p + p {
+  margin-top: 1.15em;
+}
+.doc-prose .doc-lead strong {
+  color: var(--gold-200);
+  font-weight: 500;
+}
+
 .doc-back {
   margin-top: 3.5rem;
   padding-top: 2rem;

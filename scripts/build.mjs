@@ -23,6 +23,7 @@ const REQUIRED = [
   "rules/combat.html",
   "rules/magic.html",
   "rules/classes.html",
+  "rules/races.html",
   "story/background.html",
   "styles.css",
   "main.js",
