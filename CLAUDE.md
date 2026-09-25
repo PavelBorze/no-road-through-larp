@@ -51,6 +51,7 @@ The build validates HTML ↔ nav, but **it does not check `main.js`** — if you
 
 `styles.css` conventions:
 - Design tokens (colors, fonts, widths) are CSS custom properties in `:root` — forest greens, old gold, blood red, parchment, ink. **Use these variables; don't hardcode hex values.**
+- **One deliberate exception:** each page carries a small inline `<style>` in its `<head>`, above the stylesheet links, setting the body background and the three sigil sizes/colours as literal hex. Without it a cold-cache visitor gets a full-viewport link-blue sigil on white until `styles.css` arrives — the inline `<svg>`s have no `width`/`height` attributes and sit inside an `<a>`, so unstyled they fill the viewport and inherit the UA link colour. It cannot use `var(--…)` because those live in the stylesheet that has not loaded yet. Keep the values in sync with `styles.css`.
 - Organized in labeled `/* ---------- section ---------- */` blocks. Responsive breakpoints at `880px` and `560px`, plus a `prefers-reduced-motion` block that disables reveal animations — preserve that when adding motion.
 
 ## Conventions
