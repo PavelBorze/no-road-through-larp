@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="חוקי הגנבים של No Road Through: פריצת מנעולים, מלכודות, נפחות, החיוך השני וגניבה.‏"
+    />
+    <meta name="theme-color" content="#0a0e0b" />
+    <meta property="og:title" content="חוקי גנבים — נוסח מלא — No Road Through" />
+    <meta
+      property="og:description"
+      content="‏פריצת מנעולים, מלכודות, החיוך השני וגניבה.‏"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://pavelborze.github.io/no-road-through-larp/rules/thieves.html" />
+    <meta property="og:site_name" content="No Road Through" />
+    <meta property="og:locale" content="he_IL" />
+    <meta
+      property="og:image"
+      content="https://pavelborze.github.io/no-road-through-larp/assets/og-image.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      /* First-paint fallback. Without it a cold-cache visitor sees the inline
+         sigils at full viewport size in the UA default link blue, on white,
+         until styles.css arrives. */
+      body { margin: 0; background: #0a0e0b; color: #e0cda0; }
+      .nav-sigil { width: 28px; color: #b8945a; }
+      .hero-sigil { width: clamp(70px, 12vw, 110px); color: #b8945a; }
+      .footer-sigil { width: 48px; color: #9c8750; }
+    </style>
+    <title>חוקי גנבים — נוסח מלא — No Road Through</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/sigil.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Amatic+SC:wght@400;700&family=Pirata+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="doc-page">
+    <a class="skip-link" href="#doc-main">דלגו לתוכן</a>
+
+    <header class="site-nav is-scrolled" id="top">
+      <nav class="nav-inner" aria-label="ניווט ראשי">
+        <a class="nav-brand" href="../index.html" aria-label="חזרה לאתר">
+          <svg class="nav-sigil" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" />
+            <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.4" fill="none" />
+            <path d="M16 76 L20 52 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" />
+            <path d="M80 76 L84 52 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" />
+          </svg>
+          <span class="nav-brand-text">No Road Through</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#premise">הקדמה</a></li>
+          <li><a href="../story/background.html">הרקע המלא</a></li>
+          <li><a href="../index.html#factions">קבוצות</a></li>
+          <li><a href="../index.html#practical">לוח זמנים</a></li>
+          <li><a href="../index.html#rules">חוקים ומסמכים</a></li>
+          <li><a href="../index.html#register">הרשמה</a></li>
+        </ul>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="navLinks"
+          aria-label="פתיחת תפריט"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="doc-main" id="doc-main">
+      <div class="doc-inner doc-prose">
+        <header class="doc-head reveal" data-reveal>
+          <p class="eyebrow">גַּנָּבִים</p>
+          <h1 class="doc-title">חוקי גנבים — נוסח מלא</h1>
+          <div class="gold-rule" aria-hidden="true"></div>
+          <p class="doc-lede">
+            מנעולים, כלי פריצה, מלכודות והחיוך השני.
+          </p>
+        </header>
+
+        <nav class="doc-toc reveal" data-reveal aria-labelledby="tocHeading">
+          <h2 class="doc-toc-title" id="tocHeading">בעמוד זה</h2>
+          <ol class="doc-toc-list">
+            <li><a href="#general">כללים כלליים</a></li>
+            <li><a href="#locks">מנעולים ופריצתם</a></li>
+            <li><a href="#keys">מפתחות ונפחות</a></li>
+            <li><a href="#traps">מלכודות</a></li>
+            <li><a href="#magic-locks">מנעולים קסומים</a></li>
+            <li><a href="#second-smile">החיוך השני (Second Smile)</a></li>
+            <li><a href="#stealing">גניבה</a></li>
+            <li><a href="#safety">בטיחות</a></li>
+          </ol>
+        </nav>
+
+      <section class="doc-section reveal" data-reveal id="general">
+        <h2 class="doc-section-title">כללים כלליים</h2>
+        <p>יכולות גנב זמינות רק לדמויות שיכולות אלה הוענקו להן במפורש בדף הדמות. החזקת ציוד גנבים אינה מעניקה את הזכות להשתמש בו.</p>
+        <p>היכולות הבאות נפרדות זו מזו:</p>
+        <ul class="rule-list">
+          <li><strong>פריצת מנעולים (Lockcraft):</strong> פתיחת מנעולים באמצעות כלי פריצה.</li>
+          <li><strong>טיפול במלכודות (Trapcraft):</strong> בדיקה בטוחה של מנעולים ועקיפת מלכודות.</li>
+          <li><strong>החיוך השני (Second Smile):</strong> יכולת התנקשות מיוחדת.</li>
+        </ul>
+        <p><strong>נפחות (Blacksmithing)</strong> היא יכולת נפרדת, הזמינה לדמויות מסוימות, ובהן חלק מהגמדים. היא מאפשרת לייצר כלי פריצה ולהעתיק מפתחות. נפחות אינה יכולת גנב.</p>
+        <p>דמות רשאית להחזיק בכל שילוב של יכולות אלה, אם מנהלי המשחק העניקו לה אותן.</p>
+        <p>יכולות גנב אינן מתירות גניבת חפצים מחוץ למשחק או התעלמות מחוקי הקרב והבטיחות.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="locks">
+        <h2 class="doc-section-title">מנעולים ופריצתם</h2>
+        <p>כל מנעול במשחק מיוצג באמצעות דף נייר מקופל, שעל צדו החיצוני מופיע סמל של חור מנעול. רצף של צורות גאומטריות המודפס בצדו הפנימי מייצג את מנגנון המנעול.</p>
+        <p>פתיחת קיפול הנייר והתבוננות במנגנון נחשבות לניסיון פריצה. כל מלכודת רלוונטית מופעלת מיד, אלא אם לדמות יש את ההגנה הנדרשת.</p>
+        <p class="doc-minor">מלכודות רגילות</p>
+        <p>אם תיאור מלכודת מודפס מעל המנגנון, דמות שפותחת את הנייר סופגת את ההשפעה המפורטת בו, אלא אם יש לה יכולת טיפול במלכודות או שהיא נתונה להשפעת הלחש <em>הגנה ממלכודות (Protection from Traps)</em>.</p>
+        <p class="doc-minor">מלכודות קסומות</p>
+        <p>אם תיאור של מלכודת קסומה מודפס מעל המנגנון, דמות שפותחת את הנייר סופגת את ההשפעה המפורטת בו, אלא אם יש לה גם יכולת טיפול במלכודות וגם לחש <em>הגנה ממלכודות</em> פעיל.</p>
+        <p class="doc-minor">הגנה קסומה</p>
+        <p>אם מתחת למנגנון מצוינת הגנה קסומה, קוסם חייב להטיל על המנעול את הלחש <em>הסרת הגנה קסומה (Remove Magic Protection)</em> לפני שניתן לפתוח אותו בכלי פריצה.</p>
+        <p class="doc-minor">פתיחת מנעול במפתח</p>
+        <p>מפתח מקורי או העתק תקין פותחים את המנעול המתאים ללא צורך ביכולת פריצת מנעולים.</p>
+        <p>פתיחת מנעול במפתח תקין אינה מפעילה מלכודות רגילות או קסומות ואינה מחייבת להסיר הגנה קסומה. אין צורך לפתוח את קיפול הנייר.</p>
+        <p class="doc-minor">פתיחת מנעול בכלי פריצה</p>
+        <p>רק דמות בעלת יכולת פריצת מנעולים רשאית לפתוח מנעול בכלי פריצה. עליה להחזיק בשילוב כלי הפריצה הנכון ולהיות מורשית לפתוח מנעול מן הקטגוריה המתאימה.</p>
+        <p>עצם ההחזקה בכלי פריצה אינה ראיה מספקת לכך שדמות ביצעה פשע.</p>
+        <h3 class="doc-subhead">כלי פריצה</h3>
+        <p>כלי פריצה הם אביזרים פיזיים העשויים מחוט מתכת. לכל כלי צורה גאומטרית מסוימת.</p>
+        <p>כדי לפתוח מנעול, הדמות חייבת להחזיק בכלים בעלי הצורות ובכמויות המדויקות המצוינות במנגנון שלו.</p>
+        <p>לדוגמה, מנעול שעליו מסומנים שני משולשים וריבוע אחד מחייב שני כלי פריצה משולשים וכלי פריצה מרובע אחד.</p>
+        <p>כלי הפריצה ניתנים לשימוש חוזר. הם אינם מתכלים או נשברים בעת פתיחת מנעול.</p>
+        <p>אפשר לקנות, להחליף, לגנוב או להחרים כלי פריצה, או לייצר אותם באמצעות דמות בעלת יכולת נפחות.</p>
+        <h3 class="doc-subhead">קטגוריות מנעולים</h3>
+        <ul class="rule-list">
+          <li><strong>מנעול פשוט:</strong> דורש כלי פריצה אחד או שניים.</li>
+          <li><strong>מנעול טוב:</strong> דורש שלושה כלי פריצה.</li>
+          <li><strong>מנעול משובח:</strong> דורש ארבעה או חמישה כלי פריצה.</li>
+          <li><strong>מנעול מיוחד:</strong> כפוף לדרישות נוספות המפורטות בתעודה שלו. יכולת פריצת מנעולים רגילה אינה עוקפת דרישות אלה.</li>
+        </ul>
+        <h3 class="doc-subhead">דרגות פריצת מנעולים</h3>
+        <p>ליכולת פריצת מנעולים שתי דרגות.</p>
+        <p class="doc-minor">דרגה ראשונה — פורץ (Burglar)</p>
+        <p>רשאי לפתוח מנעולים פשוטים וטובים בעזרת כלי הפריצה המתאימים.</p>
+        <p class="doc-minor">דרגה שנייה — רב־פורצים (Master Burglar)</p>
+        <p>רשאי לפתוח מנעולים פשוטים, טובים ומשובחים בעזרת כלי הפריצה המתאימים.</p>
+        <p>למנעולים מיוחדים עשויות להיות דרישות נוספות, ללא קשר לדרגת הדמות.</p>
+        <p>לפני פריצת מנעול בעל הגנה קסומה יש להסיר את ההגנה, ללא קשר לדרגת הדמות.</p>
+        <p>דרגת פריצת המנעולים של הדמות נקבעת בידי מנהל משחק.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="keys">
+        <h2 class="doc-section-title">מפתחות ונפחות</h2>
+        <p><strong>נפחות אינה יכולת גנב.</strong></p>
+        <p>מפתח מקורי או העתק תקין פותחים את המנעול המתאים ללא צורך ביכולת פריצת מנעולים.</p>
+        <p>דמות בעלת יכולת נפחות רשאית לייצר כלי פריצה ולהעתיק מפתחות.</p>
+        <h3 class="doc-subhead">העתקת מפתח</h3>
+        <p class="doc-minor">כאשר המפתח המקורי נמצא בידי הנפח</p>
+        <p>העתקת כל מפתח נמשכת חמש דקות. הנפח חייב להחזיק במפתח המקורי ולהישאר בסדנה שלו במשך כל זמן הייצור.</p>
+        <p class="doc-minor">ללא המפתח המקורי</p>
+        <p>לנפח חייבת להיות גישה למנעול עצמו.</p>
+        <ol class="doc-steps">
+          <li>עליו לשהות חמש דקות ליד המנעול ולבחון את המנגנון שלו.</li>
+          <li>לאחר מכן עליו לשהות חמש דקות נוספות בסדנה כדי לייצר את המפתח.</li>
+        </ol>
+        <p>בחינת מנעול ללא המפתח המקורי נחשבת לניסיון לבדוק את המנגנון שלו. מלכודות רגילות וקסומות חלות בהתאם לסעיף 2.</p>
+        <p>הנפח חייב להישאר ליד המנעול במשך כל זמן הבדיקה, ובסדנה במשך כל זמן הייצור.</p>
+        <p>מפתח מועתק חייב להיות מיוצג באמצעות אביזר משחק פיזי.</p>
+        <p>יכולת נפחות אינה מעניקה יכולת פריצת מנעולים או טיפול במלכודות.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="traps">
+        <h2 class="doc-section-title">מלכודות</h2>
+        <p>חלק מהמנעולים והמכלים מוגנים במלכודות רגילות או קסומות.</p>
+        <p>תיאור המלכודת קובע את השפעתה. במנעולי נייר מקופל, תיאור המלכודת מודפס מעל מנגנון המנעול.</p>
+        <p>דמות בעלת יכולת טיפול במלכודות נמנעת אוטומטית מהשפעתן של מלכודות רגילות כאשר היא בודקת מנעול או מנסה לפרוץ אותו. אין צורך בפעולת נטרול נפרדת.</p>
+        <p>דמות בעלת יכולת טיפול במלכודות נמנעת מהשפעתן של מלכודות קסומות רק אם היא נתונה גם להשפעת לחש <em>הגנה ממלכודות</em> פעיל.</p>
+        <p>דמות שאין לה ההגנה הנדרשת, המנסה לבדוק מנעול ממולכד או לפרוץ אותו, סופגת מיד את ההשפעה המפורטת בתיאור המלכודת.</p>
+        <p>דמות הפותחת מנעול באמצעות המפתח המקורי שלו או העתק תקין אינה מפעילה את המלכודות שלו.</p>
+        <p>יכולת טיפול במלכודות אינה מעניקה יכולת פריצת מנעולים.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="magic-locks">
+        <h2 class="doc-section-title">מנעולים קסומים</h2>
+        <p>לחלק מהמנעולים יש הגנה קסומה נוסף על המנגנון הפיזי שלהם.</p>
+        <p>אפשר לפתוח מנעול מוגן בקסם באמצעות המפתח המקורי שלו או העתק תקין, בלי להסיר את ההגנה הקסומה.</p>
+        <p>לפני ניסיון לפתוח מנעול כזה בכלי פריצה, קוסם חייב להטיל עליו את הלחש <em>הסרת הגנה קסומה</em>.</p>
+        <p>הסרת ההגנה הקסומה אינה פותחת אוטומטית את המנעול הפיזי ואינה מגינה על הדמות מפני מלכודות.</p>
+        <p>אם המנעול גם ממולכד, הדמות המנסה לפרוץ אותו חייבת להחזיק בהגנה הנדרשת מפני המלכודת, בהתאם לסעיף 2.</p>
+        <p>מנעולים מיוחדים עשויים לדרוש חפצים או פעולות נוספות המפורטים בתעודות שלהם.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="second-smile">
+        <h2 class="doc-section-title">החיוך השני (Second Smile)</h2>
+        <p>החיוך השני הוא יכולת התנקשות מיוחדת, הזמינה רק לדמויות שמנהל משחק העניק להן אותה.</p>
+        <p>היכולת נפרדת מפריצת מנעולים ומטיפול במלכודות.</p>
+        <h3 class="doc-subhead">ביצוע</h3>
+        <p>המתנקש חייב להתקרב למטרה מאחור בלי שהמטרה תבחין בו.</p>
+        <p>המתנקש משתמש בפגיון לאר״פ מאושר שאורכו אינו עולה על 50 ס״מ, ומבצע פגיעה סמלית ומבוקרת בגב העליון של המטרה.</p>
+        <p>אסור שהפגיעה תיגע בראש, בצוואר או בכל אזור פגיעה אסור אחר.</p>
+        <h3 class="doc-subhead">השפעה</h3>
+        <p>החיוך השני שבוצע בהצלחה מוריד מיד את נקודות הפגיעה של המטרה ל־0, ללא קשר לשריון שלה או למספר נקודות הפגיעה שנותרו לה.</p>
+        <p>החיוך השני הוא יכולת התנקשות, ולא התקפת נשק רגילה.</p>
+        <h3 class="doc-subhead">הגבלות</h3>
+        <ul class="rule-list">
+          <li>המתנקש חייב להימצא מאחורי המטרה בזמן ביצוע הפגיעה.</li>
+          <li>אי אפשר לבצע את החיוך השני נגד מטרה שפניה מופנות אל המתנקש.</li>
+          <li>קסדה הכוללת מגן צוואר מונעת את השפעת החיוך השני כל עוד היא חבושה.</li>
+          <li>אי אפשר להשתמש בחיוך השני נגד מטרה המשתתפת באותו רגע בקרב.</li>
+        </ul>
+        <p>ניסיון כושל או לא תקין לבצע את החיוך השני אינו גורם להשפעה מיוחדת. כל פגיעת נשק רגילה ותקינה מחושבת לפי חוקי הקרב.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="stealing">
+        <h2 class="doc-section-title">גניבה</h2>
+        <p>מותר לגנוב חפצי משחק בלבד.</p>
+        <p>גניבת חפץ משחק מחייבת להשיג אותו פיזית באמצעות פעולה המותרת במשחק.</p>
+        <p>דמות רשאית לגנוב חפצי משחק שהושארו ללא השגחה, לקחת חפצים ממכל שנפתח, או לקחת חפצים שנמסרו או נחשפו במהלך חיפוש המותר לפי חוקי המשחק.</p>
+        <p>אסור לקחת חפצים ישירות מכיסים, מנרתיקים או מבגדים של שחקן אחר ללא השתתפותו.</p>
+        <p>אין במשחק מנגנון כייסות המבוסס על מדבקות.</p>
+        <p>אסור לגנוב חפצים אישיים, כסף אמיתי, טלפונים או כל רכוש אחר שאינו חלק מהמשחק.</p>
+        <p>חפץ משחק שנגנב ממשיך להיות כפוף לכל הכללים ולדרישות התעודה החלים עליו.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="safety">
+        <h2 class="doc-section-title">בטיחות</h2>
+        <p>מותר להשתמש רק באביזרי משחק מאושרים לצורך פריצת מנעולים.</p>
+        <p>אסור לפרוץ, להזיק או לפתוח בכוח מנעולים, דלתות ומכלים אמיתיים שאינם מסומנים כחפצי משחק.</p>
+        <p>את החיוך השני יש לבצע באמצעות נשק לאר״פ מאושר ובפגיעה מבוקרת. פגיעה ממשית בצוואר או בראש אסורה.</p>
+      </section>
+
+        <p class="doc-back">
+          <a href="../index.html#rules">חזרה לחוקים ומסמכים</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <svg class="footer-sigil" viewBox="0 0 120 120" aria-hidden="true">
+          <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6" />
+          <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.7" />
+          <path d="M16 76 L20 52 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.6" />
+          <path d="M80 76 L84 52 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.6" />
+        </svg>
+        <p class="footer-name">No Road Through</p>
+        <p class="footer-tag">משחק תפקידים חי</p>
+        <div class="footer-rule" aria-hidden="true"></div>
+        <p class="footer-meta">
+          <a href="mailto:noldo.warrior@gmail.com">noldo.warrior@gmail.com</a>
+          <span aria-hidden="true">·</span>
+          <span>כל הזכויות שמורות ליוצרי המשחק</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../main.js" defer></script>
+  </body>
+</html>

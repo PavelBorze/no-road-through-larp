@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="חוקי המשחק הכלליים של No Road Through: חפצים, חיפוש, שבי, מסמכים, מוות ובטיחות.‏"
+    />
+    <meta name="theme-color" content="#0a0e0b" />
+    <meta property="og:title" content="חוקי משחק כלליים — No Road Through" />
+    <meta
+      property="og:description"
+      content="‏חפצים, חיפוש, שבי, מסמכים, מוות ובטיחות.‏"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://pavelborze.github.io/no-road-through-larp/rules/general.html" />
+    <meta property="og:site_name" content="No Road Through" />
+    <meta property="og:locale" content="he_IL" />
+    <meta
+      property="og:image"
+      content="https://pavelborze.github.io/no-road-through-larp/assets/og-image.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      /* First-paint fallback. Without it a cold-cache visitor sees the inline
+         sigils at full viewport size in the UA default link blue, on white,
+         until styles.css arrives. */
+      body { margin: 0; background: #0a0e0b; color: #e0cda0; }
+      .nav-sigil { width: 28px; color: #b8945a; }
+      .hero-sigil { width: clamp(70px, 12vw, 110px); color: #b8945a; }
+      .footer-sigil { width: 48px; color: #9c8750; }
+    </style>
+    <title>חוקי משחק כלליים — No Road Through</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/sigil.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Amatic+SC:wght@400;700&family=Pirata+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="doc-page">
+    <a class="skip-link" href="#doc-main">דלגו לתוכן</a>
+
+    <header class="site-nav is-scrolled" id="top">
+      <nav class="nav-inner" aria-label="ניווט ראשי">
+        <a class="nav-brand" href="../index.html" aria-label="חזרה לאתר">
+          <svg class="nav-sigil" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" />
+            <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.4" fill="none" />
+            <path d="M16 76 L20 52 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" />
+            <path d="M80 76 L84 52 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" />
+          </svg>
+          <span class="nav-brand-text">No Road Through</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#premise">הקדמה</a></li>
+          <li><a href="../story/background.html">הרקע המלא</a></li>
+          <li><a href="../index.html#factions">קבוצות</a></li>
+          <li><a href="../index.html#practical">לוח זמנים</a></li>
+          <li><a href="../index.html#rules">חוקים ומסמכים</a></li>
+          <li><a href="../index.html#register">הרשמה</a></li>
+        </ul>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="navLinks"
+          aria-label="פתיחת תפריט"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="doc-main" id="doc-main">
+      <div class="doc-inner doc-prose">
+        <header class="doc-head reveal" data-reveal>
+          <p class="eyebrow">כְּלָלִים</p>
+          <h1 class="doc-title">חוקי משחק כלליים</h1>
+          <div class="gold-rule" aria-hidden="true"></div>
+          <p class="doc-lede">
+            מה מותר לגעת בו, לקחת, לקרוא ולעצור.
+          </p>
+        </header>
+
+        <nav class="doc-toc reveal" data-reveal aria-labelledby="tocHeading">
+          <h2 class="doc-toc-title" id="tocHeading">בעמוד זה</h2>
+          <ol class="doc-toc-list">
+            <li><a href="#items">חפצי משחק ורכוש אישי</a></li>
+            <li><a href="#magic-items">חפצים קסומים</a></li>
+            <li><a href="#searching">חיפוש בדמויות ובמקומות</a></li>
+            <li><a href="#capture">שבי וקשירה</a></li>
+            <li><a href="#documents">מסמכים והודעות</a></li>
+            <li><a href="#death">חוסר יכולת, הוצאה להורג ומוות</a></li>
+            <li><a href="#boundaries">בטיחות פיזית וגבולות אישיים</a></li>
+            <li><a href="#safety">עצירת בטיחות</a></li>
+            <li><a href="#disputes">מחלוקות על החוקים וצוות המשחק</a></li>
+          </ol>
+        </nav>
+
+      <section class="doc-section reveal" data-reveal id="items">
+        <h2 class="doc-section-title">חפצי משחק ורכוש אישי</h2>
+        <p>חפצי משחק הם חפצים שסופקו או אושרו בידי צוות המשחק. מותר להעביר, להסתיר, להחרים או לגנוב אותם בהתאם לחוקים החלים עליהם.</p>
+        <p>אסור לגנוב, להסתיר, להזיק או להחרים רכוש אישי, פריטי תלבושת, כלי נשק או ציוד ללא הסכמת בעליהם.</p>
+        <p>מראהו של חפץ אינו מקנה לו תכונות משחק. תכונות מיוחדות חייבות להופיע בחוק מתאים או בתעודה המצורפת לחפץ.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="magic-items">
+        <h2 class="doc-section-title">חפצים קסומים</h2>
+        <p>לחלק מחפצי המשחק יש תכונות קסומות. חפץ קסום מסומן במדבקה או בתג ממוספר. כל דמות הרואה את הסימון יכולה לזהות שהחפץ קסום, אך אינה יכולה לדעת מהן תכונותיו על סמך הסימון בלבד.</p>
+        <p>תכונותיו של חפץ קסום מתגלות באמצעות לחש זיהוי. אי אפשר להשתמש בתכונותיו הקסומות לפני שהמחזיק הנוכחי זיהה אותו, או קיבל אותו מרצון מדמות שכבר זיהתה אותו.</p>
+        <p>כאשר חפץ קסום מזוהה נמכר, ניתן במתנה או מועבר מרצון בדרך אחרת, המקבל רשאי להשתמש בתכונותיו הקסומות ללא זיהוי נוסף.</p>
+        <p>כאשר חפץ קסום נגנב, מוחרם בכוח או נלקח מדמות שנמצאת ב־0 נקודות פגיעה, המחזיק החדש חייב לזהות אותו לפני שיוכל להשתמש בתכונותיו הקסומות, גם אם החפץ זוהה בעבר.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="searching">
+        <h2 class="doc-section-title">חיפוש בדמויות ובמקומות</h2>
+        <p>מותר לערוך חיפוש בדמות שאינה מסוגלת לפעול, בדמות שבויה או בדמות המסכימה לחיפוש.</p>
+        <p>השחקן העורך את החיפוש מודיע על כך. השחקן שדמותו נערכת בה חיפוש חייב לחשוף ולמסור את כל חפצי המשחק שברשותו, לרבות חפצים המוסתרים מתחת לבגדים או בתוך תיקים. חפצים שחוק או תעודה מגינים עליהם במפורש מפני גילוי או החרמה פטורים מכך.</p>
+        <p>החיפוש מתבצע בדיבור בלבד. אסור לערוך חיפוש פיזי בגופו, בבגדיו או בחפציו האישיים של שחקן אחר.</p>
+        <p>מותר לבדוק מקומות ומכלים נגישים הנמצאים בתוך המשחק. יש לפתוח מנעול משחק לפי חוקי המנעולים המתאימים. אסור לפגוע ברכוש אמיתי, לפרוץ מנעול פיזי או להיכנס לאזור שמחוץ למשחק לצורך חיפוש.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="capture">
+        <h2 class="doc-section-title">שבי וקשירה</h2>
+        <p>דמות רשאית להיכנע מרצונה, או להילקח בשבי כאשר לפי החוקים החלים עליה אין ביכולתה להתנגד.</p>
+        <p>קשירה מיוצגת באמצעות חבל רפוי וסמלי. כדי לקשור דמות, חייב להיות ברשות הקושר חבל ממשי. אסור לקשור שחקן בפועל, לגרור אותו, לדחוף אותו או להחזיק בו בכוח.</p>
+        <p>דמות קשורה אינה יכולה להשתחרר רק מפני ששוביה השאירו אותה ללא שמירה. הקשירה מסתיימת רק כאשר דמות אחרת משחררת אותה, או כאשר היא משתמשת ביכולת מאושרת המאפשרת לה להשתחרר.</p>
+        <p>שבוי בהכרה רשאי לדבר ולבצע פעולות שאינן סותרות את הקשירה או השפעות אחרות החלות עליו. כל שחקן רשאי לעזוב מצב משחק באופן מיידי מטעמי בטיחות אמיתיים.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="documents">
+        <h2 class="doc-section-title">מסמכים והודעות</h2>
+        <p>מותר לקרוא, להעתיק, להעביר, להסתיר, לגנוב ולהשמיד מסמכים רגילים הנמצאים בתוך המשחק, לרבות מסמכי מקור.</p>
+        <p>כדי להשמיד מסמך, יש למסור אותו פיזית למנחה או לאיש צוות טכני של המשחק. עד למסירת המסמך, הוא ממשיך להתקיים בעולם המשחק.</p>
+        <p>אסור לשחקנים להשמיד מסמכים פיזית בעצמם. אסור להשמיד רכוש אישי או מסמכים שסומנו במפורש כמוגנים מפני השמדה.</p>
+        <p>העתקת מידע אינה משכפלת השפעות קסומות, תעודות, מפתחות או תכונות משחק אחרות. שחקנים רשאים לכתוב מכתבים וחוזים משלהם, אך עצם כתיבתם אינה מעניקה להם תוקף מכני לפי חוקי המשחק.</p>
+        <p>ניתן לפענח מסמכים מוצפנים רק באמצעות חפץ הפענוח הייעודי.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="death">
+        <h2 class="doc-section-title">חוסר יכולת, הוצאה להורג ומוות</h2>
+        <p>דמות שירדה ל־0 נקודות פגיעה פצועה קשה, אך אינה מתה באופן אוטומטי. עליה לפעול לפי חוקי חוסר היכולת המפורטים בחוקי הקרב.</p>
+        <h3 class="doc-subhead">הוצאה להורג</h3>
+        <p>דמות חמושה רשאית להוציא להורג דמות הנמצאת ב־0 נקודות פגיעה ואינה מסוגלת להתנגד.</p>
+        <p>המוציא להורג חייב לדעת את זהותה של דמות המטרה.</p>
+        <p>לצורך הוצאה להורג, המוציא להורג מכריז: "מות, [שם הדמות]!" ומדמה מכת הוצאה להורג באמצעות נשק לארפ מאושר, בלי לגעת בשחקן האחר.</p>
+        <p>ההוצאה להורג מתבצעת מיד עם השלמת ההכרזה והדמיית המכה. דמות המטרה מתה באותו רגע.</p>
+        <p>אפשר להפריע להוצאה להורג לפני השלמתה. לאחר שהושלמה, ריפוי רגיל אינו יכול למנוע את המוות.</p>
+        <h3 class="doc-subhead">מוות והחייאה</h3>
+        <p>דמות מתה אינה רשאית לדבר, לפעול, למסור מידע או להשפיע על האירועים.</p>
+        <p>ריפוי רגיל אינו מחזיר דמות מתה לחיים.</p>
+        <p>אפשר להחזיר דמות מתה לחיים באמצעות לחש <strong>Resurrect</strong> של כוהן, בהתאם לחוקי הקסם.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="boundaries">
+        <h2 class="doc-section-title">בטיחות פיזית וגבולות אישיים</h2>
+        <p>שום פעולת משחק אינה מתירה פציעה אמיתית, מגע פיזי מסוכן, קשירה ממשית או פגיעה ברכוש.</p>
+        <p>כל שחקן רשאי לסרב למגע פיזי שאינו רצוי לו.</p>
+        <p>אלימות מינית אינה חלק מהמשחק, ואסור לדמות אותה, פיזית או מילולית.</p>
+        <p>הוראות החוק והכללים למניעת הטרדה ופגיעה מינית החלים בישראל תקפים לאורך כל המשחק.</p>
+        <p>שום חוק משחק או הוראה בדף דמות אינם גוברים על בטיחותו של שחקן. אם אינטראקציה גורמת לאי־נוחות או לאי־הבנה, אסור להסלים אותה. השחקנים רשאים לעצור את האינטראקציה ולהבהיר את המצב, או להמשיך את הסצנה במשחק מילולי במקום בפעולה פיזית.</p>
+        <p>במשחק מילולי, השחקנים מתארים את פעולות דמויותיהם בלי לבצע אותן פיזית. לדוגמה, שחקן יכול לומר: "אני אוחז בזרועך ומוביל אותך לבית המשמר", בלי לגעת בשחקן האחר. משחק מילולי אינו מעניק יכולות ואינו עוקף את חוקי המשחק. פעולה המחייבת שיתוף פעולה של הדמות האחרת עדיין כפופה לחוקים המתאימים.</p>
+        <p>כל אחד מהשחקנים רשאי לעצור את האינטראקציה בכל רגע. משחק מילולי אינו מתיר תוכן אסור, לרבות אלימות מינית.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="safety">
+        <h2 class="doc-section-title">עצירת בטיחות</h2>
+        <p>כל שחקן רשאי לקרוא <strong>"חדל!"</strong> רק כאשר מתעוררת בעיית בטיחות אמיתית ומיידית.</p>
+        <p>כל השחקנים הנמצאים בטווח שמיעה חייבים להפסיק מיד את הקרב ואת יתר פעולות המשחק. יש להוריד כלי נשק ולאפשר מתן סיוע באזור האירוע.</p>
+        <p>המשחק יתחדש רק לאחר פתרון בעיית הבטיחות ומתן האות המתאים לחידוש המשחק.</p>
+      </section>
+
+      <section class="doc-section reveal" data-reveal id="disputes">
+        <h2 class="doc-section-title">מחלוקות על החוקים וצוות המשחק</h2>
+        <p>השחקנים חייבים לפעול לפי החוקים הכתובים ולפי התעודות החלות על דמויותיהם ועל חפציהם. אסור להמציא יכולות, חריגים או השפעות מכניות.</p>
+        <p>צוות המשחק מכריע במחלוקות ומבהיר את החוקים. הכרעה לגבי אירוע מסוים אינה משנה באופן אוטומטי את החוקים הכתובים עבור כלל השחקנים.</p>
+      </section>
+
+        <p class="doc-back">
+          <a href="../index.html#rules">חזרה לחוקים ומסמכים</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <svg class="footer-sigil" viewBox="0 0 120 120" aria-hidden="true">
+          <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6" />
+          <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.7" />
+          <path d="M16 76 L20 52 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.6" />
+          <path d="M80 76 L84 52 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.6" />
+        </svg>
+        <p class="footer-name">No Road Through</p>
+        <p class="footer-tag">משחק תפקידים חי</p>
+        <div class="footer-rule" aria-hidden="true"></div>
+        <p class="footer-meta">
+          <a href="mailto:noldo.warrior@gmail.com">noldo.warrior@gmail.com</a>
+          <span aria-hidden="true">·</span>
+          <span>כל הזכויות שמורות ליוצרי המשחק</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../main.js" defer></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A static promotional website for a Hebrew LARP (live-action role-play) event, **"No Road Through"** (Hebrew site content; the event name is English). Late-medieval fantasy theme, Sword Coast / Faerûn setting. Hand-written HTML/CSS/JS with **no framework, no bundler, and no runtime dependencies** (there is no `node_modules`). Deploy target is GitHub Pages (serve the repo root, or the `dist/` produced by the build).
 
-The site is a one-page promo (`index.html`) **plus standalone long-form pages** — rulebooks under `rules/` and lore under `story/` — the rulesets are far too long to fit on the promo page. `rules/combat.html`, `rules/magic.html`, `rules/classes.html` and `rules/races.html` are the rulebooks so far (thieves and others are expected to follow); `story/background.html` is the full player-facing background, linked from the end of the `#premise` section. All pages share the single root `styles.css` and `main.js` (referenced as `../styles.css` / `../main.js` from inside those folders).
+The site is a one-page promo (`index.html`) **plus standalone long-form pages** — rulebooks under `rules/` and lore under `story/` — the rulesets are far too long to fit on the promo page. `rules/general.html`, `rules/combat.html`, `rules/magic.html`, `rules/thieves.html`, `rules/classes.html` and `rules/races.html` are the rulebooks so far (more are expected to follow); `story/background.html` is the full player-facing background, linked from the end of the `#premise` section. All pages share the single root `styles.css` and `main.js` (referenced as `../styles.css` / `../main.js` from inside those folders).
 
 This is plain HTML/CSS/vanilla JS. Do **not** introduce React, Tailwind, a bundler, or npm UI packages unless the user explicitly asks.
 
@@ -24,7 +24,7 @@ There is **no dev server, no test runner, and no linter**. To preview, open `ind
 `scripts/build.mjs` is the closest thing to a test suite. It does three things, and **fails the build (exit 1)** on any problem:
 
 1. **Existence check** — every path in its `REQUIRED` array must exist.
-2. **HTML sanity check** — runs over **every `.html` entry in `REQUIRED`** (currently `index.html`, the four pages under `rules/`, and `story/background.html`): balanced `<section>` tags, every in-page `href="#id"` has a matching `id="…"` on that same page, `dir="rtl"`/`lang="he"` are present, and `styles.css`/`main.js` are linked (either at the root or via `../`). Cross-page links like `href="../index.html#rules"` are deliberately skipped. **Add a new rules page to `REQUIRED` and it is validated automatically.**
+2. **HTML sanity check** — runs over **every `.html` entry in `REQUIRED`** (currently `index.html`, the six pages under `rules/`, and `story/background.html`): balanced `<section>` tags, every in-page `href="#id"` has a matching `id="…"` on that same page, `dir="rtl"`/`lang="he"` are present, and `styles.css`/`main.js` are linked (either at the root or via `../`). Cross-page links like `href="../index.html#rules"` are deliberately skipped. **Add a new rules page to `REQUIRED` and it is validated automatically.**
 3. **Copy to `dist/`** — copies `index.html`, `styles.css`, `main.js`, `README.md`, `rules/`, `story/`, `assets/`.
 
 Run `npm run build` after editing markup to catch broken nav anchors, unbalanced sections, or missing files. Build output and the script's own logs are in Hebrew.

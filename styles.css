@@ -1639,6 +1639,42 @@ button {
   margin: 1.8rem 0 0.9rem;
 }
 
+/* A paragraph after a list gets no margin from "p + p" — space the lists. */
+.doc-prose .doc-section .rule-list {
+  margin: 1.2rem 0;
+}
+
+/* Bold label lines in the source markdown — a step below .doc-subhead.
+   Scoped to .doc-prose .doc-section so it outranks the generic p rule. */
+.doc-prose .doc-section p.doc-minor {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gold-400);
+  margin: 1.5rem 0 0.6rem;
+  opacity: 1;
+}
+
+/* Numbered procedures. ul/ol are list-style:none globally, so say it. */
+.doc-steps {
+  list-style: decimal;
+  margin: 1.2rem 0;
+  padding-right: 1.5rem;
+}
+.doc-steps li {
+  color: var(--parch-900);
+  font-size: 0.96rem;
+  line-height: 1.75;
+  opacity: 0.9;
+  padding-right: 0.3rem;
+}
+.doc-steps li + li {
+  margin-top: 0.6rem;
+}
+.doc-steps li::marker {
+  color: var(--gold-500);
+}
+
 .doc-table-wrap {
   overflow-x: auto;
   margin: 1.4rem 0;

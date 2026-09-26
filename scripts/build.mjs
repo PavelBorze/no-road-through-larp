@@ -20,8 +20,10 @@ const dist = join(root, "dist");
 
 const REQUIRED = [
   "index.html",
+  "rules/general.html",
   "rules/combat.html",
   "rules/magic.html",
+  "rules/thieves.html",
   "rules/classes.html",
   "rules/races.html",
   "story/background.html",
