@@ -829,9 +829,17 @@ button {
 /* A standing rule, not prose — sits above the cards. */
 .teams-note {
   margin-top: -0.6rem;
+  margin-bottom: 0.45rem;
   font-size: 0.95rem;
   color: var(--gold-300);
   opacity: 0.85;
+}
+.teams-note + .teams-note {
+  margin-top: 0;
+}
+/* the last note carries the gap down to whatever follows */
+.teams-note:last-of-type {
+  margin-bottom: 1.8rem;
 }
 
 .team-group {
