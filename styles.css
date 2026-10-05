@@ -1647,6 +1647,8 @@ button {
   opacity: 0.85;
 }
 .premise-listen a {
+  /* keep each title whole so the line breaks between links, not inside one */
+  white-space: nowrap;
   color: var(--gold-300);
   border-bottom: 1px solid rgba(184, 148, 90, 0.35);
   transition: color 0.2s ease, border-color 0.2s ease;
@@ -1655,6 +1657,14 @@ button {
   color: var(--gold-200);
   border-bottom-color: var(--gold-300);
 }
+.premise-listen-tip {
+  margin-top: 0.4rem;
+  text-align: center;
+  font-size: 0.84rem;
+  color: var(--gold-400);
+  opacity: 0.62;
+}
+
 .premise-listen-sep {
   margin: 0 0.55rem;
   opacity: 0.4;
