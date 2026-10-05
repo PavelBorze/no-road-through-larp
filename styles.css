@@ -1628,6 +1628,38 @@ button {
   border-bottom: 1px solid rgba(184, 148, 90, 0.22);
 }
 
+/* The lore is also narrated — one line of links under the read button. */
+.premise-listen {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.93rem;
+  color: var(--gold-400);
+}
+.premise-listen svg {
+  width: 15px;
+  height: 15px;
+  vertical-align: -2px;
+  margin-inline-end: 0.4rem;
+  opacity: 0.75;
+}
+.premise-listen-label {
+  margin-inline-end: 0.5rem;
+  opacity: 0.85;
+}
+.premise-listen a {
+  color: var(--gold-300);
+  border-bottom: 1px solid rgba(184, 148, 90, 0.35);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.premise-listen a:hover {
+  color: var(--gold-200);
+  border-bottom-color: var(--gold-300);
+}
+.premise-listen-sep {
+  margin: 0 0.55rem;
+  opacity: 0.4;
+}
+
 .premise-more {
   margin-top: 2.5rem;
   text-align: center;
