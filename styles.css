@@ -915,6 +915,28 @@ button {
   border-radius: 4px;
   padding: 0.18em 0.6em;
 }
+/* Availability pill, sits under the player count. */
+.team-status {
+  margin-top: 0.45rem;
+  padding: 0.18em 0.6em;
+  border: 1px solid;
+  /* square-ish, to match .team-count and .team-badge above it */
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.team-status.is-full {
+  border-color: rgba(125, 32, 32, 0.75);
+  background: rgba(125, 32, 32, 0.18);
+  color: var(--parch-700);
+}
+.team-status.is-partial {
+  border-color: rgba(184, 148, 90, 0.45);
+  background: rgba(184, 148, 90, 0.1);
+  color: var(--gold-300);
+}
+
 .team-desc {
   margin-top: 1rem;
   font-size: 0.92rem;
