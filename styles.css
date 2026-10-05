@@ -1657,13 +1657,6 @@ button {
   color: var(--gold-200);
   border-bottom-color: var(--gold-300);
 }
-.premise-listen-tip {
-  margin-top: 0.4rem;
-  text-align: center;
-  font-size: 0.84rem;
-  color: var(--gold-400);
-  opacity: 0.62;
-}
 
 .premise-listen-sep {
   margin: 0 0.55rem;
