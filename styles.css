@@ -279,6 +279,8 @@ main > section:not(.hero) { position: relative; z-index: 1; background-color: va
 .step-count { font: 500 .75rem/1 var(--display-en); letter-spacing: .4em; color: var(--ember); }
 .story-copy h3 { font: 700 clamp(2.4rem,5.6vw,4.75rem)/1.08 var(--display-he); letter-spacing: -.015em; text-shadow: 0 6px 40px rgb(0 0 0 / .85); text-wrap: balance; }
 .story-copy p { font: 400 clamp(1.05rem,1.45vw,1.3rem)/1.7 var(--display-he); color: var(--bone); text-shadow: 0 2px 22px rgb(0 0 0 / .95),0 0 2px rgb(0 0 0 / .8); max-inline-size: 34ch; }
+/* All of a stage's copy sits in one [data-scrub] wrapper — see main.js. */
+.story-copy .story-text { display: grid; gap: 14px; justify-items: center; }
 .story-copy .sw { opacity: var(--o,1); transition: opacity 160ms linear; }
 @keyframes nudge { 50% { transform: translateY(4px); } }
 .story-journey.is-cinematic .story-visual { display: block; position: sticky; inset-block-start: 0; block-size: 100svh; overflow: hidden; }
