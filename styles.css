@@ -381,6 +381,8 @@ details[open] > summary .chevron { transform: rotate(180deg); }
 .faction-status::before { content: ''; inline-size: 6px; block-size: 6px; border-radius: 50%; background: currentColor; box-shadow: 0 0 8px currentColor; }
 [data-state="full"] .faction-status { color: var(--blood); background: var(--blood-fill); box-shadow: none; }
 [data-state="partial"] .faction-status { color: var(--amber); background: var(--amber-fill); box-shadow: none; }
+/* Full groups drop their count, leaving track 3 empty — let the pill span it. */
+.faction summary:not(:has(.faction-count)) .faction-status { grid-column: 3 / 5; justify-self: end; }
 .faction summary > .icon { grid-column: 5; color: var(--bone-3); transition: transform var(--mid) var(--ease-out),color var(--fast); }
 .faction:hover summary > .icon { color: var(--bone); }
 .faction[open] summary > .icon { transform: rotate(180deg); color: var(--ember); }
