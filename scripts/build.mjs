@@ -29,6 +29,7 @@ const REQUIRED = [
   "story/background.html",
   "styles.css",
   "main.js",
+  "doc.js",
   "assets/sigil.svg",
 ];
 
@@ -78,8 +79,9 @@ for (const page of PAGES) {
 
   if (/href="(\.\.\/)?styles\.css"/.test(html)) ok("קישור ל-styles.css");
   else fail(`${page}: חסר קישור ל-styles.css`);
-  if (/src="(\.\.\/)?main\.js"/.test(html)) ok("קישור ל-main.js");
-  else fail(`${page}: חסר קישור ל-main.js`);
+  /* the homepage drives main.js; the rulebooks load the smaller doc.js */
+  if (/src="(\.\.\/)?(main|doc)\.js"/.test(html)) ok("קישור לסקריפט העמוד");
+  else fail(`${page}: חסר קישור ל-main.js או ל-doc.js`);
 }
 
 /* 3. Copy to dist/ */

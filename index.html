@@ -1,700 +1,160 @@
 <!doctype html>
 <html lang="he" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="No Road Through — משחק תפקידים חי. פנטזיה בעולם פיירון, שתי מצודות, דרך סחר אחת.‏"
-    />
-    <meta name="theme-color" content="#0a0e0b" />
-    <meta property="og:title" content="No Road Through — LARP" />
-    <meta
-      property="og:description"
-      content="‏משחק תפקידים חי. פנטזיה בעולם פיירון.‏"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pavelborze.github.io/no-road-through-larp/" />
-    <meta property="og:site_name" content="No Road Through" />
-    <meta property="og:locale" content="he_IL" />
-    <meta
-      property="og:image"
-      content="https://pavelborze.github.io/no-road-through-larp/assets/og-image.jpg"
-    />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="No Road Through"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>No Road Through — משחק תפקידים חי</title>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Road Through — הדרך שנסגרה</title>
+<meta name="description" content="משחק תפקידים חי בעולם חוף החרב. שני בתי אצולה, דרך סחר חסומה ומצודה שאיש אינו מצליח להגיע אליה. 21 בנובמבר 2026, לבני 18 ומעלה.">
+<meta name="theme-color" content="#06070a">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/google-sans-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="styles.css">
+<script>
+/* The opening curtain plays once per visit, only when motion is welcome. It can never trap the page. */
+(function(d){var r=d.documentElement;r.classList.add('js','fx-ready');setTimeout(function(){if(!r.classList.contains('fx-live'))r.classList.remove('fx-ready','intro-pending')},4000);try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!sessionStorage.getItem('nrt-intro')&&localStorage.getItem('nrt-effects-paused')!=='true'){r.classList.add('intro-pending');setTimeout(function(){r.classList.remove('intro-pending')},4200)}}catch(e){}})(document);
+</script>
+<script src="assets/glow-cursor.js" defer></script>
+<script src="assets/fx.js" defer></script>
+<script src="main.js" defer></script>
+<noscript><style>.countdown,.effects-toggle{display:none}.site-header{position:relative;inset:auto;margin:16px;background:var(--ink-1)}</style></noscript>
+</head>
+<body id="top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-arrow" viewBox="0 0 256 256"><path fill="currentColor" d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></symbol>
+<symbol id="i-caret" viewBox="0 0 256 256"><path fill="currentColor" d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+<symbol id="i-out" viewBox="0 0 256 256"><path fill="currentColor" d="M197.66,197.66a8,8,0,0,1-11.32,0L72,83.31V168a8,8,0,0,1-16,0V64a8,8,0,0,1,8-8H168a8,8,0,0,1,0,16H83.31L197.66,186.34A8,8,0,0,1,197.66,197.66Z"/></symbol>
+<symbol id="i-speaker" viewBox="0 0 256 256"><path fill="currentColor" d="M160,32.25V223.69a8.29,8.29,0,0,1-3.91,7.18,8,8,0,0,1-9-.56l-65.57-51A4,4,0,0,1,80,176.16V79.84a4,4,0,0,1,1.55-3.15l65.57-51a8,8,0,0,1,10,.16A8.27,8.27,0,0,1,160,32.25ZM60,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H60a4,4,0,0,0,4-4V84A4,4,0,0,0,60,80Zm126.77,20.84a8,8,0,0,0-.72,11.3,24,24,0,0,1,0,31.72,8,8,0,1,0,12,10.58,40,40,0,0,0,0-52.88A8,8,0,0,0,186.74,100.84Zm40.89-26.17a8,8,0,1,0-11.92,10.66,64,64,0,0,1,0,85.34,8,8,0,1,0,11.92,10.66,80,80,0,0,0,0-106.66Z"/></symbol>
+<symbol id="i-up" viewBox="0 0 256 256"><path fill="currentColor" d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 256 256"><path fill="currentColor" d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 256 256"><path fill="currentColor" d="M235.54,150.21a104.84,104.84,0,0,1-37,52.91A104,104,0,0,1,32,120,103.09,103.09,0,0,1,52.88,57.48a104.84,104.84,0,0,1,52.91-37,8,8,0,0,1,10,10,88.08,88.08,0,0,0,109.8,109.8,8,8,0,0,1,10,10Z"/></symbol>
+<symbol id="g-book" viewBox="0 0 512 512"><path fill="currentColor" d="M102.53 26.063l90 345.75 289.22 23.25-90.03-345.72-289.19-23.28zm-18.968 1.406c-30.44 11.894-55.62 53.07-49.687 75.28l3.25 11.813c.654-1.722 1.345-3.44 2.063-5.157C49.102 85.688 65.734 62.636 89.56 50.5l-6-23.03zM94.44 69.187c-16.66 10.016-29.916 28.1-38 47.437-5.2 12.44-8 25.417-8.75 36.25v.03L112.56 388.5c.305-.572.593-1.148.907-1.72 10.585-19.223 27.804-37.623 51.06-48.405L94.438 69.187zM154 107.968l239.78 16.188-1.28 18.625-239.75-16.155L154 107.97zm46.03 34.407l5.657 8.875 14.188 22.313 39.03-15.25 7.595-2.938 3.97 7.094 16.28 29.124 4.313 7.72-7.438 4.717c-10.267 6.524-17.392 12.284-21.75 16.782-3.03 3.13-4.247 5.232-4.906 6.594 1.38.303 3.433.577 6.624.28 18.268-1.69 56.285-19.964 79-61.592l5.47-10.03 8.748 7.374 46 38.812 11.532 9.72-13.844 6-33.28 14.374c5.447 4.925 11.436 5.916 18.436 5.406 9.95-.724 21.427-6.07 29.125-11.063l10.158 15.657c-9.41 6.1-22.867 12.934-37.938 14.03-15.07 1.098-32.27-5.296-42.594-23.155l-5.25-9.095 9.625-4.156 30.44-13.157-26.033-22c-25.716 40.294-62.68 59.168-87.843 61.5-6.78.628-12.945.26-18.594-2.688-5.65-2.95-9.984-10.6-9-17.406.984-6.806 4.838-12.4 10.688-18.44 4.385-4.526 10.612-9.367 17.875-14.436l-8.188-14.656L219.5 193.75l-7.156 2.78-4.125-6.468L196 170.875c-6.308 7.158-9.485 14.528-9 21.406.654 9.28 7.854 21.054 30.594 33.69l-9.094 16.343c-25.688-14.273-38.877-31.016-40.125-48.72-1.248-17.703 9.393-33.013 23.5-44.562l8.156-6.655zm-5.968 118.188l239.782 16.156-1.25 18.655-239.78-16.188 1.25-18.625zm-24.75 96.25c-17.637 9.072-31.065 23.708-39.468 38.968-4.49 8.153-7.307 16.452-8.72 23.876l11.626 42.156 1.688.157c-3.824-27.514 11.358-60.383 41.187-80.97l-6.313-24.188zm26.22 34c-32.403 17.28-46.273 52.303-41.657 72.78l289.78 24.532c-5.298-7.743-8.625-17.827-8.592-28.313l-22.47-9.03 46.626-7.313-13.69-13.064c5.552-6.838 13.54-12.915 24.47-17.53l-274.47-22.063z"/></symbol>
+<symbol id="g-flag" viewBox="0 0 512 512"><path fill="currentColor" d="M356.688 19.188c-6.83-.032-12.837.64-18.125 1.843-24.178 5.495-36.437 21.983-50.938 41.157-14.5 19.175-31.317 40.993-62.78 47.47C195.08 115.78 154.27 108.253 91.25 78.5c-10.013 44.88-33.406 128.62-60.906 178.656 60.093 28.5 97.245 34.926 121 30.875.01 0 .02.004.03 0 21.59-5.827 34.487-20.094 47.876-43.092 17.014-29.227 32.563-72.198 60.25-123.188l16.406 8.938c-16.69 30.735-28.802 58.617-40 82.937 8.552-6.512 18.633-11.77 31.063-14.594 27.71-6.296 65.053-.495 121.655 24.75-6.932-29.276-1.885-61.913 9.875-92.218 12.686-32.69 33.038-62.907 56.28-84.03-42.595-19.553-73.152-27.554-95.124-28.282-1.01-.033-1.993-.058-2.97-.063zm127.54 14.144c-.858-.025-1.752.062-2.664.266-4.378.977-8.94 4.424-12.084 11.097L289.53 497.31h23.61L490.972 49.368c3.475-10.153-.75-15.86-6.746-16.035z"/></symbol>
+<symbol id="g-helm" viewBox="0 0 512 512"><path fill="currentColor" d="M207.47 18.875l35.968 162.25c.29 1.087.86 1.863 2.562 2.813 1.7.95 4.433 1.66 7.22 1.656 2.785-.003 5.543-.703 7.25-1.656 1.704-.954 2.276-1.75 2.56-2.813L299 18.875h-91.53zm88.936 98.03l-15.22 68.657-.06.22-.032.187c-1.747 6.52-6.404 11.432-11.5 14.28-5.096 2.848-10.738 4.026-16.344 4.03-5.606.007-11.24-1.15-16.344-4-5.104-2.847-9.782-7.784-11.53-14.31l-.032-.19-.063-.218-14.686-66.218C175 133.818 147.157 164.56 135.53 202.97c8.044 4.25 19.254 9.84 32.314 15.468 26.527 11.43 60.506 22.55 88.5 22.406 28.003-.145 61.81-11.56 88.156-23.22 13.467-5.96 24.914-11.872 32.938-16.25-12.624-39.968-42.853-71.398-81.032-84.468zm88.97 101.376c-8.365 4.538-19.865 10.487-33.313 16.44-27.522 12.18-62.797 24.673-95.625 24.843-32.838.17-68.293-12-96-23.938-13.614-5.866-25.276-11.744-33.72-16.22-.51 70.485-3.647 138.64 9.626 188.376 7.135 26.737 18.683 47.874 37.375 62.595 12.092 9.525 27.443 16.584 47.25 20.375V330.125c-28.654 16.12-67.847 2.81-81.064-30.625 8.825-22.322 30.127-33.074 50.78-33 24.583.087 48.224 15.532 48.876 45.094h.094v89h36.03l.002-87.72c-.01-.01-.023-.018-.032-.03 0-.422.022-.834.03-1.25.655-29.562 24.327-45.007 48.908-45.094 20.654-.074 41.926 10.678 50.75 33-13.204 33.403-52.324 46.702-80.97 30.656v160.47c19.544-3.867 34.6-11 46.438-20.595 18.396-14.908 29.6-36.337 36.375-63.342 12.59-50.184 8.804-118.532 8.188-188.407z"/></symbol>
+<symbol id="g-tome" viewBox="0 0 512 512"><path fill="currentColor" d="M149.688 85.625c-1.234.005-2.465.033-3.72.063-33.913.806-75.48 10.704-127.25 33.718V362.78c60.77-28.82 106.718-37.067 144.22-33.092 33.502 3.55 59.685 16.66 83.562 31.187v-242.97c-23.217-17.744-50.195-30.04-85.97-32-3.52-.192-7.142-.296-10.843-.28zm211.968 0c-3.7-.016-7.322.088-10.844.28-35.773 1.96-62.75 14.256-85.968 32v242.97c23.876-14.527 50.06-27.637 83.562-31.188 37.502-3.974 83.45 4.272 144.22 33.094V119.407c-51.77-23.014-93.337-32.912-127.25-33.72-1.255-.028-2.486-.056-3.72-.06zm5.72 261.78c-1.038-.002-2.074.017-3.095.033-4.808.075-9.43.37-13.905.843-33.932 3.597-59.603 17.976-85.53 34.44v.28c-6.554-1.99-13.02-2.37-19.408-.97-25.566-16.177-51.003-30.202-84.468-33.75-5.595-.592-11.44-.883-17.564-.842-32.04.213-71.833 9.778-124.687 35.937v42.53c60.77-28.823 106.714-37.067 144.218-33.092 18.545 1.965 34.837 6.845 49.75 13.28-4.682 6.064-9.308 13.268-13.875 21.688h117.156c-5.93-8.22-11.798-15.414-17.626-21.56 14.996-6.503 31.39-11.43 50.062-13.408 37.503-3.974 83.448 4.27 144.22 33.094v-42.53c-53.16-26.31-93.115-35.863-125.25-35.97z"/></symbol>
+<symbol id="g-compass" viewBox="0 0 512 512"><path fill="currentColor" d="M203.97 23l-18.032 4.844 11.656 43.468c-25.837 8.076-50.32 21.653-71.594 40.75L94.53 80.594l-13.218 13.22 31.376 31.374c-19.467 21.125-33.414 45.53-41.813 71.343l-42.313-11.343-4.843 18.063 42.25 11.313c-6.057 27.3-6.157 55.656-.345 83L23.72 308.78l4.843 18.064 41.812-11.22c6.693 21.225 17.114 41.525 31.25 59.876l-29.97 52.688-16.81 29.593 29.56-16.842 52.657-29.97c18.41 14.216 38.784 24.69 60.094 31.407l-11.22 41.844 18.033 4.81 11.218-41.905c27.345 5.808 55.698 5.686 83-.375l11.312 42.28 18.063-4.81-11.344-42.376c25.812-8.4 50.217-22.315 71.342-41.78l31.375 31.373 13.22-13.218-31.47-31.47c19.09-21.266 32.643-45.738 40.72-71.563l43.53 11.657 4.813-18.063-43.625-11.686c5.68-27.044 5.576-55.06-.344-82.063l43.97-11.78-4.813-18.063L440.908 197c-6.73-20.866-17.08-40.79-31.032-58.844l29.97-52.656 16.842-29.563-29.593 16.844-52.656 29.97c-17.998-13.875-37.874-24.198-58.657-30.906l11.783-44L309.5 23l-11.78 43.97c-27-5.925-55.02-6.05-82.064-.376L203.97 23zm201.56 85L297.25 298.313l-.75.437-40.844-40.875-148.72 148.72-2.186 1.25 109.125-191.75 41.78 41.78L405.532 108zm-149.686 10.594c21.858 0 43.717 5.166 63.594 15.47l-116.625 66.342-2.22 1.28-1.28 2.22-66.25 116.406c-26.942-52.04-18.616-117.603 25.03-161.25 26.99-26.988 62.38-40.468 97.75-40.468zm122.72 74.594c26.994 52.054 18.67 117.672-25.002 161.343-43.66 43.662-109.263 52.005-161.312 25.033l116.438-66.282 2.25-1.25 1.25-2.25 66.375-116.592z"/></symbol>
+<symbol id="g-swords" viewBox="0 0 512 512"><path fill="currentColor" d="M19.75 14.438c59.538 112.29 142.51 202.35 232.28 292.718l3.626 3.75.063-.062c21.827 21.93 44.04 43.923 66.405 66.25-18.856 14.813-38.974 28.2-59.938 40.312l28.532 28.53 68.717-68.717c42.337 27.636 76.286 63.646 104.094 105.81l28.064-28.06c-42.47-27.493-79.74-60.206-106.03-103.876l68.936-68.938-28.53-28.53c-11.115 21.853-24.413 42.015-39.47 60.593-43.852-43.8-86.462-85.842-130.125-125.47-.224-.203-.432-.422-.656-.625C183.624 122.75 108.515 63.91 19.75 14.437zm471.875 0c-83.038 46.28-154.122 100.78-221.97 161.156l22.814 21.562 56.81-56.812 13.22 13.187-56.438 56.44 24.594 23.186c61.802-66.92 117.6-136.92 160.97-218.72zm-329.53 125.906l200.56 200.53c-4.36 4.443-8.84 8.793-13.405 13.032L148.875 153.53l13.22-13.186zm-76.69 113.28l-28.5 28.532 68.907 68.906c-26.29 43.673-63.53 76.414-106 103.907l28.063 28.06c27.807-42.164 61.758-78.174 104.094-105.81l68.718 68.717 28.53-28.53c-20.962-12.113-41.08-25.5-59.937-40.313 17.865-17.83 35.61-35.433 53.157-52.97l-24.843-25.655-55.47 55.467c-4.565-4.238-9.014-8.62-13.374-13.062l55.844-55.844-24.53-25.374c-18.28 17.856-36.602 36.06-55.158 54.594-15.068-18.587-28.38-38.758-39.5-60.625z"/></symbol>
+</svg>
+<a class="skip-link" href="#premise">דלגו לתוכן</a>
+<div class="scroll-fuse" aria-hidden="true"><i></i></div>
+<header class="site-header">
+<a class="brand" href="#top" aria-label="No Road Through — לראש העמוד"><svg class="great-seal" width="208" height="236" viewBox="0 0 220 250" fill="none" aria-hidden="true">
+<g stroke="currentColor" stroke-width="1.4" opacity=".8">
+<path d="M87 22A96 96 0 0 0 22 114c0 53 39 93 88 113 49-20 88-60 88-113a96 96 0 0 0-65-92M110 8v37M101 21h18"/>
+<path d="M48 132V81h10V69h9v12h10v51m66 0V81h10V69h9v12h10v51M88 132V64h11V49h22v15h11v68M99 132v-24a11 11 0 0 1 22 0v24M45 141h130M50 151h120M110 74v14M62 98v15M158 98v15"/>
+<path d="M76 172 110 158l34 14-10 28-24 17-24-17ZM92 188l-12 12 17 3M128 188l12 12-17 3M87 178 62 169l-22 4M133 178l25-9 22 4M90 199l20 18 20-18"/>
+<path d="m94 177 8 4-7 4-4-4Zm32 0-8 4 7 4 4-4Z" fill="currentColor"/>
+</g></svg><span dir="ltr">NO ROAD THROUGH</span></a>
+<button class="button button-ghost button-sm menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden><span>תפריט</span><i aria-hidden="true"></i></button>
+<nav id="primary-nav" aria-label="ניווט ראשי"><span class="nav-glint" aria-hidden="true"></span><a href="#premise"><svg class="icon game-icon" aria-hidden="true"><use href="#g-book"/></svg><span>סיפור</span></a><a href="#factions"><svg class="icon game-icon" aria-hidden="true"><use href="#g-flag"/></svg><span>קבוצות</span></a><a href="#practical"><svg class="icon game-icon" aria-hidden="true"><use href="#g-helm"/></svg><span>היערכות</span></a><a href="#rules"><svg class="icon game-icon" aria-hidden="true"><use href="#g-tome"/></svg><span>חוקים</span></a><a href="#location"><svg class="icon game-icon" aria-hidden="true"><use href="#g-compass"/></svg><span>מיקום</span></a></nav>
+<a class="button button-accent button-sm header-register" href="#register">להרשמה <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</header>
+<main>
+<section class="hero" id="hero" aria-labelledby="event-title">
+<div class="hero-stage" aria-hidden="true">
+<div class="hero-depth" data-depth="far"><picture class="hero-landscape"><source media="(max-width: 600px)" srcset="assets/veyra-night-mobile.webp"><img src="assets/veyra-night.webp" width="2560" height="1440" alt="" fetchpriority="high"></picture></div>
+<canvas class="hero-rays"></canvas>
+<div class="hero-mist" data-depth="mid"><i></i><i></i><i></i></div>
+<div class="hero-atmosphere"><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i><i style="--n:9"></i><i style="--n:10"></i></div>
+<div class="hero-vignette"></div>
+</div>
+<div class="hero-content wrap">
+<p class="hero-kicker" dir="ltr" lang="en" data-reveal><span>Forgotten Realms</span><i></i><span>Uktar · 1381 DR</span></p>
+<div class="title-treatment"><h1 id="event-title" dir="ltr"><span class="title-line">NO ROAD</span><span class="title-line title-ember">THROUGH</span></h1><div class="title-embers" aria-hidden="true"><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i></div></div>
+<p class="hero-tagline" data-reveal>שני בתי אצולה. דרך סחר חסומה. <span>ומצודה שאיש אינו מצליח להגיע אליה.</span></p>
+<div class="countdown" id="countdown" role="timer" aria-live="off" aria-label="הזמן עד האירוע" dir="ltr" data-reveal>
+<div class="count-unit"><strong data-time="days">—</strong><span lang="he" dir="rtl">ימים</span></div><div class="count-unit"><strong data-time="hours">—</strong><span lang="he" dir="rtl">שעות</span></div><div class="count-unit"><strong data-time="minutes">—</strong><span lang="he" dir="rtl">דקות</span></div><div class="count-unit"><strong data-time="seconds">—</strong><span lang="he" dir="rtl">שניות</span></div>
+</div>
+<p class="hero-facts" data-reveal>שבת · <time datetime="2026-11-21"><bdi dir="ltr">21.11.2026</bdi></time><span>·</span>משחק תפקידים חי<span>·</span>מגיל 18</p>
+<div class="hero-actions" data-reveal><a class="button button-accent hero-register" href="#register" data-magnet><span>להרשמה למשחק</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="button button-ghost" href="#premise"><span>אל הסיפור</span><svg class="icon" aria-hidden="true"><use href="#i-caret"/></svg></a></div>
+</div>
+<a class="hero-scroll" href="#premise" aria-label="אל הסיפור"><span></span></a>
+</section>
 
-    <style>
-      /* First-paint fallback. Without it a cold-cache visitor sees the inline
-         sigils at full viewport size in the UA default link blue, on white,
-         until styles.css arrives. */
-      body { margin: 0; background: #0a0e0b; color: #e0cda0; }
-      .nav-sigil { width: 28px; color: #b8945a; }
-      .hero-sigil { width: clamp(70px, 12vw, 110px); color: #b8945a; }
-      .footer-sigil { width: 48px; color: #9c8750; }
-    </style>
-    <link rel="icon" type="image/svg+xml" href="assets/sigil.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Amatic+SC:wght@400;700&family=Pirata+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#premise">דלגו לתוכן</a>
+<section class="story" id="premise" aria-labelledby="story-title">
+<h2 class="sr-only" id="story-title">סיפור המשחק</h2>
+<div class="story-journey">
+<div class="story-visual" aria-hidden="true"><div class="scene-panel">
+<img class="story-image" src="assets/oath-sanctuary.webp" width="2560" height="1440" alt="" loading="lazy">
+<img class="story-image" src="assets/island-keep.webp" width="2560" height="1440" alt="" loading="lazy">
+<img class="story-image" src="assets/river-current.webp" width="2560" height="1440" alt="" loading="lazy">
+<div class="scene-shade"></div><div class="scene-arcane"></div>
+<div class="scene-embers"><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i></div>
+<div class="story-numeral" dir="ltr"><span>I</span><span>II</span><span>III</span></div>
+<ol class="story-progress"><li class="is-active"><span>השבועה</span></li><li><span>הדרך החסומה</span></li><li><span>הנהר המכושף</span></li></ol>
+</div></div>
+<div class="story-stages">
+<article class="story-step" id="story-oath" style="--story-image:url(assets/oath-sanctuary.webp)"><div class="story-copy"><span class="step-count" dir="ltr">I — III</span><h3>השבועה.</h3><div class="story-text" data-scrub><p>חודש <bdi dir="ltr">Uktar</bdi>, שנת <bdi dir="ltr">1381</bdi> <bdi dir="ltr">DR</bdi> — שנת הרעב. היבול דל, מחירי המזון מרקיעים, ודרך החוף שבין <bdi dir="ltr">Baldur&#x27;s Gate</bdi> ל־<bdi dir="ltr">Amn</bdi> חשובה מכדי להישאר חסומה.</p><p>שני בתים יריבים שולטים בעמק: <bdi dir="ltr">Valeharrow</bdi> מן המבצר <bdi dir="ltr">Harrowwatch</bdi>, ו־<bdi dir="ltr">Thornmantle</bdi> מן המבצר <bdi dir="ltr">Thornford</bdi>. שבועה עתיקה שנכרתה על שריד קדוש במקדש הנייטרלי כובלת אותם: לעולם לא לכרות שלום, לעולם לא לסייע זה לזה, לעולם לא לפעול כבעלי ברית.</p></div><a href="#story-island" class="button button-ghost button-sm story-next">הלאה בסיפור <svg class="icon" aria-hidden="true"><use href="#i-caret"/></svg></a></div></article>
+<article class="story-step" id="story-island" style="--story-image:url(assets/island-keep.webp)"><div class="story-copy"><span class="step-count" dir="ltr">II — III</span><h3>הדרך החסומה.</h3><div class="story-text" data-scrub><p>שודדים השתלטו על מצודת האי הישנה, <bdi dir="ltr">Drowned Crown Keep</bdi>, שבלב הנהר. הם מכים בשיירות ונעלמים בטרם יספיק איש לרדוף אחריהם.</p><p>סבלנותה של <bdi dir="ltr">Waterdeep</bdi> מתקרבת לקִצה. <bdi dir="ltr">Lords of Waterdeep</bdi> שלחו דבר לשני האדונים: פִּתחו מחדש את הדרך — או שתנושלו ותוגלו מאדמותיכם.</p></div><a href="#story-river" class="button button-ghost button-sm story-next">ומה מסתתר בנהר? <svg class="icon" aria-hidden="true"><use href="#i-caret"/></svg></a></div></article>
+<article class="story-step" id="story-river" style="--story-image:url(assets/river-current.webp)"><div class="story-copy"><span class="step-count" dir="ltr">III — III</span><h3>הנהר המכושף.</h3><div class="story-text" data-scrub><p>אך המים עצמם עומדים בדרך. זרם מכושף מעוות כל ניסיון להתקרב, והקסם אינו מתפקד כשורה סביב האי. איש אינו יודע כיצד לחדור אל תוך המצודה.</p><p>המשבר דורש שיתוף פעולה — בדיוק מה שהשבועה אוסרת.</p></div><a href="#factions" class="button button-accent" data-magnet><span>בחרו את הצד שלכם</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+</div></div>
+<div class="wrap story-resources"><a href="story/background.html" class="button button-accent button-lg full-premise-link"><span class="summary-mark" aria-hidden="true"><svg class="icon game-icon"><use href="#g-book"/></svg></span><span>קראו את הסיפור המלא</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><div class="audio-links"><a href="https://youtu.be/HDE1_Iu-bmU" class="button button-ghost audio-button"><svg class="icon" aria-hidden="true"><use href="#i-speaker"/></svg><span>האזנה בעברית</span></a><a href="https://youtu.be/TJtvES7LNV0" class="button button-ghost audio-button"><svg class="icon" aria-hidden="true"><use href="#i-speaker"/></svg><bdi dir="ltr">Listen in English</bdi></a></div></div>
+</section>
 
-    <!-- ============================================================
-         NAVIGATION
-    ============================================================ -->
-    <header class="site-nav" id="top">
-      <nav class="nav-inner" aria-label="ניווט ראשי">
-        <a class="nav-brand" href="#top" aria-label="חזרה לראש העמוד">
-          <svg class="nav-sigil" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" />
-            <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.4" fill="none" />
-            <path d="M16 76 L20 52 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" />
-            <path d="M80 76 L84 52 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" />
-          </svg>
-          <span class="nav-brand-text">No Road Through</span>
-        </a>
 
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#premise">הקדמה</a></li>
-          <li><a href="story/background.html">הרקע המלא</a></li>
-          <li><a href="#factions">קבוצות</a></li>
-          <li><a href="#practical">לוח זמנים</a></li>
-          <li><a href="#rules">חוקים ומסמכים</a></li>
-          <li><a href="#register">הרשמה</a></li>
-        </ul>
 
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-expanded="false"
-          aria-controls="navLinks"
-          aria-label="פתיחת תפריט"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </header>
+<section class="factions-section" id="factions" aria-labelledby="factions-title"><div class="scene-embers" aria-hidden="true"><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i></div><div class="wrap">
+<header class="section-head"><span class="ghost-word" dir="ltr" lang="en" aria-hidden="true">Factions</span><span class="section-rule" aria-hidden="true"></span><h2 id="factions-title" data-split-words>בחרו את <span class="accent">הדמות</span> שלכם.</h2></header>
+<div class="houses" data-reveal>
+<a class="house house-vale" href="#faction-01"><span class="house-crest" aria-hidden="true"><svg class="game-icon"><use href="#g-helm"/></svg></span><span class="house-name" dir="ltr">Valeharrow</span><span class="house-seat">טירת <bdi dir="ltr">Harrowwatch</bdi></span></a>
+<div class="houses-oath" aria-hidden="true"><span class="houses-river"></span><span class="houses-sigil"><svg class="game-icon"><use href="#g-swords"/></svg></span></div>
+<a class="house house-thorn" href="#faction-03"><span class="house-crest" aria-hidden="true"><svg class="game-icon"><use href="#g-flag"/></svg></span><span class="house-name" dir="ltr">Thornmantle</span><span class="house-seat">טירת <bdi dir="ltr">Thornford</bdi></span></a>
+</div>
+<div class="faction-index"><div class="faction-filters" aria-label="סינון קבוצות" hidden><span class="filter-indicator" aria-hidden="true"></span><button type="button" data-filter="all" aria-pressed="true">כל הקבוצות <span>13</span></button><button type="button" data-filter="nobles" aria-pressed="false">בתי האצולה</button><button type="button" data-filter="mercenaries" aria-pressed="false">שכירי חרב</button><button type="button" data-filter="outlaws" aria-pressed="false">השודדים</button><button type="button" data-filter="others" aria-pressed="false">תפקידים נוספים</button></div><p class="sr-only" id="filter-feedback" aria-live="polite"></p><div class="faction-group" id="nobles"><h3><span class="group-name">בתי האצולה</span><span class="group-range" dir="ltr">01—04</span></h3><details class="faction" id="faction-01" data-state="full">
+<summary><span class="faction-no" aria-hidden="true">01</span><span class="faction-identity"><span class="faction-name">משפחת <bdi dir="ltr">Valeharrow</bdi></span><span class="faction-seat">טירת <bdi dir="ltr">Harrowwatch</bdi></span></span><span class="faction-status">הקבוצה מלאה</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>בני המשפחה השלטת ב־<bdi dir="ltr">Harrowwatch</bdi> רואים בעצמם את מגיני הדרך והסדר בעמק. עליהם להתמודד עם התקפות השודדים ועם הלחץ המופעל עליהם, בלי לוותר בקלות ליריביהם שמעבר לנהר.</p><dl><div><dt>מקצועות</dt><dd>פלאדין, קוסם ולוחם</dd></div><div><dt>גזעים</dt><dd>בני אדם בלבד</dd></div></dl><p class="status-note">הקבוצה מלאה</p></div></details><details class="faction" id="faction-02" data-state="full">
+<summary><span class="faction-no" aria-hidden="true">02</span><span class="faction-identity"><span class="faction-name">אנשי טירת <bdi dir="ltr">Harrowwatch</bdi></span><span class="faction-seat">משרתים ווסאלים</span></span><span class="faction-status">הקבוצה מלאה</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>שומרים, משרתים ואנשי אמון האחראים לחיי הטירה ולהגנתה. הם נאמנים לבית <bdi dir="ltr">Valeharrow</bdi>, אך יש להם קשרים, אינטרסים ודעות משלהם.</p><dl><div><dt>מקצועות</dt><dd>כוהן אחד, דמות בעלת מיומנויות גנב, ועוד <bdi dir="ltr">1–2</bdi> לוחמים או אנשי משק הבית</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div></dl><p class="status-note">הקבוצה מלאה</p></div></details><details class="faction" id="faction-03" data-state="unlisted">
+<summary><span class="faction-no" aria-hidden="true">03</span><span class="faction-identity"><span class="faction-name">משפחת <bdi dir="ltr">Thornmantle</bdi></span><span class="faction-seat">טירת <bdi dir="ltr">Thornford</bdi></span></span><span class="faction-count"><bdi dir="ltr">3</bdi> שחקנים</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>בני המשפחה השלטת ב־<bdi dir="ltr">Thornford</bdi> נחושים לשמור על כבודם ועל עצמאותם. האיבה העתיקה לבית <bdi dir="ltr">Valeharrow</bdi> מקשה עליהם להתמודד עם הסכנות המשותפות המאיימות על העמק.</p><dl><div><dt>מקצועות</dt><dd>פלאדין, כוהן ולוחם</dd></div><div><dt>גזעים</dt><dd>בני אדם בלבד</dd></div></dl></div></details><details class="faction" id="faction-04" data-state="unlisted">
+<summary><span class="faction-no" aria-hidden="true">04</span><span class="faction-identity"><span class="faction-name">אנשי טירת <bdi dir="ltr">Thornford</bdi></span><span class="faction-seat">משרתים ווסאלים</span></span><span class="faction-count"><bdi dir="ltr">3–4</bdi> שחקנים</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>שומרים, משרתים ואנשי אמון המשרתים את בית <bdi dir="ltr">Thornmantle</bdi>. הם מכירים את העמק ואת אנשיו, ולעיתים קשריהם האישיים חוצים את גבולות הסכסוך.</p><dl><div><dt>מקצועות</dt><dd>קוסם אחד, דמות בעלת מיומנויות גנב, ועוד <bdi dir="ltr">1–2</bdi> לוחמים או אנשי משק הבית</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div></dl></div></details></div><div class="faction-group" id="mercenaries"><h3><span class="group-name">שכירי חרב</span><span class="group-range" dir="ltr">05—07</span></h3><details class="faction" id="faction-05" data-state="reserved">
+<summary><span class="faction-no" aria-hidden="true">05</span><span class="faction-identity"><span class="faction-name"><bdi dir="ltr">Flaming Fist</bdi></span><span class="faction-seat">יחידת <bdi dir="ltr">Harrowwatch</bdi></span></span><span class="faction-count"><bdi dir="ltr">5</bdi> שחקנים</span><span class="faction-status">שמור ל־<bdi dir="ltr">Bannerless</bdi></span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>יחידה מקצועית של שכירי חרב המלווה את שליח ברית הלורדים אל <bdi dir="ltr">Harrowwatch</bdi>. לאחר הגעתה תפעל בפיקודו המבצעי של הלורד המקומי, תוך שמירה על זהותה כיחידת <bdi dir="ltr">Flaming Fist</bdi>.</p><dl><div><dt>מקצועות</dt><dd>לוחמים</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים וגמדים</dd></div></dl><p class="status-note">שמור ל־<bdi dir="ltr">Bannerless</bdi></p></div></details><details class="faction" id="faction-06" data-state="reserved">
+<summary><span class="faction-no" aria-hidden="true">06</span><span class="faction-identity"><span class="faction-name"><bdi dir="ltr">Flaming Fist</bdi></span><span class="faction-seat">יחידת <bdi dir="ltr">Thornford</bdi></span></span><span class="faction-count"><bdi dir="ltr">5</bdi> שחקנים</span><span class="faction-status">שמור ל־<bdi dir="ltr">Bannerless</bdi></span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>יחידה שנייה מאותו ארגון, המלווה את השליח אל <bdi dir="ltr">Thornford</bdi>. חיילי שתי היחידות מכירים אלה את אלה, אך כעת הם מוצבים בשירותם של שני לורדים יריבים.</p><dl><div><dt>מקצועות</dt><dd>לוחמים</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים וגמדים</dd></div></dl><p class="status-note">שמור ל־<bdi dir="ltr">Bannerless</bdi></p></div></details><details class="faction" id="faction-07" data-state="reserved">
+<summary><span class="faction-no" aria-hidden="true">07</span><span class="faction-identity"><span class="faction-name"><bdi dir="ltr">Order of the Blue Boar</bdi></span><span class="faction-seat">פלוגת חוזה</span></span><span class="faction-count"><bdi dir="ltr">5</bdi> שחקנים</span><span class="faction-status">שמור ל־<bdi dir="ltr">Bannerless</bdi></span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>לוחמים ותיקים מאמן הפועלים בעמק במסגרת חוזה שכירות. הם שומרים על הנהגה משלהם ועל משמעת צבאית, וגם להם יש אינטרסים החורגים מהסכסוך המקומי.</p><dl><div><dt>מקצועות</dt><dd>לוחמים ותפקידי שכירי חרב מקצועיים</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים וחצאי־אורקים</dd></div></dl><p class="status-note">שמור ל־<bdi dir="ltr">Bannerless</bdi></p></div></details></div><div class="faction-group" id="outlaws"><h3><span class="group-name">קבוצות השודדים</span><span class="group-range" dir="ltr">08—09</span></h3><details class="faction" id="faction-08" data-state="full">
+<summary><span class="faction-no" aria-hidden="true">08</span><span class="faction-identity"><span class="faction-name">השודדים המקומיים</span><span class="faction-seat"><bdi dir="ltr">Local Outlaws</bdi></span></span><span class="faction-status">הקבוצה מלאה</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>לוחמים, גנבים ופורעי חוק מן העמק ומסביבתו. הם פושטים על שיירות ומגינים על מעוזם ב־<bdi dir="ltr">Drowned Crown Keep</bdi>. מנהיגם, ברברי מן הצפון הרחוק, מוביל אותם בפשיטות ובמאבקים על השליטה באזור.</p><dl><div><dt>מקצועות</dt><dd>ברברי אחד — מנהיג הקבוצה; כוהן אחד; דמות בעלת מיומנויות גנב; ועוד <bdi dir="ltr">3</bdi> לוחמים. לתפקיד הברברי נדרש מבחן הקרב שבחוקי המשחק</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div></dl><p class="status-note">הקבוצה מלאה</p></div></details><details class="faction" id="faction-09" data-state="full">
+<summary><span class="faction-no" aria-hidden="true">09</span><span class="faction-identity"><span class="faction-name">נציגים מן הדרום</span><span class="faction-seat"><bdi dir="ltr">Southern Operatives</bdi></span></span><span class="faction-status">הקבוצה מלאה</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>אנשי קשר בעלי ניסיון במסחר, איסוף מידע ופעילות חשאית, שהגיעו לעמק מן הדרום. הם פועלים לצד השודדים המקומיים, אך שומרים על מטרותיהם ועל זהותם הארגונית.</p><dl><div><dt>מקצועות</dt><dd><bdi dir="ltr">3</bdi> סוכנים וקוסם אחד; מקצועות הלחימה ומיומנויות הגנב ייקבעו בדפי הדמות</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div></dl><p class="status-note">הקבוצה מלאה</p></div></details></div><div class="faction-group" id="others"><h3><span class="group-name">תפקידים נוספים</span><span class="group-range" dir="ltr">10—13</span></h3><details class="faction" id="faction-10" data-state="reserved">
+<summary><span class="faction-no" aria-hidden="true">10</span><span class="faction-identity"><span class="faction-name">שליחי ברית הלורדים</span><span class="faction-seat"><bdi dir="ltr">Lords’ Alliance</bdi></span></span><span class="faction-count"><bdi dir="ltr">2</bdi> שחקנים</span><span class="faction-status">תפקידי צוות משחק</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>שליח אחד מגיע לכל אחת משתי הטירות בליווי יחידת <bdi dir="ltr">Flaming Fist</bdi>. הם מייצגים את האינטרסים של ברית הלורדים ומופקדים על הטיפול במשבר הדרך.</p><dl><div><dt>מקצועות</dt><dd>שני שליחים מדיניים; מקצועות קרב אינם מוגדרים מראש</dd></div><div><dt>גזעים</dt><dd>בני אדם וחצאי־אלפים</dd></div></dl><p class="status-note">תפקידי צוות משחק</p></div></details><details class="faction" id="faction-11" data-state="partial">
+<summary><span class="faction-no" aria-hidden="true">11</span><span class="faction-identity"><span class="faction-name">המקדש הניטרלי</span><span class="faction-seat">כוהנים</span></span><span class="faction-count"><bdi dir="ltr">1–2</bdi> שחקנים</span><span class="faction-status">כוהן אחד נלקח</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>אנשי הדת שומרים על השריד העתיק ועל מסורת השבועה של שני בתי האצולה. המקדש משמש מקום פולחן ניטרלי, ובו נערכים טקסים דתיים.</p><dl><div><dt>מקצועות</dt><dd>כוהנים</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div></dl><p class="status-note">כוהן אחד נלקח</p></div></details><details class="faction" id="faction-12" data-state="unlisted">
+<summary><span class="faction-no" aria-hidden="true">12</span><span class="faction-identity"><span class="faction-name">פונדק <bdi dir="ltr">The Broken Wheel</bdi></span><span class="faction-seat">בעלי הפונדק ועובדיו</span></span><span class="faction-count"><bdi dir="ltr">1–2</bdi> שחקנים</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>מקום מפגש ניטרלי לסוחרים, לנוסעים ולתושבי שני צדי העמק. עובדיו שומעים חדשות ושמועות מכל עבר ומארחים אנשים בעלי נאמנויות שונות.</p><dl><div><dt>מקצועות</dt><dd>בעלי הפונדק ועובדיו; מקצועות ומיומנויות נוספות לפי דף הדמות</dd></div><div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div></dl></div></details><details class="faction" id="faction-13" data-state="partial">
+<summary><span class="faction-no" aria-hidden="true">13</span><span class="faction-identity"><span class="faction-name">נוסעים ודמויות עצמאיות</span><span class="faction-seat">דרכים משלהן</span></span><span class="faction-count"><bdi dir="ltr">8</bdi> שחקנים</span><span class="faction-status">נותרו מקומות ספורים</span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+<div class="faction-body"><p>נוסעים, בעלי מלאכה והרפתקנים שהגיעו לעמק מסיבות שונות. לכל דמות מטרות וקשרים משלה, והיא חופשית לבחור עם מי לשתף פעולה.</p><dl><div><dt>מקצועות</dt><dd>לפי דף הדמות; בין המתוכננים נפח גמדי וגמד המחפש את חבריו הנעדרים</dd></div><div><dt>גזעים</dt><dd>מגוון גזעים, חלקם באישור המארגנים</dd></div></dl><p class="status-note">נותרו מקומות ספורים</p></div></details></div><details class="faction-notes"><summary>על הדמויות ומספרי השחקנים <svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary><div class="faction-notes-content"><p>בעמק נהר <bdi dir="ltr">Veyra</bdi> ניצבים זה מול זה שני בתי אצולה יריבים. כל בית מחולק לשתי קבוצות שחקנים נפרדות: משפחת האצולה ואנשי הטירה. לצד תושבי העמק פועלים שכירי חרב, שודדים, נציגים מבחוץ ודמויות עצמאיות.</p><p>כל הדמויות פתוחות לגברים ולנשים כאחד, אלא אם צוין אחרת במפורש.</p><p>בכל קבוצה אפשר להוסיף עד <bdi dir="ltr">30%</bdi> שחקנים מעבר למספר המצוין.</p><p class="provisional">סך הכול <bdi dir="ltr">45–49</bdi> שחקנים.</p></div></details></div>
+<div class="faction-enroll"><a class="button button-accent" href="#register" data-magnet><span>להרשמה</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+</div></section>
 
-    <main>
-      <!-- ============================================================
-           HERO / TEASER
-      ============================================================ -->
-      <section class="hero" id="hero" aria-labelledby="heroTitle">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-vignette" aria-hidden="true"></div>
-        <div class="hero-mist" aria-hidden="true"></div>
+<section class="registration" id="register" aria-labelledby="register-title">
+<div class="registration-backdrop" aria-hidden="true"><img src="assets/veyra-night.webp" width="2560" height="1440" alt="" loading="lazy"></div>
+<div class="scene-embers" aria-hidden="true"><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i></div>
+<div class="wrap registration-inner">
+<div class="registration-heading"><span class="ghost-word" dir="ltr" lang="en" aria-hidden="true">Enlist</span><span class="section-rule" aria-hidden="true"></span><h2 id="register-title" data-split-words>ההרשמה <span class="accent">למשחק.</span></h2><p>המשחק מיועד ל־<bdi dir="ltr">60</bdi> משתתפים בלבד, לשמירת עומק העלילה. ההרשמה נסגרת עם מילוי המקומות.</p>
+<div class="capacity" aria-hidden="true"><strong dir="ltr" data-count="60">60</strong><span>משתתפים<br>בלבד</span></div></div>
+<div class="registration-card" data-reveal><div class="registration-details"><div class="price"><span>מחיר השתתפות</span><div><span class="price-up-to">עד</span> <span class="price-amount"><strong>100</strong><span class="currency">ש״ח</span></span></div></div><a class="button button-accent registration-cta" href="https://forms.gle/gM2V2QnUGpk5Dahx7" data-magnet><span>מילוי טופס ההרשמה</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="button button-ghost button-sm whatsapp-link" href="https://chat.whatsapp.com/Ch2k6Uh7SGQBx9z8Qf2KTw">לקבוצת הוואטסאפ<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><details class="calendar-help"><summary>מילאתי את הטופס אבל האירוע לא נוסף ליומן שלי</summary><a class="button button-ghost button-sm" href="https://calendar.app.google/CYNh49gwvVJwUNfX7">הוספת האירוע ליומן<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></details></div></div>
+</div></section>
 
-        <figure class="hero-epigraph" dir="ltr">
-          <blockquote>
-            <p>
-              The forms of things unknown, the poet’s pen<br />
-              Turns them to shapes and gives to airy nothing<br />
-              A local habitation and a name.
-            </p>
-          </blockquote>
-          <figcaption>Shakespeare — <cite>A Midsummer Night’s Dream</cite></figcaption>
-        </figure>
+<section class="practical" id="practical" aria-labelledby="practical-title"><div class="wrap">
+<header class="section-head is-centered"><span class="ghost-word" dir="ltr" lang="en" aria-hidden="true">Prepare</span><span class="section-rule" aria-hidden="true"></span><h2 id="practical-title" data-split-words>לקראת <span class="accent">המשחק.</span></h2></header>
+<div class="day-arc" data-reveal><svg class="day-arc-path" viewBox="0 0 1000 220" preserveAspectRatio="none" aria-hidden="true"><path class="arc-base" d="M150 205 C 330 -30, 670 -30, 850 205"/><path class="arc-burn" pathLength="1" d="M150 205 C 330 -30, 670 -30, 850 205"/></svg>
+<ol class="schedule"><li><span class="schedule-glyph" aria-hidden="true"><svg class="icon"><use href="#i-sun"/></svg></span><time datetime="09:00" dir="ltr">09:00</time><div><h3>התאספות</h3><p>הגעה לחניון.</p></div></li><li><span class="schedule-glyph" aria-hidden="true"><svg class="icon"><use href="#i-moon"/></svg></span><time datetime="21:00" dir="ltr">21:00</time><div><h3>סיום ויציאה</h3><p>הורדת תלבושות ושיחת סיום (<bdi dir="ltr">Debrief</bdi>).</p></div></li></ol></div>
+<div class="prep-grid"><p class="safety-copy" data-reveal><span class="safety-mark" dir="ltr" aria-hidden="true">18+</span><span>העלילה נבנית סביב בחירות השחקנים ואינה כוללת תוכן מטריד או אלימות גרפית. המשחק מתאים לבוגרים מגיל <bdi dir="ltr">18</bdi> ומעלה.</span></p></div>
+</div></section>
 
-        <div class="hero-content">
-          <svg class="hero-sigil" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7" />
-            <path d="M60 10 L105 41 V79 L60 110 L15 79 V41 Z" stroke="currentColor" stroke-width="0.9" fill="none" opacity="0.5" />
-            <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.95" />
-            <path d="M47 36 H73" stroke="currentColor" stroke-width="0.8" opacity="0.6" />
-            <path d="M16 76 L20 52 V42 H24 V46 H26 V42 H30 V46 H32 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.15" fill="none" opacity="0.85" />
-            <path d="M20 52 H36" stroke="currentColor" stroke-width="0.7" opacity="0.5" />
-            <path d="M80 76 L84 52 V42 H88 V46 H90 V42 H94 V46 H96 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.15" fill="none" opacity="0.85" />
-            <path d="M84 52 H100" stroke="currentColor" stroke-width="0.7" opacity="0.5" />
-            <path d="M60 46 V64 M28 58 V70 M92 58 V70" stroke="currentColor" stroke-width="1.1" fill="none" opacity="0.7" />
-            <path d="M16 76 H104" stroke="currentColor" stroke-width="1" opacity="0.5" />
-            <path d="M54 84 Q44 80 36 79 Q29 78 24 80 M66 84 Q76 80 84 79 Q91 78 96 80" stroke="currentColor" stroke-width="0.9" fill="none" opacity="0.7" />
-            <path d="M46 85 Q46 80 53 80 H67 Q74 80 74 85 L71 95 Q66 102 60 104 Q54 102 49 95 Z" stroke="currentColor" stroke-width="1.15" fill="none" opacity="0.9" />
-            <ellipse cx="52.5" cy="89" rx="2.6" ry="4.8" transform="rotate(-22 52.5 89)" fill="currentColor" opacity="0.85" />
-            <ellipse cx="67.5" cy="89" rx="2.6" ry="4.8" transform="rotate(22 67.5 89)" fill="currentColor" opacity="0.85" />
-            <path d="M53 99 Q56 105 60 107 M67 99 Q64 105 60 107" stroke="currentColor" stroke-width="0.9" fill="none" opacity="0.75" />
-          </svg>
+<section class="rules" id="rules" aria-labelledby="rules-title"><div class="scene-embers" aria-hidden="true"><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i></div><div class="wrap">
+<header class="section-head rules-heading"><span class="ghost-word" dir="ltr" lang="en" aria-hidden="true">Tomes</span><span class="section-rule" aria-hidden="true"></span><h2 id="rules-title" data-split-words>ספרי <span class="accent">החוקים.</span></h2><p>ספרי החוקים להכנת הדמות ולמשחק בשטח.</p></header>
+<div class="rule-index"><a class="rule-entry" href="rules/general.html" data-tilt><span class="rule-glare" aria-hidden="true"></span><span class="rule-numeral" dir="ltr" aria-hidden="true">I</span><span class="rule-symbol" aria-hidden="true"><svg class="icon game-icon" viewBox="0 0 512 512" width="24" height="24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M149.688 85.625c-1.234.005-2.465.033-3.72.063-33.913.806-75.48 10.704-127.25 33.718V362.78c60.77-28.82 106.718-37.067 144.22-33.092 33.502 3.55 59.685 16.66 83.562 31.187v-242.97c-23.217-17.744-50.195-30.04-85.97-32-3.52-.192-7.142-.296-10.843-.28zm211.968 0c-3.7-.016-7.322.088-10.844.28-35.773 1.96-62.75 14.256-85.968 32v242.97c23.876-14.527 50.06-27.637 83.562-31.188 37.502-3.974 83.45 4.272 144.22 33.094V119.407c-51.77-23.014-93.337-32.912-127.25-33.72-1.255-.028-2.486-.056-3.72-.06zm5.72 261.78c-1.038-.002-2.074.017-3.095.033-4.808.075-9.43.37-13.905.843-33.932 3.597-59.603 17.976-85.53 34.44v.28c-6.554-1.99-13.02-2.37-19.408-.97-25.566-16.177-51.003-30.202-84.468-33.75-5.595-.592-11.44-.883-17.564-.842-32.04.213-71.833 9.778-124.687 35.937v42.53c60.77-28.823 106.714-37.067 144.218-33.092 18.545 1.965 34.837 6.845 49.75 13.28-4.682 6.064-9.308 13.268-13.875 21.688h117.156c-5.93-8.22-11.798-15.414-17.626-21.56 14.996-6.503 31.39-11.43 50.062-13.408 37.503-3.974 83.448 4.27 144.22 33.094v-42.53c-53.16-26.31-93.115-35.863-125.25-35.97z"/></svg></span><span class="rule-text"><h3>חוקים כלליים</h3><p>חפצים, חיפוש, שבי, מסמכים, מוות, בטיחות והכרעות צוות.</p></span><span class="rule-open" aria-hidden="true"><svg class="icon"><use href="#i-out"/></svg></span></a><a class="rule-entry" href="rules/combat.html" data-tilt><span class="rule-glare" aria-hidden="true"></span><span class="rule-numeral" dir="ltr" aria-hidden="true">II</span><span class="rule-symbol" aria-hidden="true"><svg class="icon game-icon" viewBox="0 0 512 512" width="24" height="24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M19.75 14.438c59.538 112.29 142.51 202.35 232.28 292.718l3.626 3.75.063-.062c21.827 21.93 44.04 43.923 66.405 66.25-18.856 14.813-38.974 28.2-59.938 40.312l28.532 28.53 68.717-68.717c42.337 27.636 76.286 63.646 104.094 105.81l28.064-28.06c-42.47-27.493-79.74-60.206-106.03-103.876l68.936-68.938-28.53-28.53c-11.115 21.853-24.413 42.015-39.47 60.593-43.852-43.8-86.462-85.842-130.125-125.47-.224-.203-.432-.422-.656-.625C183.624 122.75 108.515 63.91 19.75 14.437zm471.875 0c-83.038 46.28-154.122 100.78-221.97 161.156l22.814 21.562 56.81-56.812 13.22 13.187-56.438 56.44 24.594 23.186c61.802-66.92 117.6-136.92 160.97-218.72zm-329.53 125.906l200.56 200.53c-4.36 4.443-8.84 8.793-13.405 13.032L148.875 153.53l13.22-13.186zm-76.69 113.28l-28.5 28.532 68.907 68.906c-26.29 43.673-63.53 76.414-106 103.907l28.063 28.06c27.807-42.164 61.758-78.174 104.094-105.81l68.718 68.717 28.53-28.53c-20.962-12.113-41.08-25.5-59.937-40.313 17.865-17.83 35.61-35.433 53.157-52.97l-24.843-25.655-55.47 55.467c-4.565-4.238-9.014-8.62-13.374-13.062l55.844-55.844-24.53-25.374c-18.28 17.856-36.602 36.06-55.158 54.594-15.068-18.587-28.38-38.758-39.5-60.625z"/></svg></span><span class="rule-text"><h3>חוקי קרב</h3><p>בדיקת ציוד, אזורי פגיעה, נקודות פגיעה, מגע פיזי ויכולות קרב.</p></span><span class="rule-open" aria-hidden="true"><svg class="icon"><use href="#i-out"/></svg></span></a><a class="rule-entry" href="rules/magic.html" data-tilt><span class="rule-glare" aria-hidden="true"></span><span class="rule-numeral" dir="ltr" aria-hidden="true">III</span><span class="rule-symbol" aria-hidden="true"><svg class="icon game-icon" viewBox="0 0 512 512" width="24" height="24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M105.063 18.03c71.2 31.42 129.344 86.117 152.5 155.75 23.155-69.633 78.953-124.33 150.03-155.75h-36.156c-53.802 15.416-89.834 45.46-107.25 92 2.238-52.074 18.275-78.34 40.25-92H203.094c21.98 13.66 38.044 39.926 40.28 92-17.415-46.54-53.446-76.584-107.25-92h-31.06zm386.968 4.157c-16.65 228.426-81.874 410.467-209.06 398.907 41.547 39.438 83.78 62.385 122.342 72.22l86.72-.002v-32.968c-27.303 13.718-52.895 14.545-130.938-13.438 68.627.614 101.042-14.37 130.937-51.656v-46.063c-20.77 32.913-58.994 60.416-130.936 75.438 64.71-34.947 107.585-89.884 130.937-180.844V22.188zM18.69 71.344V255.47c23.96 84.017 65.86 135.732 127.75 169.155-68.45-14.292-106.347-39.89-127.75-70.688v45.125c29.053 34.484 61.523 48.437 127.75 47.844-75.03 26.903-101.557 27.177-127.75 14.97v31.437h82.28c38.562-9.834 80.796-32.78 122.344-72.22-117.915 10.718-182.556-144.97-204.625-349.75zm113.687 82.406v176.28l4.875 2.658 112.063 60.875 4.468 2.406 4.44-2.408 112.06-60.875 4.908-2.656V153.75H356.5v165.188l-102.75 55.78-102.688-55.78V153.75h-18.687zm37.53.188v151.406l73.532 41.437V198.5l-73.53-44.563zm167.72 0l-75.5 45.78v148.188l75.5-42.562V153.938z"/></svg></span><span class="rule-text"><h3>חוקי קסם</h3><p>מסורות ודרגות, הכנת לחשים, הטלה, מגילות והתאוששות.</p></span><span class="rule-open" aria-hidden="true"><svg class="icon"><use href="#i-out"/></svg></span></a><a class="rule-entry" href="rules/thieves.html" data-tilt><span class="rule-glare" aria-hidden="true"></span><span class="rule-numeral" dir="ltr" aria-hidden="true">IV</span><span class="rule-symbol" aria-hidden="true"><svg class="icon game-icon" viewBox="0 0 512 512" width="24" height="24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M254.07 19.707c-56.303 28.998-106.297 107.317-122.64 168.707 32.445 2.11 58.63 12.963 78.638 30.848l9.334-10.198c-13.336-13.056-30.596-23.9-52.994-34.707 12.68-31.542 32.01-79.29 56.598-82.07 9.62-1.088 19.92 4.722 31.13 21.068 35.08-58.334 68.394 18.705 87.727 61.002-21.94 11.897-39.132 22.82-52.63 36.024l8.68 9.76c19.68-17.732 45.72-29.358 78.55-31.673C358.24 127.335 311.515 50.14 254.07 19.707zM219.617 144.57c-8.894 0-16.103 3.952-16.103 8.826 0 4.875 7.21 8.827 16.103 8.827 8.894 0 16.106-3.95 16.106-8.827 0-4.874-7.212-8.826-16.106-8.826zm68.965 0c-8.894 0-16.105 3.952-16.105 8.826 0 4.875 7.21 8.827 16.105 8.827 8.894 0 16.106-3.95 16.106-8.827 0-4.874-7.212-8.826-16.106-8.826zm-118.894 70.88c-2.19 3.672-4.343 7.497-6.444 11.52-25.587 48.98-43.26 123.643-43.896 223.48 32.776 18.89 64.322 31.324 95.707 36.988-35.5-24.36-60.375-80.893-60.375-146.754 0-45.97 12.12-87.39 31.51-116.506-5.098-3.372-10.583-6.29-16.502-8.727zm168.933.35c-5.852 2.477-11.27 5.412-16.298 8.764 19.24 29.095 31.254 70.354 31.254 116.12 0 65.82-24.844 122.322-60.306 146.707 30.88-5.598 62.44-17.812 95.656-36.947-.638-99.57-18.31-174.163-43.9-223.177-2.088-4.002-4.228-7.81-6.405-11.467zm-97.665 23.61c7.026 22.543 9.128 45.086.98 67.63h-41.552v18.513c10.057-3.24 20.25-5.39 30.502-6.594.066 50.215 1.313 96.574 19.82 145.435l4.193 11.074 4.485-10.962c19.48-47.615 18.045-95.297 17.933-145.024 10.257 1.333 20.463 3.4 30.545 6.07v-18.515h-41.374c-6.888-22.544-5.932-45.087.803-67.63h-26.335z"/></svg></span><span class="rule-text"><h3>חוקי גנבים</h3><p>פריצת מנעולים, כלי פריצה, מלכודות, נפחות והחיוך השני.</p></span><span class="rule-open" aria-hidden="true"><svg class="icon"><use href="#i-out"/></svg></span></a><a class="rule-entry" href="rules/classes.html" data-tilt><span class="rule-glare" aria-hidden="true"></span><span class="rule-numeral" dir="ltr" aria-hidden="true">V</span><span class="rule-symbol" aria-hidden="true"><svg class="icon game-icon" viewBox="0 0 512 512" width="24" height="24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M207.47 18.875l35.968 162.25c.29 1.087.86 1.863 2.562 2.813 1.7.95 4.433 1.66 7.22 1.656 2.785-.003 5.543-.703 7.25-1.656 1.704-.954 2.276-1.75 2.56-2.813L299 18.875h-91.53zm88.936 98.03l-15.22 68.657-.06.22-.032.187c-1.747 6.52-6.404 11.432-11.5 14.28-5.096 2.848-10.738 4.026-16.344 4.03-5.606.007-11.24-1.15-16.344-4-5.104-2.847-9.782-7.784-11.53-14.31l-.032-.19-.063-.218-14.686-66.218C175 133.818 147.157 164.56 135.53 202.97c8.044 4.25 19.254 9.84 32.314 15.468 26.527 11.43 60.506 22.55 88.5 22.406 28.003-.145 61.81-11.56 88.156-23.22 13.467-5.96 24.914-11.872 32.938-16.25-12.624-39.968-42.853-71.398-81.032-84.468zm88.97 101.376c-8.365 4.538-19.865 10.487-33.313 16.44-27.522 12.18-62.797 24.673-95.625 24.843-32.838.17-68.293-12-96-23.938-13.614-5.866-25.276-11.744-33.72-16.22-.51 70.485-3.647 138.64 9.626 188.376 7.135 26.737 18.683 47.874 37.375 62.595 12.092 9.525 27.443 16.584 47.25 20.375V330.125c-28.654 16.12-67.847 2.81-81.064-30.625 8.825-22.322 30.127-33.074 50.78-33 24.583.087 48.224 15.532 48.876 45.094h.094v89h36.03l.002-87.72c-.01-.01-.023-.018-.032-.03 0-.422.022-.834.03-1.25.655-29.562 24.327-45.007 48.908-45.094 20.654-.074 41.926 10.678 50.75 33-13.204 33.403-52.324 46.702-80.97 30.656v160.47c19.544-3.867 34.6-11 46.438-20.595 18.396-14.908 29.6-36.337 36.375-63.342 12.59-50.184 8.804-118.532 8.188-188.407z"/></svg></span><span class="rule-text"><h3>מקצועות ויכולות</h3><p>לוחם, ברברי, פלאדין, טבאקסי, גנב, קוסם וכוהן.</p></span><span class="rule-open" aria-hidden="true"><svg class="icon"><use href="#i-out"/></svg></span></a><a class="rule-entry" href="rules/races.html" data-tilt><span class="rule-glare" aria-hidden="true"></span><span class="rule-numeral" dir="ltr" aria-hidden="true">VI</span><span class="rule-symbol" aria-hidden="true"><svg class="icon game-icon" viewBox="0 0 512 512" width="24" height="24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M397.063 35.625c-.457-.016-1.004.003-1.625.03-3.728.168-10.345 1.242-18.313 3.876-10.624 3.514-23.957 9.298-38.813 16.782-29.71 14.97-65.58 36.7-100 60.813-34.42 24.112-67.443 50.63-91.593 74.875-23.258 23.347-37.07 45.37-38.19 56.813 12.647 31.888 32.353 64.766 23.72 110.812l-.063.313-.062.28c-6.6 25.567-2.835 44.212 4.47 53.626 7.303 9.414 17.606 12.227 33.155 5.03 1.985-.917 4.3-2 6.75-3.155-2.486-10.81-7.07-21.55-12.375-30a9 9 0 0 1-.22-.376 9 9 0 0 1 1.22-11.188 9 9 0 0 1 4.125-2.344 9 9 0 0 1 1-.187c2.646-.604 5.262-.946 7.875-.97 8.826-.075 17.342 2.934 24.625 7.69 5.605 3.658 10.678 8.318 15.156 13.624 23.114-16.29 48.865-40.562 68.844-77.158 32.997-60.45 66.407-123.794 89-175.593 13.73-31.47 23.427-58.843 26.688-77.75 1.63-9.455 1.47-16.734.343-20.657-1.126-3.924-1.658-4.41-4.624-5.063-.27-.06-.637-.11-1.094-.125zm-59.094 53.47c5.087-.17 10.11 1.105 13.936 4.56 5.103 4.61 6.45 11.296 6.156 17.595-.294 6.3-2.115 13.014-5.125 20.406a9.012 9.012 0 0 1-16.687-6.812c2.493-6.125 3.694-11.232 3.844-14.438.102-2.183-.234-3.068-.344-3.344-.283-.06-1.086-.154-3.188.282-3.422.71-9.126 3.035-16.375 7.53-10.088 6.26-23.188 16.672-39.25 31.907 2.553.783 4.967 2.106 6.844 3.97 6.717 6.667 6.88 15.32 6.314 25.5-.565 10.18-2.784 22.688-6.156 37.75a9 9 0 1 1-17.563-3.938c3.27-14.602 5.288-26.493 5.75-34.812.41-7.41-.96-10.778-.938-11.188-.906.116-2.742.554-5.5 1.907-5.415 2.655-13.532 8.252-23.875 16.905-23.02 25.275-49.96 57.655-80.812 98.313 11.047 9.275 20.027 18.605 24.313 29.25 2.58 6.405 3.118 14.112-.25 20.75-3.37 6.637-9.644 11.313-17.844 14.78a9 9 0 1 1-7.032-16.562c5.844-2.472 8.12-4.95 8.843-6.375.725-1.424.874-2.696-.405-5.874-2.56-6.355-12.36-17.034-25.625-27.47a9 9 0 0 1-1.625-12.498c31.042-41.276 58.145-74.417 81.656-100.72a9 9 0 0 1 2.626-3.437c.716-.62 1.395-1.182 2.094-1.78 33.625-37.063 59.61-59.7 78.938-71.688 8.363-5.187 15.527-8.456 22.218-9.843 1.673-.348 3.367-.57 5.063-.626zM186.75 390.31c4.65 10.366 8.14 21.8 9.313 33.5 1.473 14.686-.817 30.045-9.47 42.438 8.513 8.398 14.487 9.757 18.626 8.938 4.937-.98 10.24-6.094 13.686-12.313 5.635-10.16 2.592-31.96-7.625-49.156-5.107-8.6-11.703-15.928-18.374-20.283-2.1-1.37-4.13-2.333-6.156-3.125z"/></svg></span><span class="rule-text"><h3>גזעים ומראה</h3><p>אילו גזעים אפשר לשחק, ומה נדרש מהתחפושת.</p></span><span class="rule-open" aria-hidden="true"><svg class="icon"><use href="#i-out"/></svg></span></a></div>
+</div></section>
 
-          <p class="eyebrow reveal" data-reveal>משחק תפקידים חי</p>
-          <h1 class="hero-title reveal" data-reveal id="heroTitle">
-            No Road<br />Through
-          </h1>
-
-          <p class="hero-subtitle reveal" data-reveal>
-            A Sword Coast LARP about two castles, one trade road, and a fortress no one can reach
-          </p>
-
-          <div class="hero-rule reveal" data-reveal aria-hidden="true">
-            <svg viewBox="0 0 240 24" fill="none"><path d="M0 12 H80 M160 12 H240" stroke="currentColor" stroke-width="1" opacity="0.5" /><path d="M88 12 C96 4, 104 4, 120 12 C136 20, 144 20, 152 12" stroke="currentColor" stroke-width="1" opacity="0.7" /><circle cx="120" cy="12" r="2.5" fill="currentColor" /></svg>
-          </div>
-
-          <p class="hero-date reveal" data-reveal>
-            <span class="hero-date-main">21 בנובמבר 2026</span>
-            <span class="hero-date-sub">חורשת שוסטר</span>
-          </p>
-
-          <div class="hero-countdown reveal" data-reveal id="countdown" aria-live="polite">
-            <div class="count-cell"><span class="count-num" id="cdDays">—</span><span class="count-label">ימים</span></div>
-            <div class="count-cell"><span class="count-num" id="cdHours">—</span><span class="count-label">שעות</span></div>
-            <div class="count-cell"><span class="count-num" id="cdMinutes">—</span><span class="count-label">דקות</span></div>
-            <div class="count-cell"><span class="count-num" id="cdSeconds">—</span><span class="count-label">שניות</span></div>
-          </div>
-
-          <div class="hero-cta reveal" data-reveal>
-            <a href="#register" class="btn btn-weathered">להרשמה</a>
-            <a href="#premise" class="btn btn-ghost">קראו את ההקדמה</a>
-          </div>
-        </div>
-
-        <a href="#premise" class="scroll-cue" aria-label="גלילה למטה">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4 V18 M5 11 L12 18 L19 11" stroke="currentColor" stroke-width="1.5" /></svg>
-        </a>
-      </section>
-
-      <!-- ============================================================
-           PREMISE
-      ============================================================ -->
-      <section class="section section-dark" id="premise" aria-labelledby="premiseHeading">
-        <div class="section-inner">
-          <header class="section-head reveal" data-reveal>
-            <p class="eyebrow">הַקְּדָמָה</p>
-            <h2 class="section-heading" id="premiseHeading">שנת הרעב — הדרך שנסגרה</h2>
-            <div class="gold-rule" aria-hidden="true"></div>
-          </header>
-
-          <div class="prose prose-dark reveal" data-reveal>
-            <p>
-              חודש Uktar, שנת 1381 DR — <em>שנת הרעב</em>. היבול דל, מחירי המזון מרקיעים,
-              ודרך החוף (Coast Way) שבין Baldur's Gate ל־Amn חשובה מכדי להישאר חסומה.
-              סבלנותה של Waterdeep מתקרבת לקִצה.
-            </p>
-            <p>
-              שני בתים יריבים שולטים בעמק הנהר: בית Valeharrow מן המבצר Harrowwatch, ובית
-              Thornmantle מן המבצר Thornford. הם אוחזים בכפרים, במעברות ובביטחון הדרך —
-              וכבולים בשבועה עתיקה שנכרתה על שריד קדוש במקדש הנייטרלי: לעולם לא לכרות שלום,
-              לעולם לא לסייע זה לזה, לעולם לא לפעול כבעלי ברית. השבועה אוסרת בדיוק את הדבר
-              שהמשבר דורש — שיתוף פעולה.
-            </p>
-            <p>
-              שודדים השתלטו על מצודת האי הישנה, Drowned Crown Keep, שבלב הנהר. הם מכים
-              בשיירות ונעלמים בטרם יספיק איש לרדוף אחריהם. Lords of Waterdeep שלחו דבר לשני
-              האדונים: פִּתחו מחדש את הדרך — או שתנושלו ותוגלו מאדמותיכם.
-            </p>
-            <p>
-              אך המים עצמם עומדים בדרך. זרם מכושף מעוות כל ניסיון להתקרב, והקסם אינו מתפקד
-              כשורה סביב האי. איש אינו יודע כיצד לחדור אל תוך המצודה. ובצללים נעים
-              ה־Harpers, ולהם שאלות משלהם על העמק, על הבתים ועל השבועה שכובלת אותם.
-            </p>
-          </div>
-
-          <p class="premise-more reveal" data-reveal>
-            <a href="story/background.html" class="btn btn-ghost">קראו את הרקע המלא</a>
-          </p>
-          <p class="premise-listen reveal" data-reveal>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15 V12 A8 8 0 0 1 20 12 V15" /><path d="M4 15 H6 A1 1 0 0 1 7 16 V19 A1 1 0 0 1 6 20 H5 A1 1 0 0 1 4 19 Z" /><path d="M20 15 H18 A1 1 0 0 0 17 16 V19 A1 1 0 0 0 18 20 H19 A1 1 0 0 0 20 19 Z" /></svg>
-            <span class="premise-listen-label">מעדיפים להאזין?</span>
-            <a href="https://youtu.be/HDE1_Iu-bmU" target="_blank" rel="noopener noreferrer">הרקע בעברית</a>
-            <span class="premise-listen-sep" aria-hidden="true">·</span>
-            <a href="https://youtu.be/TJtvES7LNV0" target="_blank" rel="noopener noreferrer"><span dir="ltr">Background in English</span></a>
-          </p>
-
-          <aside class="premise-note reveal" data-reveal>
-            <p>
-              העלילה נבנית סביב בחירות השחקנים ואינה כוללת תוכן מטריד או אלימות גרפית. המשחק
-              מתאים לבוגרים מגיל 18 ומעלה.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           FACTIONS
-      ============================================================ -->
-      <section class="section section-stone" id="factions" aria-labelledby="factionsHeading">
-        <div class="section-inner section-inner-wide">
-          <header class="section-head reveal" data-reveal>
-            <p class="eyebrow">קְבוּצוֹת וּתְפָקִידִים</p>
-            <h2 class="section-heading" id="factionsHeading">מי תהיו בעמק</h2>
-            <div class="gold-rule" aria-hidden="true"></div>
-          </header>
-
-          <p class="prose-dark teams-intro reveal" data-reveal>
-            בעמק נהר Veyra ניצבים זה מול זה שני בתי אצולה יריבים. כל בית מחולק לשתי קבוצות שחקנים נפרדות:
-            משפחת האצולה ואנשי הטירה. לצד תושבי העמק פועלים שכירי חרב, שודדים, נציגים מבחוץ ודמויות עצמאיות.
-          </p>
-
-          <p class="prose-dark teams-intro teams-note reveal" data-reveal>
-            כל הדמויות פתוחות לגברים ולנשים כאחד, אלא אם צוין אחרת במפורש.
-          </p>
-          <p class="prose-dark teams-intro teams-note reveal" data-reveal>
-            בכל קבוצה אפשר להוסיף עד <span dir="ltr">30%</span> שחקנים מעבר למספר המצוין.
-          </p>
-
-          <div class="draft-note reveal" data-reveal>
-            מספרי השחקנים מתוכננים ועשויים להשתנות עד לפתיחת ההרשמה. סך הכול <span dir="ltr">45–49</span> שחקנים.
-          </div>
-
-          <div class="team-group reveal" data-reveal>
-            <h3 class="team-group-title">בתי האצולה</h3>
-          </div>
-
-          <div class="teams-grid">
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 41 V19 H19 V16 H23 V19 H25 V16 H29 V19 H32 V41" /><path d="M12 41 H36" /><path d="M24 13 Q20 9 24 3 Q28 9 24 13 Z" /></svg>
-              </div>
-              <h4 class="team-name">משפחת Valeharrow</h4>
-              <p class="team-seat">טירת Harrowwatch</p>
-              <p class="team-count"><span dir="ltr">3</span> שחקנים</p>
-              <p class="team-status is-full">הקבוצה מלאה</p>
-              <p class="team-desc">בני המשפחה השלטת ב־Harrowwatch רואים בעצמם את מגיני הדרך והסדר בעמק. עליהם להתמודד עם התקפות השודדים ועם הלחץ המופעל עליהם, בלי לוותר בקלות ליריביהם שמעבר לנהר.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>פלאדין, קוסם ולוחם</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם בלבד</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="13" r="6" /><path d="M24 4 V9" /><path d="M24 19 V40" /><path d="M24 30 H31" /><path d="M24 35 H29" /></svg>
-              </div>
-              <h4 class="team-name">אנשי טירת Harrowwatch</h4>
-              <p class="team-seat">משרתים ווסאלים</p>
-              <p class="team-count"><span dir="ltr">3–4</span> שחקנים</p>
-              <p class="team-status is-full">הקבוצה מלאה</p>
-              <p class="team-desc">שומרים, משרתים ואנשי אמון האחראים לחיי הטירה ולהגנתה. הם נאמנים לבית Valeharrow, אך יש להם קשרים, אינטרסים ודעות משלהם.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>כוהן אחד, דמות בעלת מיומנויות גנב, ועוד 1–2 לוחמים או אנשי משק הבית</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 41 Q23 31 27 20 Q29 12 34 6" /><path d="M20 32 L15 29" /><path d="M24 25 L29 24" /><path d="M27 18 L22 15" /><path d="M31 11 L36 11" /></svg>
-              </div>
-              <h4 class="team-name">משפחת Thornmantle</h4>
-              <p class="team-seat">טירת Thornford</p>
-              <p class="team-count"><span dir="ltr">3</span> שחקנים</p>
-              <p class="team-desc">בני המשפחה השלטת ב־Thornford נחושים לשמור על כבודם ועל עצמאותם. האיבה העתיקה לבית Valeharrow מקשה עליהם להתמודד עם הסכנות המשותפות המאיימות על העמק.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>פלאדין, כוהן ולוחם</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם בלבד</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="13" r="6" /><path d="M21 16 L24 9 L27 16" /><path d="M24 19 V40" /><path d="M24 30 H31" /><path d="M24 35 H29" /></svg>
-              </div>
-              <h4 class="team-name">אנשי טירת Thornford</h4>
-              <p class="team-seat">משרתים ווסאלים</p>
-              <p class="team-count"><span dir="ltr">3–4</span> שחקנים</p>
-              <p class="team-desc">שומרים, משרתים ואנשי אמון המשרתים את בית Thornmantle. הם מכירים את העמק ואת אנשיו, ולעיתים קשריהם האישיים חוצים את גבולות הסכסוך.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>קוסם אחד, דמות בעלת מיומנויות גנב, ועוד 1–2 לוחמים או אנשי משק הבית</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div>
-              </dl>
-            </article>
-          </div>
-
-          <div class="team-group reveal" data-reveal>
-            <h3 class="team-group-title">שכירי חרב</h3>
-          </div>
-
-          <div class="teams-grid">
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 Q15 23 19 23 H29 Q33 23 33 27 V35 Q33 40 28 40 H20 Q15 40 15 35 Z" /><path d="M19 28 H29" /><path d="M19 33 H29" /><path d="M20 21 Q17 14 22 8 Q22 15 26 10 Q30 16 27 21" /></svg>
-              </div>
-              <h4 class="team-name">Flaming Fist</h4>
-              <p class="team-seat">יחידת Harrowwatch</p>
-              <p class="team-count"><span dir="ltr">5</span> שחקנים</p>
-              <p class="team-badge">שמור ל־Bannerless</p>
-              <p class="team-desc">יחידה מקצועית של שכירי חרב המלווה את שליח ברית הלורדים אל Harrowwatch. לאחר הגעתה תפעל בפיקודו המבצעי של הלורד המקומי, תוך שמירה על זהותה כיחידת Flaming Fist.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>לוחמים</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים וגמדים</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 Q15 23 19 23 H29 Q33 23 33 27 V35 Q33 40 28 40 H20 Q15 40 15 35 Z" /><path d="M19 28 H29" /><path d="M19 33 H29" /><path d="M20 21 Q17 14 22 8 Q22 15 26 10 Q30 16 27 21" /></svg>
-              </div>
-              <h4 class="team-name">Flaming Fist</h4>
-              <p class="team-seat">יחידת Thornford</p>
-              <p class="team-count"><span dir="ltr">5</span> שחקנים</p>
-              <p class="team-badge">שמור ל־Bannerless</p>
-              <p class="team-desc">יחידה שנייה מאותו ארגון, המלווה את השליח אל Thornford. חיילי שתי היחידות מכירים אלה את אלה, אך כעת הם מוצבים בשירותם של שני לורדים יריבים.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>לוחמים</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים וגמדים</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 23 Q17 15 24 15 Q31 15 31 23 L33 31 Q33 38 24 38 Q15 38 15 31 Z" /><path d="M19 31 H29" /><path d="M18 32 Q14 30 15 26" /><path d="M30 32 Q34 30 33 26" /><path d="M18 18 L14 12 L21 16" /><path d="M30 18 L34 12 L27 16" /><circle cx="20" cy="24" r="1.4" fill="currentColor" stroke="none" /><circle cx="28" cy="24" r="1.4" fill="currentColor" stroke="none" /></svg>
-              </div>
-              <h4 class="team-name">Order of the Blue Boar</h4>
-              <p class="team-seat">פלוגת חוזה</p>
-              <p class="team-count"><span dir="ltr">5</span> שחקנים</p>
-              <p class="team-badge">שמור ל־Bannerless</p>
-              <p class="team-desc">לוחמים ותיקים מאמן הפועלים בעמק במסגרת חוזה שכירות. הם שומרים על הנהגה משלהם ועל משמעת צבאית, וגם להם יש אינטרסים החורגים מהסכסוך המקומי.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>לוחמים ותפקידי שכירי חרב מקצועיים</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים וחצאי־אורקים</dd></div>
-              </dl>
-            </article>
-          </div>
-
-          <div class="team-group reveal" data-reveal>
-            <h3 class="team-group-title">קבוצות השודדים</h3>
-          </div>
-
-          <div class="teams-grid">
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 25 L17 14 L24 21 L31 14 L35 25 Z" /><path d="M9 31 Q13 27 17 31 T25 31 T33 31 T39 31" /><path d="M9 38 Q13 34 17 38 T25 38 T33 38 T39 38" /></svg>
-              </div>
-              <h4 class="team-name">השודדים המקומיים</h4>
-              <p class="team-seat">Local Outlaws</p>
-              <p class="team-count"><span dir="ltr">6</span> שחקנים</p>
-              <p class="team-desc">לוחמים, גנבים ופורעי חוק מן העמק ומסביבתו. הם פושטים על שיירות ומגינים על מעוזם ב־Drowned Crown Keep. מנהיגם, ברברי מן הצפון הרחוק, מוביל אותם בפשיטות ובמאבקים על השליטה באזור.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>ברברי אחד — מנהיג הקבוצה; כוהן אחד; דמות בעלת מיומנויות גנב; ועוד 3 לוחמים. לתפקיד הברברי נדרש מבחן הקרב שבחוקי המשחק</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 L38 24 L24 40 L10 24 Z" /><path d="M15 24 Q24 16 33 24 Q24 32 15 24 Z" /><circle cx="24" cy="24" r="2.6" fill="currentColor" stroke="none" /></svg>
-              </div>
-              <h4 class="team-name">נציגים מן הדרום</h4>
-              <p class="team-seat">Southern Operatives</p>
-              <p class="team-count"><span dir="ltr">4</span> שחקנים</p>
-              <p class="team-desc">אנשי קשר בעלי ניסיון במסחר, איסוף מידע ופעילות חשאית, שהגיעו לעמק מן הדרום. הם פועלים לצד השודדים המקומיים, אך שומרים על מטרותיהם ועל זהותם הארגונית.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>3 סוכנים וקוסם אחד; מקצועות הלחימה ומיומנויות הגנב ייקבעו בדפי הדמות</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div>
-              </dl>
-            </article>
-          </div>
-
-          <div class="team-group reveal" data-reveal>
-            <h3 class="team-group-title">תפקידים נוספים</h3>
-          </div>
-
-          <div class="teams-grid">
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8 H33 V40 H15 Z" /><path d="M20 15 H28" /><path d="M20 20 H28" /><circle cx="24" cy="30" r="5" /><path d="M22 28 L26 32 M26 28 L22 32" /></svg>
-              </div>
-              <h4 class="team-name">שליחי ברית הלורדים</h4>
-              <p class="team-seat">Lords’ Alliance</p>
-              <p class="team-count"><span dir="ltr">2</span> שחקנים</p>
-              <p class="team-badge">תפקידי צוות משחק</p>
-              <p class="team-desc">שליח אחד מגיע לכל אחת משתי הטירות בליווי יחידת Flaming Fist. הם מייצגים את האינטרסים של ברית הלורדים ומופקדים על הטיפול במשבר הדרך.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>שני שליחים מדיניים; מקצועות קרב אינם מוגדרים מראש</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם וחצאי־אלפים</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 40 V22 Q13 11 24 11 Q35 11 35 22 V40" /><path d="M10 40 H38" /><path d="M24 33 Q20 28 24 20 Q28 28 24 33 Z" /></svg>
-              </div>
-              <h4 class="team-name">המקדש הניטרלי</h4>
-              <p class="team-seat">כוהנים</p>
-              <p class="team-count"><span dir="ltr">1–2</span> שחקנים</p>
-              <p class="team-status is-partial">כוהן אחד נלקח</p>
-              <p class="team-desc">אנשי הדת שומרים על השריד העתיק ועל מסורת השבועה של שני בתי האצולה. המקדש משמש מקום פולחן ניטרלי, ובו נערכים טקסים דתיים.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>כוהנים</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 11 A13 13 0 1 1 14 31" /><path d="M24 24 V11" /><path d="M24 24 L35 30" /><path d="M24 24 L13 30" /><path d="M24 24 L33 16" /><circle cx="24" cy="24" r="3" /></svg>
-              </div>
-              <h4 class="team-name">פונדק The Broken Wheel</h4>
-              <p class="team-seat">בעלי הפונדק ועובדיו</p>
-              <p class="team-count"><span dir="ltr">1–2</span> שחקנים</p>
-              <p class="team-desc">מקום מפגש ניטרלי לסוחרים, לנוסעים ולתושבי שני צדי העמק. עובדיו שומעים חדשות ושמועות מכל עבר ומארחים אנשים בעלי נאמנויות שונות.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>בעלי הפונדק ועובדיו; מקצועות ומיומנויות נוספות לפי דף הדמות</dd></div>
-                <div><dt>גזעים</dt><dd>בני אדם, חצאי־אלפים, גמדים ובני־מחצית</dd></div>
-              </dl>
-            </article>
-            <article class="team-card reveal" data-reveal>
-              <div class="team-sigil" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 42 L31 7" /><path d="M27 12 Q35 9 37 15 Q35 21 27 19" /><path d="M13 42 H24" /></svg>
-              </div>
-              <h4 class="team-name">נוסעים ודמויות עצמאיות</h4>
-              <p class="team-seat">דרכים משלהן</p>
-              <p class="team-count"><span dir="ltr">8</span> שחקנים</p>
-              <p class="team-status is-full">הקבוצה מלאה</p>
-              <p class="team-desc">נוסעים, בעלי מלאכה והרפתקנים שהגיעו לעמק מסיבות שונות. לכל דמות מטרות וקשרים משלה, והיא חופשית לבחור עם מי לשתף פעולה.</p>
-              <dl class="team-meta">
-                <div><dt>מקצועות</dt><dd>לפי דף הדמות; בין המתוכננים נפח גמדי וגמד המחפש את חבריו הנעדרים</dd></div>
-                <div><dt>גזעים</dt><dd>מגוון גזעים, חלקם באישור המארגנים</dd></div>
-              </dl>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           PRACTICAL INFO & SCHEDULE
-      ============================================================ -->
-      <section class="section section-parchment" id="practical" aria-labelledby="practicalHeading">
-        <div class="section-inner section-inner-wide">
-          <header class="section-head reveal" data-reveal>
-            <h2 class="eyebrow eyebrow-dark" id="practicalHeading">לוּחַ זְמַנִּים</h2>
-            <div class="gold-rule gold-rule-dark" aria-hidden="true"></div>
-          </header>
-
-          <div class="draft-note reveal" data-reveal>
-            לוח הזמנים הוא דוגמה זמנית ויעודכן לקראת האירוע.
-          </div>
-
-          <div class="schedule reveal" data-reveal>
-            <ol class="schedule-list">
-              <li><span class="sch-time">09:00</span><div class="sch-body"><strong>התאספות</strong><span>הגעה לחניון.</span></div></li>
-              <li><span class="sch-time">21:00</span><div class="sch-body"><strong>סיום ויציאה</strong><span>הורדת תלבושות ושיחת סיום (Debrief).</span></div></li>
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           RULES & DOCUMENTS
-      ============================================================ -->
-      <section class="section section-dark" id="rules" aria-labelledby="rulesHeading">
-        <div class="section-inner section-inner-wide">
-          <header class="section-head reveal" data-reveal>
-            <h2 class="eyebrow" id="rulesHeading">חֻקִּים וּמְסָמָכִים</h2>
-            <div class="gold-rule" aria-hidden="true"></div>
-          </header>
-
-          <div class="documents reveal" data-reveal>
-            <h3 class="documents-title">ספרי החוקים</h3>
-            <ul class="doc-list">
-              <li>
-                <a href="rules/general.html" class="doc-link">
-                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 4 H19 V17 H8 Z M8 17 V19 Q8 21 6 21 Q4 21 4 19 V7 H8" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" /><path d="M11 8 H16 M11 11.5 H16" stroke="currentColor" stroke-width="1.1" /></svg></span>
-                  <span class="doc-text"><strong>חוקים כלליים</strong><span>חפצים, חיפוש, שבי, מסמכים, מוות, בטיחות והכרעות צוות.</span></span>
-                  <span class="doc-cta" aria-hidden="true">לעמוד</span>
-                </a>
-              </li>
-              <li>
-                <a href="rules/combat.html" class="doc-link">
-                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5 H11 V19 H4 Z M20 5 H13 V19 H20 Z" stroke="currentColor" stroke-width="1.3" /></svg></span>
-                  <span class="doc-text"><strong>חוקי קרב</strong><span>בדיקת ציוד, אזורי פגיעה, נקודות פגיעה, מגע פיזי ויכולות קרב.</span></span>
-                  <span class="doc-cta" aria-hidden="true">לעמוד</span>
-                </a>
-              </li>
-              <li>
-                <a href="rules/magic.html" class="doc-link">
-                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 L13.8 9.2 L20 11 L13.8 12.8 L12 19 L10.2 12.8 L4 11 L10.2 9.2 Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" /></svg></span>
-                  <span class="doc-text"><strong>חוקי קסם</strong><span>מסורות ודרגות, הכנת לחשים, הטלה, מגילות והתאוששות.</span></span>
-                  <span class="doc-cta" aria-hidden="true">לעמוד</span>
-                </a>
-              </li>
-              <li>
-                <a href="rules/thieves.html" class="doc-link">
-                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="7.5" cy="7.5" r="3.3" stroke="currentColor" stroke-width="1.3" /><path d="M9.9 9.9 L19.5 19.5" stroke="currentColor" stroke-width="1.3" /><path d="M15.4 15.4 L13.5 17.3 M17.4 17.4 L15.5 19.3" stroke="currentColor" stroke-width="1.2" /></svg></span>
-                  <span class="doc-text"><strong>חוקי גנבים</strong><span>פריצת מנעולים, כלי פריצה, מלכודות, נפחות והחיוך השני.</span></span>
-                  <span class="doc-cta" aria-hidden="true">לעמוד</span>
-                </a>
-              </li>
-              <li>
-                <a href="rules/classes.html" class="doc-link">
-                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 L19 6 V12 C19 16 16 19.2 12 21 C8 19.2 5 16 5 12 V6 Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" /><path d="M12 8 V15 M9 11 H15" stroke="currentColor" stroke-width="1.1" /></svg></span>
-                  <span class="doc-text"><strong>מקצועות ויכולות</strong><span>לוחם, ברברי, פלאדין, טבאקסי, גנב, קוסם וכוהן.</span></span>
-                  <span class="doc-cta" aria-hidden="true">לעמוד</span>
-                </a>
-              </li>
-              <li>
-                <a href="rules/races.html" class="doc-link">
-                  <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 20 V14 M15 20 V14" stroke="currentColor" stroke-width="1.3" /><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.3" /><circle cx="16" cy="9" r="2.3" stroke="currentColor" stroke-width="1.2" /><path d="M6 14 Q9 11 12 14 M13 14 Q16 12 19 14" stroke="currentColor" stroke-width="1.2" /></svg></span>
-                  <span class="doc-text"><strong>גזעים ומראה</strong><span>אילו גזעים אפשר לשחק, ומה נדרש מהתחפושת.</span></span>
-                  <span class="doc-cta" aria-hidden="true">לעמוד</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           REGISTRATION
-      ============================================================ -->
-      <section class="section section-register" id="register" aria-labelledby="registerHeading">
-        <div class="register-bg" aria-hidden="true"></div>
-        <div class="section-inner register-inner">
-          <header class="section-head reveal" data-reveal>
-            <p class="eyebrow">הַרְשָׁמָה</p>
-            <h2 class="section-heading register-heading" id="registerHeading">המקומות מוגבלים</h2>
-            <div class="gold-rule" aria-hidden="true"></div>
-          </header>
-
-          <div class="register-body reveal" data-reveal>
-            <p class="prose-dark">
-              המשחק מיועד ל־60 משתתפים בלבד, לשמירת עומק העלילה. ההרשמה פתוחה עד שבועיים לפני האירוע, ונסגרת עם מילוי המקומות.
-            </p>
-
-            <div class="register-price">
-              <div class="price-box price-box-full">
-                <span class="price-label">מחיר</span>
-                <span class="price-amount">עד 100 ₪</span>
-                <span class="price-note">טרם נקבע סופית</span>
-              </div>
-            </div>
-
-            <p class="register-deadline">
-              ההרשמה נסגרת ב־7 בנובמבר 2026 או עם מילוי המקומות — המוקדם מביניהם.
-            </p>
-
-            <div class="register-cta">
-              <a href="https://forms.gle/gM2V2QnUGpk5Dahx7" target="_blank" rel="noopener noreferrer" class="btn btn-weathered">מילוי טופס ההרשמה</a>
-              <a href="https://chat.whatsapp.com/Ch2k6Uh7SGQBx9z8Qf2KTw" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">הצטרפו לקבוצת הוואטסאפ</a>
-            </div>
-
-            <details class="calendar-help">
-              <summary>מילאתי את הטופס אבל האירוע לא נוסף ליומן שלי</summary>
-              <p>
-                <a href="https://calendar.app.google/CYNh49gwvVJwUNfX7" target="_blank" rel="noopener noreferrer">הוספת האירוע ליומן</a>
-              </p>
-            </details>
-            <p class="register-contact-note">שאלות? הצטרפו לקבוצת הוואטסאפ.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           LOCATION (initially hidden)
-      ============================================================ -->
-      <section class="section section-stone" id="location" aria-labelledby="locationHeading">
-        <div class="section-inner">
-          <header class="section-head reveal" data-reveal>
-            <p class="eyebrow">הַמָּקוֹם</p>
-            <h2 class="section-heading" id="locationHeading">חורשת שוסטר</h2>
-            <div class="gold-rule" aria-hidden="true"></div>
-          </header>
-
-          <div class="location-locked reveal" data-reveal>
-            <p class="location-lock-text">
-              לחצו לפרטי הגעה, חניה ותצלומים מהאתר.
-            </p>
-            <button class="btn btn-ghost" id="locationReveal" aria-expanded="false" aria-controls="locationDetails">
-              פרטי המיקום וההגעה
-            </button>
-          </div>
-
-          <div class="location-details" id="locationDetails" aria-hidden="true">
-            <p class="prose-dark location-intro">
-              האתר נבחר בקפידה: חורש עבות, דרכי עפר ושטח פתוח המאפשרים אספה, מסתור ותחנות משחק.
-            </p>
-
-            <dl class="info-list location-info">
-              <div><dt>ניווט</dt><dd><a class="map-link" href="https://maps.app.goo.gl/t3RGtkSPPJA1oeMe6" target="_blank" rel="noopener noreferrer">Google Maps</a> <span aria-hidden="true">·</span> <a class="map-link" href="https://waze.com/ul/hsv8wzbxuw" target="_blank" rel="noopener noreferrer">Waze</a></dd></div>
-              <div><dt>תחבורה ציבורית</dt><dd>תחנת "מרכז שוסטר" — כ־5 דקות הליכה לשער הכניסה</dd></div>
-              <div><dt>תחבורה בשבת</dt><dd>המשחק מתקיים בשבת. קו <span dir="ltr">710</span> של אוטובוסי השבת עוצר בתחנת "מרכז שוסטר" — <a class="map-link" href="https://busofash.co.il/?lines=710" target="_blank" rel="noopener noreferrer">לוח זמנים</a></dd></div>
-              <div><dt>חניון</dt><dd>חניון סמוך לשער הכניסה, עם יציאה ישירה לשטח המשחק</dd></div>
-            </dl>
-
-            <figure class="location-gallery">
-              <ul class="location-shots">
-              <li>
-                <img
-                  src="assets/location/grove-1.jpg"
-                  alt="חורש האקליפטוס — גזעים בהירים ורצפת עלים יבשים"
-                  loading="lazy"
-                  decoding="async"
-                  width="720"
-                  height="1280"
-                />
-              </li>
-              <li>
-                <img
-                  src="assets/location/grove-2.jpg"
-                  alt="שולי החורש — עצי אקליפטוס וסבך נמוך"
-                  loading="lazy"
-                  decoding="async"
-                  width="720"
-                  height="1280"
-                />
-              </li>
-              <li>
-                <img
-                  src="assets/location/grove-3.jpg"
-                  alt="דרך עפר לאורך שדה פתוח, קו עצים באופק"
-                  loading="lazy"
-                  decoding="async"
-                  width="1280"
-                  height="720"
-                />
-              </li>
-              <li>
-                <img
-                  src="assets/location/grove-4.jpg"
-                  alt="שביל עפר חוצה עשבייה גבוהה אל תוך החורש"
-                  loading="lazy"
-                  decoding="async"
-                  width="1280"
-                  height="720"
-                />
-              </li>
-              <li>
-                <img
-                  src="assets/location/grove-5.jpg"
-                  alt="מרחב פתוח מוצל תחת עצי אקליפטוס ותיקים"
-                  loading="lazy"
-                  decoding="async"
-                  width="1280"
-                  height="720"
-                />
-              </li>
-              </ul>
-              <figcaption>תצלומים מהאתר.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ============================================================
-         FOOTER
-    ============================================================ -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <svg class="footer-sigil" viewBox="0 0 120 120" aria-hidden="true">
-          <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6" />
-          <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.7" />
-          <path d="M16 76 L20 52 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.6" />
-          <path d="M80 76 L84 52 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.6" />
-        </svg>
-        <p class="footer-name">No Road Through</p>
-        <p class="footer-tag">משחק תפקידים חי</p>
-        <div class="footer-rule" aria-hidden="true"></div>
-        <p class="footer-meta">
-          <a href="mailto:noldo.warrior@gmail.com">noldo.warrior@gmail.com</a>
-          <span aria-hidden="true">·</span>
-          <span>כל הזכויות שמורות ליוצרי המשחק</span>
-        </p>
-      </div>
-    </footer>
-
-    <script src="main.js" defer></script>
-  </body>
-</html>
+<section class="location" id="location" aria-labelledby="location-title"><div class="wrap">
+<header class="section-head is-centered location-heading"><span class="ghost-word" dir="ltr" lang="en" aria-hidden="true">The Grove</span><div class="location-symbol" aria-hidden="true"><svg class="game-icon"><use href="#g-compass"/></svg></div><h2 id="location-title" data-split-words>מקום <span class="accent">המפגש.</span></h2></header>
+<details class="location-disclosure" id="location-details"><summary><span class="wax-seal" aria-hidden="true"><svg viewBox="0 0 26 30" fill="none"><path d="M3 24V10h5v14m2 0V4h6v20m2 0V10h5v14M2 28h22M13 0v2" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="summary-copy"><strong>לחשיפת המיקום ופרטי ההגעה</strong></span><svg class="icon chevron" aria-hidden="true"><use href="#i-caret"/></svg></summary><div class="location-content"><h3>חורשת שוסטר</h3><p>האתר נבחר בקפידה: חורש עבות, דרכי עפר ושטח פתוח המאפשרים אספה, מסתור ותחנות משחק.</p><div class="location-directions"><div><h4>ניווט וחניה</h4><div class="map-links"><a class="button button-ghost button-sm" href="https://maps.app.goo.gl/t3RGtkSPPJA1oeMe6"><bdi dir="ltr">Google Maps</bdi><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="button button-ghost button-sm" href="https://waze.com/ul/hsv8wzbxuw"><bdi dir="ltr">Waze</bdi><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><p>חניון סמוך לשער הכניסה, עם יציאה ישירה לשטח המשחק.</p></div><div><h4>תחבורה ציבורית בשבת</h4><p>תחנת ״מרכז שוסטר״ — כ־5 דקות הליכה לשער הכניסה. המשחק מתקיים בשבת. קו <bdi dir="ltr">710</bdi> של אוטובוסי השבת עוצר בתחנת ״מרכז שוסטר״.</p><a class="button button-ghost button-sm" href="https://busofash.co.il/?lines=710">לוח הזמנים של קו 710<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div><p class="eyebrow gallery-label">תצלומים מהאתר</p><div class="location-gallery"><a href="assets/location/grove-1.webp" aria-label="פתיחת תצלום 1 של חורשת שוסטר"><img src="assets/location/grove-1.webp" alt="חורשת שוסטר — תצלום 1 מהאתר" width="800" height="600" loading="lazy"></a><a href="assets/location/grove-2.webp" aria-label="פתיחת תצלום 2 של חורשת שוסטר"><img src="assets/location/grove-2.webp" alt="חורשת שוסטר — תצלום 2 מהאתר" width="800" height="600" loading="lazy"></a><a href="assets/location/grove-3.webp" aria-label="פתיחת תצלום 3 של חורשת שוסטר"><img src="assets/location/grove-3.webp" alt="חורשת שוסטר — תצלום 3 מהאתר" width="800" height="600" loading="lazy"></a><a href="assets/location/grove-4.webp" aria-label="פתיחת תצלום 4 של חורשת שוסטר"><img src="assets/location/grove-4.webp" alt="חורשת שוסטר — תצלום 4 מהאתר" width="800" height="600" loading="lazy"></a><a href="assets/location/grove-5.webp" aria-label="פתיחת תצלום 5 של חורשת שוסטר"><img src="assets/location/grove-5.webp" alt="חורשת שוסטר — תצלום 5 מהאתר" width="800" height="600" loading="lazy"></a></div></div></details>
+</div></section>
+</main>
+<button class="effects-toggle" type="button" aria-label="אפקטים" aria-pressed="true" title="השהיית האפקטים" hidden><svg class="icon pause-icon" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M200,32H160a16,16,0,0,0-16,16V208a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm0,176H160V48h40ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Zm0,176H56V48H96Z"/></svg><svg class="icon play-icon" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"/></svg></button>
+<footer class="site-footer"><div class="footer-word" dir="ltr" aria-hidden="true">NO ROAD THROUGH</div><div class="wrap footer-inner"><div class="footer-brand"><svg width="26" height="30" viewBox="0 0 26 30" fill="none" aria-hidden="true"><path d="M3 24V10h5v14m2 0V4h6v20m2 0V10h5v14M2 28h22M13 0v2" stroke="currentColor" stroke-width="1.5"/></svg><span dir="ltr">NO ROAD THROUGH</span><span>משחק תפקידים חי</span></div><div class="footer-contact"><a href="mailto:noldo.warrior@gmail.com"><bdi dir="ltr">noldo.warrior@gmail.com</bdi></a><span>כל הזכויות שמורות ליוצרי המשחק</span><details class="asset-credits"><summary>קרדיטים לאייקונים</summary><p dir="ltr">Icons by <a href="https://game-icons.net/">Lorc &amp; Delapouite / Game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Colors adapted; backgrounds removed. Effects adapted from <a href="https://reactbits.dev/">React Bits</a>.</p></details></div><a class="button button-ghost button-sm back-top" href="#top">בחזרה למעלה <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a></div></footer>
+</body></html>
