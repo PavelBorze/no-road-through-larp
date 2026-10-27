@@ -168,7 +168,7 @@
     emberLayers.forEach(l => emberObserver.observe(l));
   }
 
-  /* ——— Heavy loops (light rays, oath marquee) gated by visibility ——— */
+  /* ——— Heavy loops (light rays) gated by visibility ——— */
   const visible = new Set();
   const loopObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
     entries.forEach(({ target, isIntersecting }) => { isIntersecting ? visible.add(target) : visible.delete(target); });
@@ -176,41 +176,16 @@
   }, { rootMargin: '80px 0px' }) : null;
   const raysCanvas = $('.hero-rays');
   let rays = null;
-  const oath = $('.oath');
-  loopObserver?.observe(hero); loopObserver?.observe(oath);
+  loopObserver?.observe(hero);
   function syncLoops() {
     const ok = motionOK() && !forcedColors.matches;
     if (ok && visible.has(hero) && !heroCovered && innerWidth > 760) {
       rays ??= window.nrtLightRays?.(raysCanvas) ?? null;
       rays?.start(); raysCanvas.classList.toggle('is-on', !!rays);
     } else rays?.stop();
-    if (ok && visible.has(oath)) startMarquee(); else stopMarquee();
   }
 
-  /* ——— Oath marquee — React Bits Scroll Velocity, adapted ——— */
-  const rows = $$('.velocity-row').map(row => {
-    const track = $('.velocity-track', row);
-    const copy = track.innerHTML;
-    track.innerHTML = copy + copy + copy;
-    return { row, track, dir: Number(row.dataset.velocity) || 1, x: 0, width: 0 };
-  });
-  const measureRows = () => rows.forEach(r => { r.width = r.track.scrollWidth / 3; });
-  let marqueeRaf = 0, lastT = 0, lastScroll = scrollY, scrollVel = 0, velFactor = 0;
-  const marquee = now => {
-    const dt = Math.min(.05, (now - (lastT || now)) / 1000); lastT = now;
-    const instant = (scrollY - lastScroll) / Math.max(dt, .001); lastScroll = scrollY;
-    scrollVel += (instant - scrollVel) * .12;
-    velFactor = clamp(scrollVel / 1000 * 5, -6, 6);
-    rows.forEach(r => {
-      const sign = velFactor < 0 ? -1 : 1;
-      r.x += r.dir * sign * 42 * dt * (1 + Math.abs(velFactor));
-      if (r.width) r.x = ((r.x % r.width) + r.width) % r.width;
-      r.track.style.transform = `translate3d(${-r.x}px,0,0)`;
-    });
-    marqueeRaf = requestAnimationFrame(marquee);
-  };
-  function startMarquee() { if (!marqueeRaf) { lastT = 0; lastScroll = scrollY; measureRows(); marqueeRaf = requestAnimationFrame(marquee); } }
-  function stopMarquee() { if (marqueeRaf) cancelAnimationFrame(marqueeRaf); marqueeRaf = 0; }
+
 
   /* ——— Pointer: fluid glow cursor, light pool, faction spotlight, hero parallax ——— */
   const pointerLight = document.createElement('div');
@@ -496,7 +471,7 @@
   }
   function scheduleFrame() { if (!frame) frame = requestAnimationFrame(updateView); }
   addEventListener('scroll', () => { scheduleFrame(); schedulePointer(); }, { passive: true });
-  addEventListener('resize', () => { scheduleFrame(); placeIndicator(); placeGlint(); measureRows(); });
+  addEventListener('resize', () => { scheduleFrame(); placeIndicator(); placeGlint(); });
   reduceMotion.addEventListener('change', () => {
     syncEffects();
     if (reduceMotion.matches) document.getAnimations().forEach(a => a.cancel());
@@ -515,7 +490,7 @@
     const ro = new ResizeObserver(scheduleFrame);
     ro.observe(journey); stepCopies.forEach(c => ro.observe(c));
   }
-  document.fonts?.ready.then(() => { scheduleFrame(); placeIndicator(); placeGlint(); measureRows(); });
+  document.fonts?.ready.then(() => { scheduleFrame(); placeIndicator(); placeGlint(); });
 
   /* ——— Deep links reveal their faction ——— */
   function revealHash() {
