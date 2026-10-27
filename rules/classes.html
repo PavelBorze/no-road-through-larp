@@ -1,100 +1,62 @@
 <!doctype html>
 <html lang="he" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="מקצועות ויכולות מיוחדות ב-No Road Through — לוחם, ברברי, פלאדין, טבאקסי, גנב, קוסם וכוהן.‏"
-    />
-    <meta name="theme-color" content="#0a0e0b" />
-    <meta property="og:title" content="מקצועות ויכולות מיוחדות — No Road Through" />
-    <meta
-      property="og:description"
-      content="‏המקצועות והיכולות המיוחדות של המשחק.‏"
-    />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://pavelborze.github.io/no-road-through-larp/rules/classes.html" />
-    <meta property="og:site_name" content="No Road Through" />
-    <meta property="og:locale" content="he_IL" />
-    <meta
-      property="og:image"
-      content="https://pavelborze.github.io/no-road-through-larp/assets/og-image.jpg"
-    />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>מקצועות ויכולות מיוחדות — No Road Through</title>
-
-    <style>
-      /* First-paint fallback. Without it a cold-cache visitor sees the inline
-         sigils at full viewport size in the UA default link blue, on white,
-         until styles.css arrives. */
-      body { margin: 0; background: #0a0e0b; color: #e0cda0; }
-      .nav-sigil { width: 28px; color: #b8945a; }
-      .hero-sigil { width: clamp(70px, 12vw, 110px); color: #b8945a; }
-      .footer-sigil { width: 48px; color: #9c8750; }
-    </style>
-    <link rel="icon" type="image/svg+xml" href="../assets/sigil.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Amatic+SC:wght@400;700&family=Pirata+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles-legacy.css" />
-  </head>
-  <body class="doc-page">
-    <a class="skip-link" href="#doc-main">דלגו לתוכן</a>
-
-    <header class="site-nav is-scrolled" id="top">
-      <nav class="nav-inner" aria-label="ניווט ראשי">
-        <a class="nav-brand" href="../index.html" aria-label="חזרה לאתר">
-          <svg class="nav-sigil" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" />
-            <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.4" fill="none" />
-            <path d="M16 76 L20 52 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" />
-            <path d="M80 76 L84 52 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" />
-          </svg>
-          <span class="nav-brand-text">No Road Through</span>
-        </a>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="../index.html#premise">הקדמה</a></li>
-          <li><a href="../story/background.html">הרקע המלא</a></li>
-          <li><a href="../index.html#factions">קבוצות</a></li>
-          <li><a href="../index.html#practical">לוח זמנים</a></li>
-          <li><a href="../index.html#rules">חוקים ומסמכים</a></li>
-          <li><a href="../index.html#register">הרשמה</a></li>
-        </ul>
-
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-expanded="false"
-          aria-controls="navLinks"
-          aria-label="פתיחת תפריט"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </header>
-
-    <main class="doc-main" id="doc-main">
-      <div class="doc-inner doc-prose">
-        <header class="doc-head reveal" data-reveal>
-          <p class="eyebrow">מִקְצוֹעוֹת</p>
-          <h1 class="doc-title">מקצועות ויכולות מיוחדות</h1>
-          <div class="gold-rule" aria-hidden="true"></div>
-          <p class="doc-lede">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="מקצועות ויכולות מיוחדות ב-No Road Through — לוחם, ברברי, פלאדין, טבאקסי, גנב, קוסם וכוהן.‏">
+<meta name="theme-color" content="#06070a">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/google-sans-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;background:#040507;color:#f1e8d8}</style>
+<title>מקצועות ויכולות מיוחדות — No Road Through</title>
+<script src="../doc.js" defer></script>
+</head>
+<body class="doc-page">
+<a class="skip-link" href="#doc-main">דלגו לתוכן</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-arrow" viewBox="0 0 256 256"><path fill="currentColor" d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></symbol>
+<symbol id="i-caret" viewBox="0 0 256 256"><path fill="currentColor" d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+<symbol id="i-out" viewBox="0 0 256 256"><path fill="currentColor" d="M197.66,197.66a8,8,0,0,1-11.32,0L72,83.31V168a8,8,0,0,1-16,0V64a8,8,0,0,1,8-8H168a8,8,0,0,1,0,16H83.31L197.66,186.34A8,8,0,0,1,197.66,197.66Z"/></symbol>
+<symbol id="i-speaker" viewBox="0 0 256 256"><path fill="currentColor" d="M160,32.25V223.69a8.29,8.29,0,0,1-3.91,7.18,8,8,0,0,1-9-.56l-65.57-51A4,4,0,0,1,80,176.16V79.84a4,4,0,0,1,1.55-3.15l65.57-51a8,8,0,0,1,10,.16A8.27,8.27,0,0,1,160,32.25ZM60,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H60a4,4,0,0,0,4-4V84A4,4,0,0,0,60,80Zm126.77,20.84a8,8,0,0,0-.72,11.3,24,24,0,0,1,0,31.72,8,8,0,1,0,12,10.58,40,40,0,0,0,0-52.88A8,8,0,0,0,186.74,100.84Zm40.89-26.17a8,8,0,1,0-11.92,10.66,64,64,0,0,1,0,85.34,8,8,0,1,0,11.92,10.66,80,80,0,0,0,0-106.66Z"/></symbol>
+<symbol id="i-up" viewBox="0 0 256 256"><path fill="currentColor" d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 256 256"><path fill="currentColor" d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 256 256"><path fill="currentColor" d="M235.54,150.21a104.84,104.84,0,0,1-37,52.91A104,104,0,0,1,32,120,103.09,103.09,0,0,1,52.88,57.48a104.84,104.84,0,0,1,52.91-37,8,8,0,0,1,10,10,88.08,88.08,0,0,0,109.8,109.8,8,8,0,0,1,10,10Z"/></symbol>
+<symbol id="g-book" viewBox="0 0 512 512"><path fill="currentColor" d="M102.53 26.063l90 345.75 289.22 23.25-90.03-345.72-289.19-23.28zm-18.968 1.406c-30.44 11.894-55.62 53.07-49.687 75.28l3.25 11.813c.654-1.722 1.345-3.44 2.063-5.157C49.102 85.688 65.734 62.636 89.56 50.5l-6-23.03zM94.44 69.187c-16.66 10.016-29.916 28.1-38 47.437-5.2 12.44-8 25.417-8.75 36.25v.03L112.56 388.5c.305-.572.593-1.148.907-1.72 10.585-19.223 27.804-37.623 51.06-48.405L94.438 69.187zM154 107.968l239.78 16.188-1.28 18.625-239.75-16.155L154 107.97zm46.03 34.407l5.657 8.875 14.188 22.313 39.03-15.25 7.595-2.938 3.97 7.094 16.28 29.124 4.313 7.72-7.438 4.717c-10.267 6.524-17.392 12.284-21.75 16.782-3.03 3.13-4.247 5.232-4.906 6.594 1.38.303 3.433.577 6.624.28 18.268-1.69 56.285-19.964 79-61.592l5.47-10.03 8.748 7.374 46 38.812 11.532 9.72-13.844 6-33.28 14.374c5.447 4.925 11.436 5.916 18.436 5.406 9.95-.724 21.427-6.07 29.125-11.063l10.158 15.657c-9.41 6.1-22.867 12.934-37.938 14.03-15.07 1.098-32.27-5.296-42.594-23.155l-5.25-9.095 9.625-4.156 30.44-13.157-26.033-22c-25.716 40.294-62.68 59.168-87.843 61.5-6.78.628-12.945.26-18.594-2.688-5.65-2.95-9.984-10.6-9-17.406.984-6.806 4.838-12.4 10.688-18.44 4.385-4.526 10.612-9.367 17.875-14.436l-8.188-14.656L219.5 193.75l-7.156 2.78-4.125-6.468L196 170.875c-6.308 7.158-9.485 14.528-9 21.406.654 9.28 7.854 21.054 30.594 33.69l-9.094 16.343c-25.688-14.273-38.877-31.016-40.125-48.72-1.248-17.703 9.393-33.013 23.5-44.562l8.156-6.655zm-5.968 118.188l239.782 16.156-1.25 18.655-239.78-16.188 1.25-18.625zm-24.75 96.25c-17.637 9.072-31.065 23.708-39.468 38.968-4.49 8.153-7.307 16.452-8.72 23.876l11.626 42.156 1.688.157c-3.824-27.514 11.358-60.383 41.187-80.97l-6.313-24.188zm26.22 34c-32.403 17.28-46.273 52.303-41.657 72.78l289.78 24.532c-5.298-7.743-8.625-17.827-8.592-28.313l-22.47-9.03 46.626-7.313-13.69-13.064c5.552-6.838 13.54-12.915 24.47-17.53l-274.47-22.063z"/></symbol>
+<symbol id="g-flag" viewBox="0 0 512 512"><path fill="currentColor" d="M356.688 19.188c-6.83-.032-12.837.64-18.125 1.843-24.178 5.495-36.437 21.983-50.938 41.157-14.5 19.175-31.317 40.993-62.78 47.47C195.08 115.78 154.27 108.253 91.25 78.5c-10.013 44.88-33.406 128.62-60.906 178.656 60.093 28.5 97.245 34.926 121 30.875.01 0 .02.004.03 0 21.59-5.827 34.487-20.094 47.876-43.092 17.014-29.227 32.563-72.198 60.25-123.188l16.406 8.938c-16.69 30.735-28.802 58.617-40 82.937 8.552-6.512 18.633-11.77 31.063-14.594 27.71-6.296 65.053-.495 121.655 24.75-6.932-29.276-1.885-61.913 9.875-92.218 12.686-32.69 33.038-62.907 56.28-84.03-42.595-19.553-73.152-27.554-95.124-28.282-1.01-.033-1.993-.058-2.97-.063zm127.54 14.144c-.858-.025-1.752.062-2.664.266-4.378.977-8.94 4.424-12.084 11.097L289.53 497.31h23.61L490.972 49.368c3.475-10.153-.75-15.86-6.746-16.035z"/></symbol>
+<symbol id="g-helm" viewBox="0 0 512 512"><path fill="currentColor" d="M207.47 18.875l35.968 162.25c.29 1.087.86 1.863 2.562 2.813 1.7.95 4.433 1.66 7.22 1.656 2.785-.003 5.543-.703 7.25-1.656 1.704-.954 2.276-1.75 2.56-2.813L299 18.875h-91.53zm88.936 98.03l-15.22 68.657-.06.22-.032.187c-1.747 6.52-6.404 11.432-11.5 14.28-5.096 2.848-10.738 4.026-16.344 4.03-5.606.007-11.24-1.15-16.344-4-5.104-2.847-9.782-7.784-11.53-14.31l-.032-.19-.063-.218-14.686-66.218C175 133.818 147.157 164.56 135.53 202.97c8.044 4.25 19.254 9.84 32.314 15.468 26.527 11.43 60.506 22.55 88.5 22.406 28.003-.145 61.81-11.56 88.156-23.22 13.467-5.96 24.914-11.872 32.938-16.25-12.624-39.968-42.853-71.398-81.032-84.468zm88.97 101.376c-8.365 4.538-19.865 10.487-33.313 16.44-27.522 12.18-62.797 24.673-95.625 24.843-32.838.17-68.293-12-96-23.938-13.614-5.866-25.276-11.744-33.72-16.22-.51 70.485-3.647 138.64 9.626 188.376 7.135 26.737 18.683 47.874 37.375 62.595 12.092 9.525 27.443 16.584 47.25 20.375V330.125c-28.654 16.12-67.847 2.81-81.064-30.625 8.825-22.322 30.127-33.074 50.78-33 24.583.087 48.224 15.532 48.876 45.094h.094v89h36.03l.002-87.72c-.01-.01-.023-.018-.032-.03 0-.422.022-.834.03-1.25.655-29.562 24.327-45.007 48.908-45.094 20.654-.074 41.926 10.678 50.75 33-13.204 33.403-52.324 46.702-80.97 30.656v160.47c19.544-3.867 34.6-11 46.438-20.595 18.396-14.908 29.6-36.337 36.375-63.342 12.59-50.184 8.804-118.532 8.188-188.407z"/></symbol>
+<symbol id="g-tome" viewBox="0 0 512 512"><path fill="currentColor" d="M149.688 85.625c-1.234.005-2.465.033-3.72.063-33.913.806-75.48 10.704-127.25 33.718V362.78c60.77-28.82 106.718-37.067 144.22-33.092 33.502 3.55 59.685 16.66 83.562 31.187v-242.97c-23.217-17.744-50.195-30.04-85.97-32-3.52-.192-7.142-.296-10.843-.28zm211.968 0c-3.7-.016-7.322.088-10.844.28-35.773 1.96-62.75 14.256-85.968 32v242.97c23.876-14.527 50.06-27.637 83.562-31.188 37.502-3.974 83.45 4.272 144.22 33.094V119.407c-51.77-23.014-93.337-32.912-127.25-33.72-1.255-.028-2.486-.056-3.72-.06zm5.72 261.78c-1.038-.002-2.074.017-3.095.033-4.808.075-9.43.37-13.905.843-33.932 3.597-59.603 17.976-85.53 34.44v.28c-6.554-1.99-13.02-2.37-19.408-.97-25.566-16.177-51.003-30.202-84.468-33.75-5.595-.592-11.44-.883-17.564-.842-32.04.213-71.833 9.778-124.687 35.937v42.53c60.77-28.823 106.714-37.067 144.218-33.092 18.545 1.965 34.837 6.845 49.75 13.28-4.682 6.064-9.308 13.268-13.875 21.688h117.156c-5.93-8.22-11.798-15.414-17.626-21.56 14.996-6.503 31.39-11.43 50.062-13.408 37.503-3.974 83.448 4.27 144.22 33.094v-42.53c-53.16-26.31-93.115-35.863-125.25-35.97z"/></symbol>
+<symbol id="g-compass" viewBox="0 0 512 512"><path fill="currentColor" d="M203.97 23l-18.032 4.844 11.656 43.468c-25.837 8.076-50.32 21.653-71.594 40.75L94.53 80.594l-13.218 13.22 31.376 31.374c-19.467 21.125-33.414 45.53-41.813 71.343l-42.313-11.343-4.843 18.063 42.25 11.313c-6.057 27.3-6.157 55.656-.345 83L23.72 308.78l4.843 18.064 41.812-11.22c6.693 21.225 17.114 41.525 31.25 59.876l-29.97 52.688-16.81 29.593 29.56-16.842 52.657-29.97c18.41 14.216 38.784 24.69 60.094 31.407l-11.22 41.844 18.033 4.81 11.218-41.905c27.345 5.808 55.698 5.686 83-.375l11.312 42.28 18.063-4.81-11.344-42.376c25.812-8.4 50.217-22.315 71.342-41.78l31.375 31.373 13.22-13.218-31.47-31.47c19.09-21.266 32.643-45.738 40.72-71.563l43.53 11.657 4.813-18.063-43.625-11.686c5.68-27.044 5.576-55.06-.344-82.063l43.97-11.78-4.813-18.063L440.908 197c-6.73-20.866-17.08-40.79-31.032-58.844l29.97-52.656 16.842-29.563-29.593 16.844-52.656 29.97c-17.998-13.875-37.874-24.198-58.657-30.906l11.783-44L309.5 23l-11.78 43.97c-27-5.925-55.02-6.05-82.064-.376L203.97 23zm201.56 85L297.25 298.313l-.75.437-40.844-40.875-148.72 148.72-2.186 1.25 109.125-191.75 41.78 41.78L405.532 108zm-149.686 10.594c21.858 0 43.717 5.166 63.594 15.47l-116.625 66.342-2.22 1.28-1.28 2.22-66.25 116.406c-26.942-52.04-18.616-117.603 25.03-161.25 26.99-26.988 62.38-40.468 97.75-40.468zm122.72 74.594c26.994 52.054 18.67 117.672-25.002 161.343-43.66 43.662-109.263 52.005-161.312 25.033l116.438-66.282 2.25-1.25 1.25-2.25 66.375-116.592z"/></symbol>
+<symbol id="g-swords" viewBox="0 0 512 512"><path fill="currentColor" d="M19.75 14.438c59.538 112.29 142.51 202.35 232.28 292.718l3.626 3.75.063-.062c21.827 21.93 44.04 43.923 66.405 66.25-18.856 14.813-38.974 28.2-59.938 40.312l28.532 28.53 68.717-68.717c42.337 27.636 76.286 63.646 104.094 105.81l28.064-28.06c-42.47-27.493-79.74-60.206-106.03-103.876l68.936-68.938-28.53-28.53c-11.115 21.853-24.413 42.015-39.47 60.593-43.852-43.8-86.462-85.842-130.125-125.47-.224-.203-.432-.422-.656-.625C183.624 122.75 108.515 63.91 19.75 14.437zm471.875 0c-83.038 46.28-154.122 100.78-221.97 161.156l22.814 21.562 56.81-56.812 13.22 13.187-56.438 56.44 24.594 23.186c61.802-66.92 117.6-136.92 160.97-218.72zm-329.53 125.906l200.56 200.53c-4.36 4.443-8.84 8.793-13.405 13.032L148.875 153.53l13.22-13.186zm-76.69 113.28l-28.5 28.532 68.907 68.906c-26.29 43.673-63.53 76.414-106 103.907l28.063 28.06c27.807-42.164 61.758-78.174 104.094-105.81l68.718 68.717 28.53-28.53c-20.962-12.113-41.08-25.5-59.937-40.313 17.865-17.83 35.61-35.433 53.157-52.97l-24.843-25.655-55.47 55.467c-4.565-4.238-9.014-8.62-13.374-13.062l55.844-55.844-24.53-25.374c-18.28 17.856-36.602 36.06-55.158 54.594-15.068-18.587-28.38-38.758-39.5-60.625z"/></symbol>
+</svg>
+<header class="site-header">
+<a class="brand" href="../index.html#top" aria-label="No Road Through — לראש העמוד"><svg class="great-seal" width="208" height="236" viewBox="0 0 220 250" fill="none" aria-hidden="true">
+<g stroke="currentColor" stroke-width="1.4" opacity=".8">
+<path d="M87 22A96 96 0 0 0 22 114c0 53 39 93 88 113 49-20 88-60 88-113a96 96 0 0 0-65-92M110 8v37M101 21h18"/>
+<path d="M48 132V81h10V69h9v12h10v51m66 0V81h10V69h9v12h10v51M88 132V64h11V49h22v15h11v68M99 132v-24a11 11 0 0 1 22 0v24M45 141h130M50 151h120M110 74v14M62 98v15M158 98v15"/>
+<path d="M76 172 110 158l34 14-10 28-24 17-24-17ZM92 188l-12 12 17 3M128 188l12 12-17 3M87 178 62 169l-22 4M133 178l25-9 22 4M90 199l20 18 20-18"/>
+<path d="m94 177 8 4-7 4-4-4Zm32 0-8 4 7 4 4-4Z" fill="currentColor"/>
+</g></svg><span dir="ltr">NO ROAD THROUGH</span></a>
+<button class="button button-ghost button-sm menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden><span>תפריט</span><i aria-hidden="true"></i></button>
+<nav id="primary-nav" aria-label="ניווט ראשי"><span class="nav-glint" aria-hidden="true"></span><a href="../index.html#premise"><svg class="icon game-icon" aria-hidden="true"><use href="../index.html#g-book"/></svg><span>סיפור</span></a><a href="../index.html#factions"><svg class="icon game-icon" aria-hidden="true"><use href="../index.html#g-flag"/></svg><span>קבוצות</span></a><a href="../index.html#practical"><svg class="icon game-icon" aria-hidden="true"><use href="../index.html#g-helm"/></svg><span>היערכות</span></a><a href="../index.html#rules"><svg class="icon game-icon" aria-hidden="true"><use href="../index.html#g-tome"/></svg><span>חוקים</span></a><a href="../index.html#location"><svg class="icon game-icon" aria-hidden="true"><use href="../index.html#g-compass"/></svg><span>מיקום</span></a></nav>
+<a class="button button-accent button-sm header-register" href="../index.html#register">להרשמה <svg class="icon" aria-hidden="true"><use href="../index.html#i-arrow"/></svg></a>
+</header>
+<main class="doc-main" id="doc-main">
+<div class="doc-inner doc-prose">
+<header class="doc-head" data-reveal>
+<p class="doc-eyebrow">מִקְצוֹעוֹת</p>
+<h1 class="doc-title">מקצועות ויכולות מיוחדות</h1>
+<p class="doc-lede">
             מה כל מקצוע יכול לעשות. קראו זאת יחד עם חוקי הקרב וחוקי הקסם.
           </p>
-        </header>
+<div class="doc-rule" aria-hidden="true"></div>
+</header>
 
-        <nav class="doc-toc reveal" data-reveal aria-labelledby="tocHeading">
-          <h2 class="doc-toc-title" id="tocHeading">בעמוד זה</h2>
-          <ol class="doc-toc-list">
+<nav class="doc-toc" data-reveal aria-labelledby="toc-heading">
+<h2 class="doc-toc-title" id="toc-heading">בעמוד זה</h2>
+<ol class="doc-toc-list">
             <li><a href="#general">כללים כלליים</a></li>
             <li><a href="#fighter">לוחם (Fighter)</a></li>
             <li><a href="#barbarian">ברברי (Barbarian)</a></li>
@@ -105,23 +67,20 @@
             <li><a href="#cleric">כוהן (Cleric)</a></li>
             <li><a href="#non-combat">מעמד ללא לחימה (Non-Combat)</a></li>
           </ol>
-        </nav>
-
-      <section class="doc-section reveal" data-reveal id="general">
+</nav>
+<section class="doc-section" data-reveal id="general">
         <h2 class="doc-section-title">כללים כלליים</h2>
         <p>לכל דמות יש מקצוע ראשי. דמות רשאית להחזיק גם במיומנויות נוספות, אם קיבלה לכך אישור מפורש.</p>
         <p>המקצועות מקנים רק את היכולות המתוארות בכללים אלה. הגזע של הדמות אינו מקנה לה יכולות מיוחדות באופן אוטומטי.</p>
         <p>ללוחמים, ברברים, פלאדינים וסייפים אקרובטיים אין דרגות דמות. לגנבים, קוסמים וכוהנים יש דרגות ממוספרות. הדרגות קובעות את מכסת כלי הפריצה או את זמינות הלחשים ומספרם, בהתאם למקצוע. דרגות אינן משנות ישירות את הנזק של נשק או את נקודות הפגיעה הבסיסיות.</p>
       </section>
-
-      <section class="doc-section reveal" data-reveal id="fighter">
+<section class="doc-section" data-reveal id="fighter">
         <h2 class="doc-section-title">לוחם (Fighter)</h2>
         <p>ללוחם אין יכולת קרב מיוחדת.</p>
         <p>לוחמים רשאים להשתמש בכל נשק, מגן ושריון שאושרו, בכפוף לכללי הקרב. נקודות הפגיעה שלהם נקבעות לפי ציודם.</p>
         <p>מקצוע זה כולל חיילים רגילים, שומרים, שכירי חרב ולוחמים אחרים שאין להם יכולת מקצוע מיוחדת.</p>
       </section>
-
-      <section class="doc-section reveal" data-reveal id="barbarian">
+<section class="doc-section" data-reveal id="barbarian">
         <h2 class="doc-section-title">ברברי (Barbarian)</h2>
         <p><strong>מקצוע מוגבל</strong></p>
         <h3 class="doc-subhead">זעם (Rage)</h3>
@@ -131,8 +90,7 @@
         <p>ניתן להשתמש בזעם פעם אחת בכל קרב. ברברי המשתמש ביכולת חייב להילחם בחרב או בגרזן, ואינו רשאי להשתמש בחנית.</p>
         <p>כדי לשחק ברברי יש לעבור מבחן קרב מעשי מול אחד המאסטרים לפני המשחק.</p>
       </section>
-
-      <section class="doc-section reveal" data-reveal id="paladin">
+<section class="doc-section" data-reveal id="paladin">
         <h2 class="doc-section-title">פלאדין (Paladin)</h2>
         <h3 class="doc-subhead">הנחת ידיים (Lay on Hands)</h3>
         <p>פעם אחת בכל קרב, פלאדין רשאי להשיב לדמות חיה אחרת את מלוא נקודות הפגיעה שלה.</p>
@@ -141,8 +99,7 @@
         <p>המגע הנדרש להפעלת היכולת הוא חריג לאיסור הרגיל על מגע גופני במהלך קרב.</p>
         <p>לפלאדינים אין דרגות הטלת לחשים ואין להם יכולות נוספות להטלת לחשים, אלא אם צוין אחרת במפורש בדף הדמות שלהם.</p>
       </section>
-
-      <section class="doc-section reveal" data-reveal id="tabaxi">
+<section class="doc-section" data-reveal id="tabaxi">
         <h2 class="doc-section-title">סייף אקרובטי טבאקסי (Tabaxi Swashbuckler)</h2>
         <p><strong>מקצוע מוגבל</strong></p>
         <h3 class="doc-subhead">זריזות חתולית (Feline Agility)</h3>
@@ -152,8 +109,7 @@
         <p>היכולת אינה מגינה מפני נשק באורך מטר אחד או פחות, חצים, בריחי קשת, נשק הטלה, לחשים או השפעות אחרות.</p>
         <p>כדי לשחק סייף אקרובטי טבאקסי יש לעבור מבחן קרב מעשי מול אחד המאסטרים לפני המשחק.</p>
       </section>
-
-      <section class="doc-section reveal" data-reveal id="thief">
+<section class="doc-section" data-reveal id="thief">
         <h2 class="doc-section-title">גנב (Thief)</h2>
         <p>דמות שהמקצוע הראשי שלה הוא גנב רשאית להשתמש בכל נשק מאושר, אך אינה רשאית ללבוש שריון מתכת או להשתמש במגן.</p>
         <p>אפשר להעניק מיומנויות גנב כמיומנויות משניות לדמויות שהמקצוע הראשי שלהן אחר. מיומנויות גנב משניות אינן מקנות באופן אוטומטי את היכולת "החיוך השני".</p>
@@ -173,52 +129,27 @@
         <p><strong>דמות שירדה ל־0 נקודות פגיעה בעקבות החיוך השני אינה רשאית לדבר, לצעוק או להשמיע כל קול בתוך המשחק עד שתרופא.</strong> זהו חריג לכללים הרגילים החלים על דמויות ב־0 נקודות פגיעה. קריאות בטיחות מחוץ למשחק, כולל "חדל!", ובקשות לעזרה במציאות מותרות תמיד.</p>
         <p>קסדה הכוללת הגנה על הצוואר מונעת את החיוך השני. אם הגנב מנסה להשתמש בחיוך השני נגד דמות החובשת קסדה כזאת, ההתקפה גורמת במקום זאת לנזק של נקודת פגיעה אחת, אינה מפילה את היעד אוטומטית ל־0 נקודות פגיעה, והיעד נעשה מודע לתקיפה.</p>
       </section>
-
-      <section class="doc-section reveal" data-reveal id="wizard">
+<section class="doc-section" data-reveal id="wizard">
         <h2 class="doc-section-title">קוסם (Wizard)</h2>
         <p>קוסמים משתמשים בקסם מאגי בהתאם לכללי הקסם הנפרדים.</p>
         <p>המעגל הממוספר של הקוסם קובע אילו לחשים הוא רשאי ללמוד וכמה לחשים זמינים לו. הכנת לחשים, ספרי לחשים, הטלת לחשים, חידוש לחשים ומגילות כפופים לכללי הקסם.</p>
         <p>לקוסמים אין יכולת קרב נוספת. הם רשאים להשתמש בנשק מאושר בהתאם לכללי הקרב הרגילים. קוסמים אינם רשאים ללבוש שריון.</p>
       </section>
-
-      <section class="doc-section reveal" data-reveal id="cleric">
+<section class="doc-section" data-reveal id="cleric">
         <h2 class="doc-section-title">כוהן (Cleric)</h2>
         <p>כוהנים משתמשים בקסם אלוהי בהתאם לכללי הקסם הנפרדים.</p>
         <p>דרגת החסד הממוספרת של הכוהן קובעת באילו תפילות, ברכות וטקסים הוא רשאי להשתמש ומהי מכסת הלחשים המותרת לו.</p>
         <p>לכוהנים אין יכולת קרב נוספת. ריפוי והשפעות אלוהיות אחרות כפופים לכללי הקסם ולתיאור של כל לחש בנפרד.</p>
       </section>
-
-      <section class="doc-section reveal" data-reveal id="non-combat">
+<section class="doc-section" data-reveal id="non-combat">
         <h2 class="doc-section-title">מעמד ללא לחימה (Non-Combat)</h2>
         <p>דמויות מכל מקצוע מתאים יכולות לקבל מעמד של דמות שאינה משתתפת בלחימה. דמויות כאלה עונדות סרטים בצבע ירוק זרחני־חומצי על שני פרקי הידיים ופועלות לפי הוראות הדמויות ללא לחימה שבכללי הקרב. אסור להן להשתמש בנשק קפא״פ או לשאת אותו.</p>
         <p>מעמד ללא לחימה אינו מקנה או מבטל יכולות מקצוע. דמות ללא לחימה שירדה ל־0 נקודות פגיעה אינה רשאית להמשיך להשתמש ביכולות או להטיל לחשים.</p>
       </section>
 
-        <p class="doc-back">
-          <a href="../index.html#rules">חזרה לחוקים ומסמכים</a>
-        </p>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <svg class="footer-sigil" viewBox="0 0 120 120" aria-hidden="true">
-          <path d="M60 6 L108 40 V80 L60 114 L12 80 V40 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6" />
-          <path d="M41 76 L47 36 V22 H52 V28 H54 V22 H59 V28 H61 V22 H66 V28 H68 V22 H73 V36 L79 76 Z" stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.7" />
-          <path d="M16 76 L20 52 V42 H36 V52 L40 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.6" />
-          <path d="M80 76 L84 52 V42 H100 V52 L104 76 Z" stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.6" />
-        </svg>
-        <p class="footer-name">No Road Through</p>
-        <p class="footer-tag">משחק תפקידים חי</p>
-        <div class="footer-rule" aria-hidden="true"></div>
-        <p class="footer-meta">
-          <a href="mailto:noldo.warrior@gmail.com">noldo.warrior@gmail.com</a>
-          <span aria-hidden="true">·</span>
-          <span>כל הזכויות שמורות ליוצרי המשחק</span>
-        </p>
-      </div>
-    </footer>
-
-    <script src="../main-legacy.js" defer></script>
-  </body>
+<p class="doc-back"><a class="button button-ghost" href="../index.html#rules">חזרה לחוקים ומסמכים</a></p>
+</div>
+</main>
+<footer class="site-footer"><div class="footer-word" dir="ltr" aria-hidden="true">NO ROAD THROUGH</div><div class="wrap footer-inner"><div class="footer-brand"><svg width="26" height="30" viewBox="0 0 26 30" fill="none" aria-hidden="true"><path d="M3 24V10h5v14m2 0V4h6v20m2 0V10h5v14M2 28h22M13 0v2" stroke="currentColor" stroke-width="1.5"/></svg><span dir="ltr">NO ROAD THROUGH</span><span>משחק תפקידים חי</span></div><div class="footer-contact"><a href="mailto:noldo.warrior@gmail.com"><bdi dir="ltr">noldo.warrior@gmail.com</bdi></a><span>כל הזכויות שמורות ליוצרי המשחק</span><details class="asset-credits"><summary>קרדיטים לאייקונים</summary><p dir="ltr">Icons by <a href="https://game-icons.net/">Lorc &amp; Delapouite / Game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Colors adapted; backgrounds removed. Effects adapted from <a href="https://reactbits.dev/">React Bits</a>.</p></details></div><a class="button button-ghost button-sm back-top" href="../index.html#top">בחזרה למעלה <svg class="icon" aria-hidden="true"><use href="../index.html#i-up"/></svg></a></div></footer>
+</body>
 </html>
