@@ -90,7 +90,7 @@ try {
   rmSync(dist, { recursive: true, force: true });
   mkdirSync(dist, { recursive: true });
 
-  for (const file of ["index.html", "styles.css", "main.js", "README.md"]) {
+  for (const file of ["index.html", "styles.css", "main.js", "doc.js", "README.md"]) {
     cpSync(join(root, file), join(dist, file));
     ok(file);
   }

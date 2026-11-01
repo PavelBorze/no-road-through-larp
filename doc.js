@@ -20,25 +20,29 @@
     onScroll();
   }
 
-  /* ——— Mobile menu ——— */
+  /* ——— Mobile menu ———
+     The stylesheet has no open/closed class for the nav: under 1050px it turns
+     the bar into a fixed panel under the header and relies on [hidden] to take
+     it off screen, the same mechanism main.js drives on the homepage. Toggling
+     classes instead left the panel sitting over the top of the page. */
   const toggle = $('.menu-toggle');
   const nav = $('#primary-nav');
   if (toggle && nav) {
-    toggle.hidden = false;
-    const setOpen = (open) => {
-      toggle.setAttribute('aria-expanded', String(open));
-      nav.classList.toggle('is-open', open);
-      document.body.classList.toggle('nav-open', open);
+    const narrow = matchMedia('(max-width: 1050px)');
+    let open = false;
+    const sync = () => {
+      toggle.hidden = !narrow.matches;
+      nav.hidden = narrow.matches && !open;
+      toggle.setAttribute('aria-expanded', String(narrow.matches && open));
+      toggle.firstElementChild.textContent = open ? 'סגירה' : 'תפריט';
     };
-    toggle.addEventListener('click', () =>
-      setOpen(toggle.getAttribute('aria-expanded') !== 'true')
-    );
-    nav.addEventListener('click', (e) => {
-      if (e.target.closest('a')) setOpen(false);
-    });
-    addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') setOpen(false);
-    });
+    const close = () => { if (open) { open = false; sync(); } };
+    toggle.addEventListener('click', () => { open = !open; sync(); });
+    nav.addEventListener('click', (e) => { if (e.target.closest('a')) close(); });
+    document.addEventListener('click', (e) => { if (open && !header?.contains(e.target)) close(); });
+    addEventListener('keydown', (e) => { if (e.key === 'Escape' && open) { close(); toggle.focus(); } });
+    narrow.addEventListener('change', () => { open = false; sync(); });
+    sync();
   }
 
   /* ——— Reveal on entry ——— */
