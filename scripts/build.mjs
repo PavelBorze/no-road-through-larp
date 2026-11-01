@@ -28,6 +28,7 @@ const REQUIRED = [
   "rules/races.html",
   "story/background.html",
   "styles.css",
+  "nav.js",
   "main.js",
   "doc.js",
   "assets/sigil.svg",
@@ -82,6 +83,32 @@ for (const page of PAGES) {
   /* the homepage drives main.js; the rulebooks load the smaller doc.js */
   if (/src="(\.\.\/)?(main|doc)\.js"/.test(html)) ok("קישור לסקריפט העמוד");
   else fail(`${page}: חסר קישור ל-main.js או ל-doc.js`);
+  /* every page shares the menu, and defer means nav.js has to be linked first */
+  const navAt = html.search(/src="(\.\.\/)?nav\.js"/);
+  const pageAt = html.search(/src="(\.\.\/)?(main|doc)\.js"/);
+  if (navAt === -1) fail(`${page}: חסר קישור ל-nav.js`);
+  else if (navAt > pageAt) fail(`${page}: nav.js חייב להיטען לפני סקריפט העמוד`);
+  else ok("קישור ל-nav.js לפני סקריפט העמוד");
+}
+
+/* 2b. The menu breakpoint lives in two files that cannot see each other:
+   the media query in styles.css that turns the nav into a fixed panel, and the
+   matchMedia in nav.js that hides it. Drift between them is invisible until the
+   menu misbehaves, so compare them here. */
+console.log("\n2ב) בודק את נקודת השבירה של התפריט");
+{
+  const css = readFileSync(join(root, "styles.css"), "utf8");
+  const navJs = readFileSync(join(root, "nav.js"), "utf8");
+  const declared = navJs.match(/NAV_BREAKPOINT\s*=\s*(\d+)/)?.[1];
+  const panelAt = css.indexOf(".site-header nav { position: fixed");
+  const styled = panelAt === -1
+    ? undefined
+    : [...css.slice(0, panelAt).matchAll(/@media \(max-width: (\d+)px\)/g)].at(-1)?.[1];
+
+  if (!declared) fail("nav.js: לא נמצא NAV_BREAKPOINT");
+  else if (!styled) fail("styles.css: לא נמצאה שאילתא שהופכת את התפריט ללוח");
+  else if (declared === styled) ok(`נקודת השבירה זהה ב-nav.js וב-styles.css (${styled}px)`);
+  else fail(`נקודת שבירה לא תואמת: nav.js ${declared}px מול styles.css ${styled}px`);
 }
 
 /* 3. Copy to dist/ */
@@ -90,7 +117,7 @@ try {
   rmSync(dist, { recursive: true, force: true });
   mkdirSync(dist, { recursive: true });
 
-  for (const file of ["index.html", "styles.css", "main.js", "doc.js", "README.md"]) {
+  for (const file of ["index.html", "styles.css", "nav.js", "main.js", "doc.js", "README.md"]) {
     cpSync(join(root, file), join(dist, file));
     ok(file);
   }

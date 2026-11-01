@@ -10,7 +10,6 @@
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
   const forcedColors = matchMedia('(forced-colors: active)');
-  const narrow = matchMedia('(max-width: 1050px)');
   const cinematic = matchMedia('(min-width: 761px) and (min-height: 621px)');
   const effectsToggle = $('.effects-toggle');
   let effectsPaused = false;
@@ -108,33 +107,29 @@
     });
   }, { threshold: .18, rootMargin: '0px 0px -6% 0px' }) : null;
 
-  /* ——— Header, menu, nav glint ——— */
+  /* ——— Header, menu, nav glint ———
+     The menu itself lives in nav.js, shared with the rulebook pages; this adds
+     only what the homepage has on top of it — the tucking header and the glint
+     that follows the active link. */
   const header = $('.site-header');
-  const toggle = $('.menu-toggle');
   const nav = $('#primary-nav');
   const glint = $('.nav-glint');
-  let menuOpen = false;
-  const syncMenu = () => {
-    toggle.hidden = !narrow.matches;
-    nav.hidden = narrow.matches && !menuOpen;
-    toggle.setAttribute('aria-expanded', String(narrow.matches && menuOpen));
-    toggle.firstElementChild.textContent = menuOpen ? 'סגירה' : 'תפריט';
-    if (menuOpen) header.classList.remove('is-tucked');
-  };
-  toggle.addEventListener('click', () => { menuOpen = !menuOpen; syncMenu(); });
-  nav.addEventListener('click', e => { if (e.target.closest('a')) { menuOpen = false; syncMenu(); } });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) { menuOpen = false; syncMenu(); toggle.focus(); } });
-  document.addEventListener('click', e => { if (menuOpen && !header.contains(e.target)) { menuOpen = false; syncMenu(); } });
-  narrow.addEventListener('change', () => { menuOpen = false; syncMenu(); placeGlint(); });
-  syncMenu();
   const navLinks = $$('a[href^="#"]', nav);
   let glintTarget = null;
+  let menuNarrow = false;
   function placeGlint(link = glintTarget) {
-    if (narrow.matches || !link) { glint.classList.remove('is-on'); return; }
+    if (menuNarrow || !link) { glint.classList.remove('is-on'); return; }
     glint.style.setProperty('--gx', `${link.offsetLeft}px`);
     glint.style.setProperty('--gw', `${link.offsetWidth}px`);
     glint.classList.add('is-on');
   }
+  const menu = window.NRT?.initHeaderMenu?.({
+    onSync: ({ open, narrow }) => {
+      menuNarrow = narrow;
+      if (open) header.classList.remove('is-tucked');
+      placeGlint();
+    },
+  }) ?? null;
   navLinks.forEach(link => link.addEventListener('pointerenter', () => placeGlint(link)));
   nav.addEventListener('pointerleave', () => placeGlint());
   header.addEventListener('focusin', () => header.classList.remove('is-tucked'));
@@ -397,7 +392,7 @@
     fuse.style.setProperty('--p', String(clamp(y / Math.max(1, docH))));
     header.classList.toggle('is-scrolled', y > 40);
     const dy = y - lastY; lastY = y;
-    if (!menuOpen && !header.contains(document.activeElement)) {
+    if (!menu?.isOpen() && !header.contains(document.activeElement)) {
       if (dy > 6 && y > vh * .9) header.classList.add('is-tucked');
       else if (dy < -6 || y < vh * .5) header.classList.remove('is-tucked');
     }
