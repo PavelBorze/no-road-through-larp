@@ -47,7 +47,7 @@ Active-nav-link highlighting measures each `<section id="…">` against a refere
 - Reveal-on-scroll: elements marked `data-reveal` get `.is-in` when they enter the viewport (falls back to always-visible without IntersectionObserver).
 - Header scroll state (`.is-scrolled`), the tucking header (`.is-tucked`, suppressed while the menu is open), active-section tracking and the nav glint.
 - **All pages share the same top nav.** The sub-page copies are generated from the one in `index.html` with `href="#x"` rewritten to `href="../index.html#x"`; keep them in sync when nav items change.
-- **Countdown timer** — the event datetime is hard-coded as `new Date("2026-11-21T10:00:00+02:00")`. Change it there.
+- ~~Countdown timer~~ — the event ran on 21 Nov 2026. The hero's rolling digits are gone; a static `<p class="countdown game-over">GAME OVER</p>` sits in their place, with no JS behind it. Restoring a countdown for a future date means new markup, a new `.count-unit` block in `styles.css` and a new ticker here.
 - Location reveal toggle (the exact venue is intentionally hidden behind a button).
 
 `styles.css` conventions:

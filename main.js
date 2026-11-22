@@ -134,25 +134,6 @@
   nav.addEventListener('pointerleave', () => placeGlint());
   header.addEventListener('focusin', () => header.classList.remove('is-tucked'));
 
-  /* ——— Countdown: unchanged source target, digits roll on change ——— */
-  const eventDate = new Date('2026-11-21T10:00:00+02:00');
-  const countdown = $('#countdown');
-  const timeFields = $$('[data-time]', countdown);
-  function updateCountdown() {
-    const seconds = Math.max(0, Math.floor((eventDate.getTime() - Date.now()) / 1000));
-    const values = { days: Math.floor(seconds / 86400), hours: Math.floor(seconds / 3600) % 24, minutes: Math.floor(seconds / 60) % 60, seconds: seconds % 60 };
-    timeFields.forEach(field => {
-      const value = String(values[field.dataset.time]).padStart(2, '0');
-      if (field.textContent === value) return;
-      const first = field.textContent === '—';
-      field.textContent = value;
-      if (!first && motionOK()) { field.classList.remove('tick'); void field.offsetWidth; field.classList.add('tick'); }
-    });
-    countdown.setAttribute('aria-label', seconds ? 'הזמן עד האירוע' : 'מועד האירוע הגיע');
-  }
-  updateCountdown();
-  setInterval(() => { if (!document.hidden) updateCountdown(); }, 1000);
-
   /* ——— Ember particle layers: CSS loops run only while visible ——— */
   const emberLayers = $$('.scene-embers,.hero-atmosphere,.title-embers');
   if ('IntersectionObserver' in window) {
@@ -478,7 +459,7 @@
   document.addEventListener('visibilitychange', () => {
     root.classList.toggle('page-paused', document.hidden);
     if (document.hidden) { if (frame) cancelAnimationFrame(frame); frame = 0; hidePointer(); }
-    else { updateCountdown(); scheduleFrame(); }
+    else scheduleFrame();
     syncLoops();
   });
   if ('ResizeObserver' in window) {
